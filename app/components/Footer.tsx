@@ -1,108 +1,218 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import { ArrowUpRight, Camera as Instagram, Aperture as Dribbble, Bookmark, Briefcase as Linkedin } from "lucide-react";
+import InteractiveDotGrid from "./InteractiveDotGrid";
+import { motion, useSpring, useMotionValue } from "framer-motion";
+
+function SocialCard({ social, isLast }: { social: any, isLast: boolean }) {
+    const cardRef = useRef<HTMLAnchorElement>(null);
+    const x = useMotionValue(0);
+    const y = useMotionValue(0);
+    const springConfig = { damping: 25, stiffness: 250, mass: 0.5 };
+    const xSpring = useSpring(x, springConfig);
+    const ySpring = useSpring(y, springConfig);
+    const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        if (!cardRef.current) return;
+        const rect = cardRef.current.getBoundingClientRect();
+        // center the orange bubble (size 112px => half is 56px)
+        x.set(e.clientX - rect.left - 56);
+        y.set(e.clientY - rect.top - 56);
+    };
+
+    return (
+        <Link
+            ref={cardRef}
+            href={social.href}
+            onMouseMove={handleMouseMove}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            className={`flex flex-col justify-between items-start p-6 md:p-8 h-[160px] md:h-[200px] text-[#222] hover:bg-black/5 transition-colors group relative overflow-hidden ${
+                !isLast ? 'border-r border-black/10' : ''
+            }`}
+        >
+            {/* Tracking orange bubble */}
+            <motion.div
+                style={{ x: xSpring, y: ySpring }}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: isHovered ? 1 : 0, scale: isHovered ? 1 : 0 }}
+                transition={{ duration: 0.2 }}
+                className="absolute top-0 left-0 w-28 h-28 rounded-full bg-[#f26522] flex items-center justify-center pointer-events-none z-10 shadow-lg [&>svg]:w-8 [&>svg]:h-8 [&>svg]:stroke-white [&>svg]:fill-none [&>span]:text-3xl [&>span]:text-white"
+            >
+                {/* Specific override for Clutch svg since it relies on currentColor */}
+                <div className="text-white [&>*]:text-white">
+                    {social.icon}
+                </div>
+            </motion.div>
+
+            {/* Top Box: Normal Icon -> Fades to Text */}
+            <div className="relative z-20 w-full h-8">
+                {/* Icon */}
+                <div className="absolute inset-0 text-[#333] transition-all duration-300 origin-left group-hover:opacity-0 group-hover:scale-90 group-hover:translate-y-2">
+                    {social.icon}
+                </div>
+                
+                {/* Hover Text */}
+                <div className="absolute inset-0 text-xl font-medium tracking-tight text-black opacity-0 -translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-none">
+                    {social.hoverText}
+                </div>
+            </div>
+            
+            {/* Bottom Label */}
+            <span className="relative z-20 text-[11px] md:text-[13px] font-medium tracking-wide uppercase transition-colors duration-300">
+                {social.name}
+            </span>
+        </Link>
+    );
+}
 
 export default function Footer() {
+
+    // Social links mimicking the design attachment
+    const socialLinks = [
+        { 
+            name: 'Awwwards', 
+            hoverText: 'Awards',
+            icon: <span className="font-serif font-black text-2xl tracking-tighter">W.</span>, 
+            href: '#' 
+        },
+        { 
+            name: 'Clutch',
+            hoverText: 'Reviews', 
+            // C Logo with inner curves approximation
+            icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 8C14.5 6.5 12 6.5 10.5 8C8.5 10 8.5 14 10.5 16C12 17.5 14.5 17.5 16 16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
+                </svg>
+            ), 
+            href: '#' 
+        },
+        { 
+            name: 'Instagram', 
+            hoverText: 'Social',
+            icon: <Instagram className="w-6 h-6 stroke-[1.5]" />, 
+            href: '#' 
+        },
+        { 
+            name: 'Dribbble', 
+            hoverText: 'Eye Candy',
+            icon: <Dribbble className="w-6 h-6 stroke-[1.5]" />, 
+            href: '#' 
+        },
+        { 
+            name: 'Substack', 
+            hoverText: 'Newsletter',
+            icon: (
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 22L12 16.5L2 22V7H22V22ZM2 2H22V5H2V2Z" />
+                </svg>
+            ), 
+            href: '#' 
+        },
+        { 
+            name: 'LinkedIn', 
+            hoverText: 'Connect',
+            icon: <Linkedin className="w-6 h-6 stroke-[1.5]" />, 
+            href: '#' 
+        },
+    ];
+
     return (
-        <footer className="w-full max-w-[1440px] mx-auto px-4 py-8">
-            <div className="relative bg-[#111111] rounded-[40px] p-8 md:p-16 text-white flex flex-col justify-between min-h-[600px] mt-48">
-                {/* Top Section */}
-                <div className="flex flex-col md:flex-row justify-between w-full z-10 gap-12">
-                    {/* Left Content: Headings & Form */}
-                    <div className="flex flex-col space-y-12 w-full md:w-1/2">
-                        <div className="space-y-6">
-                            <h2 className="text-5xl md:text-7xl font-light tracking-tight leading-tight">
-                                Book a <br /> Discovery call
-                            </h2>
-                            <p className="text-gray-400 text-lg max-w-md">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            </p>
-                        </div>
+        <footer className="w-full relative bg-[#f4ecef] md:bg-[#f6f6fb] overflow-hidden pt-10 pb-8 border-t border-black/5">
+            
+            {/* Top Section Wrapper - Break out to 100vw for background, keep content padded */}
+            <div 
+                className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-24 mb-6 md:mb-10 px-4 flex justify-center"
+            >
+                {/* High-performance physics Canvas dot pattern */}
+                <InteractiveDotGrid />
 
-                        {/* Form */}
-                        <div className="flex flex-col gap-10 w-full max-w-xl">
-                            <div className="flex flex-col md:flex-row gap-8 w-full">
-                                <div className="flex flex-col w-full">
-                                    <label className="text-sm text-gray-500 mb-2">Full Name*</label>
-                                    <input
-                                        type="text"
-                                        className="bg-transparent border-b border-gray-600 pb-2 text-white focus:outline-none focus:border-white transition-colors"
-                                    />
-                                </div>
-                                <div className="flex flex-col w-full">
-                                    <label className="text-sm text-gray-500 mb-2">Phone*</label>
-                                    <input
-                                        type="text"
-                                        className="bg-transparent border-b border-gray-600 pb-2 text-white focus:outline-none focus:border-white transition-colors"
-                                    />
-                                </div>
-                            </div>
-                        </div>
+                {/* Actual Constraint Wrapper for Content */}
+                <div className="relative z-10 w-full max-w-[1440px] px-0 md:px-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+                    {/* Left: Let's Jam */}
+                    <div className="flex flex-col relative z-10">
+                        <h2 className="text-[5rem] md:text-[8rem] font-medium tracking-tight text-[#1a1a1a] leading-none mb-10 md:mb-0">
+                            Let&apos;s Jam.
+                        </h2>
                     </div>
 
-                    {/* Right Content: Globe & Navigation */}
-                    <div className="relative flex flex-col items-end w-full md:w-1/3 group">
-                        {/* Globe - Aligned right */}
-                        <div className="absolute -top-32 right-0 md:-top-52 md:-right-8 w-48 h-48 md:w-64 md:h-64 select-none pointer-events-none z-0">
-                            <Image
-                                src="/tdw-favicon.svg"
-                                alt="Globe"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-
-                        {/* Navigation Links - Pushed down to avoid visual overlap with globe interior */}
-                        <nav className="flex flex-col gap-4 mt-24 md:mt-24 items-end w-full z-10">
-                            {['About', 'Services', 'Work'].map((item) => (
-                                <Link
-                                    key={item}
-                                    href={`/${item.toLowerCase()}`}
-                                    className="bg-[#fdf8f2] text-black font-semibold text-lg py-3 px-12 rounded-lg min-w-[160px] text-center hover:bg-gray-200 transition-colors"
-                                >
-                                    {item}
-                                </Link>
-                            ))}
-                        </nav>
-                    </div>
-                </div>
-
-                {/* Bottom Section: CTA, Logo, Copyright */}
-                <div className="flex flex-col w-full relative z-10 mt-24">
-                    <div className="flex flex-col md:flex-row items-center justify-between w-full">
-                        {/* CTA Button - Aligned Left */}
-                        <div className="flex items-center gap-4 w-full md:w-auto mb-8 md:mb-0">
-                            <button className="bg-white text-black font-semibold py-3 px-8 rounded-full hover:bg-gray-200 transition-colors">
-                                Get a call
-                            </button>
-                            <div className="bg-[#ff5a26] rounded-full p-2 w-10 h-10 flex items-center justify-center transition-transform hover:translate-x-1 hover:-translate-y-1 cursor-pointer">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="black" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-                            </div>
-                        </div>
-
-                        {/* Logo - Aligned Right */}
-                        <div className="w-full md:w-auto flex justify-start md:justify-end">
-                            <Image
-                                src="/tdw-logo.svg"
-                                alt="The Designers World"
-                                width={200}
-                                height={50}
-                                className="object-contain"
-                            />
-                        </div>
-                    </div>
-
-                    {/* Copyright - Centered Below */}
-                    <div className="text-gray-500 text-sm text-center mt-12 md:mt-12">
-                        &copy; 2026 The Designers World
+                    {/* Right: Huge Button */}
+                    <div className="relative z-10 flex items-center md:items-start justify-end w-full md:w-auto mt-4 md:mt-0 pr-4 md:pr-0">
+                        <Link href="#" className="group bg-[#1a1a1a] text-white px-10 md:px-12 py-5 md:py-6 rounded-full flex items-center justify-center gap-4 hover:bg-black transition-all hover:scale-[1.02] shadow-xl w-full md:w-auto">
+                            <ArrowUpRight className="w-6 h-6 md:w-8 md:h-8 font-light text-white group-hover:rotate-12 transition-transform duration-300" strokeWidth={1.5} />
+                            <span className="text-2xl md:text-3xl font-normal tracking-wide">Get Started</span>
+                        </Link>
                     </div>
                 </div>
             </div>
+
+            <div className="max-w-[1440px] mx-auto px-4 md:px-8 relative z-10">
+                
+                <div className="flex flex-col w-full mb-16 md:mb-20">
+
+                    {/* Row 2: Avatars & Text block (Right-aligned under the button) */}
+                    <div className="flex justify-end w-full pt-6 md:pt-10">
+                        <div className="flex items-center gap-5">
+                            {/* Overlapping Faces */}
+                            <div className="flex -space-x-4">
+                                <img
+                                    className="w-12 h-12 md:w-14 md:h-14 border-2 border-white rounded-full object-cover z-[3]"
+                                    src="https://api.dicebear.com/7.x/notionists/svg?seed=Mia"
+                                    alt="Team member"
+                                />
+                                <img
+                                    className="w-12 h-12 md:w-14 md:h-14 border-2 border-white rounded-full object-cover z-[2]"
+                                    src="https://api.dicebear.com/7.x/notionists/svg?seed=Liam"
+                                    alt="Team member"
+                                />
+                                <img
+                                    className="w-12 h-12 md:w-14 md:h-14 border-2 border-white rounded-full object-cover z-[1]"
+                                    src="https://api.dicebear.com/7.x/notionists/svg?seed=Olivia"
+                                    alt="Team member"
+                                />
+                            </div>
+                            
+                            {/* Mini Text */}
+                            <p className="text-[#333] text-sm md:text-base leading-snug font-medium max-w-[280px]">
+                                We&apos;re always up for a coffee and a chat,<br />
+                                <Link href="#" className="text-[#8c6bf7] hover:underline">
+                                    Send us a message
+                                </Link>{" "}
+                                and we&apos;ll get back to you!.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                {/* Bottom Section: Social Links Grid */}
+                {/* Horizontal scrolling wrapper on mobile to prevent squishing */}
+                <div className="w-full overflow-x-auto pb-4 hide-scrollbar">
+                    <div className="flex flex-row md:grid md:grid-cols-6 min-w-[900px] md:min-w-full rounded-2xl md:rounded-[24px] overflow-hidden border border-black/10 bg-[#f8f9ff]/50 backdrop-blur-sm shadow-sm">
+                        {socialLinks.map((social, idx) => (
+                            <SocialCard key={social.name} social={social} isLast={idx === socialLinks.length - 1} />
+                        ))}
+                    </div>
+                </div>
+
+            </div>
+
+            {/* Global style to hide scrollbar just for the grid wrapper */}
+            <style jsx>{`
+                .hide-scrollbar::-webkit-scrollbar {
+                    display: none;
+                }
+                .hide-scrollbar {
+                    -ms-overflow-style: none; /* IE and Edge */
+                    scrollbar-width: none; /* Firefox */
+                }
+            `}</style>
+
         </footer>
     );
 }

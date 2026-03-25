@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="flex flex-col items-center justify-center min-h-[50vh] px-4 py-20 text-center w-full max-w-[1440px] mx-auto">
+        <section className="flex flex-col items-center justify-center min-h-[50vh] px-4 pt-20 pb-[calc(min(45vw,350px)+40px)] text-center w-full max-w-[1440px] mx-auto">
             <div className="relative w-full max-w-7xl flex items-center justify-center">
                 <Image
                     src="/heading.svg"

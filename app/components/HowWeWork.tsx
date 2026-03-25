@@ -1,0 +1,167 @@
+"use client";
+
+import React, { useRef, useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+// Attempt to import MorphSVG. If it fails due to trial/club membership, we will still have the animation structure in place.
+let MorphSVGPlugin: any;
+try {
+    MorphSVGPlugin = require("gsap/dist/MorphSVGPlugin").MorphSVGPlugin;
+} catch(e) {
+    console.warn("MorphSVGPlugin not found.");
+}
+
+import { workSteps } from "./data-how-we-work";
+
+export default function HowWeWork() {
+    const containerRef = useRef<HTMLElement>(null);
+    const pathRef = useRef<SVGPathElement>(null);
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            gsap.registerPlugin(ScrollTrigger);
+            if (MorphSVGPlugin) {
+                gsap.registerPlugin(MorphSVGPlugin);
+            }
+
+            let ctx = gsap.context(() => {
+                const tl = gsap.timeline({
+                    scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: "center center",
+                        end: "+=800%", // Long scroll distance
+                        pin: true,
+                        scrub: 0.5,
+                        onUpdate: (self) => {
+                            // The timeline has a total duration of 6.5
+                            // (0.5 hold) + (1 morph + 0.5 hold)*4
+                            const time = self.progress * 6.5;
+                            let index = 0;
+                            // Check the time checkpoints evenly split between the morph transitions
+                            if (time >= 5.5) index = 4;
+                            else if (time >= 4.0) index = 3;
+                            else if (time >= 2.5) index = 2;
+                            else if (time >= 1.0) index = 1;
+                            
+                            setActiveIndex(index);
+                        }
+                    }
+                });
+
+                // Setup the morphing timeline with pauses
+                if (MorphSVGPlugin) {
+                    // Start by holding the first shape
+                    tl.to({}, { duration: 0.5 });
+
+                    workSteps.forEach((step, i) => {
+                        if (i === 0) return; // skip initial
+                        
+                        // Morph to the next shape
+                        tl.to(pathRef.current, {
+                            morphSVG: step.svgPath,
+                            duration: 1,
+                            ease: "power1.inOut" // adds a slight easing to the morph instead of linear
+                        });
+                        
+                        // Pause/hold at the new shape
+                        tl.to({}, { duration: 0.5 });
+                    });
+                } else {
+                    // Fallback dummy timeline if no MorphSVG
+                     workSteps.forEach((step, i) => {
+                        if (i === 0) return;
+                        tl.to(pathRef.current, { opacity: 1, duration: 1.5 });
+                     });
+                }
+            }, containerRef);
+            
+            return () => ctx.revert();
+        }
+    }, []);
+
+    const activeStep = workSteps[activeIndex];
+
+    return (
+        <div className="w-full bg-[#fdf8f2]">
+            
+            {/* Header: Moved OUT of the pinning section so it scrolls away naturally before we hit center viewport! */}
+            <div className="w-full pt-20 pb-10 md:pt-32 md:pb-16">
+                <div className="text-center max-w-4xl mx-auto px-4">
+                    <h2 className="text-5xl md:text-7xl font-normal tracking-tight text-black mb-6 md:mb-10 leading-tight">
+                        How We Work
+                    </h2>
+                    <p className="text-lg md:text-2xl text-black max-w-2xl mx-auto leading-relaxed">
+                        The Designers World is built on a mix of creative thinking and clear
+                        systems, so projects feel inspiring but also stay under control.
+                    </p>
+                </div>
+            </div>
+
+            {/* Pinned Section */}
+            <section ref={containerRef} className="relative w-full flex justify-center h-screen overflow-hidden">
+                <div className="w-full max-w-screen-2xl px-4 flex flex-col items-center h-full justify-center">
+                    
+                    {/* Steps Layout (Perfectly centered vertically in the viewport) */}
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0 w-full max-w-7xl mx-auto relative mt-0">
+                        
+                        {/* Left: Title (Reverted back to slightly smaller text size) */}
+                        <div className="w-full md:w-1/4 flex justify-center md:justify-end z-20 h-[100px] md:h-[150px] items-center">
+                            <AnimatePresence mode="wait">
+                                <motion.h3 
+                                    key={activeStep.id + "-title"}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="text-5xl md:text-6xl lg:text-7xl font-normal text-black tracking-tight translate-x-0 md:translate-x-12"
+                                >
+                                    {activeStep.title}
+                                </motion.h3>
+                            </AnimatePresence>
+                        </div>
+
+                        {/* Center: Morphing Shape */}
+                        <div className="w-full md:w-2/4 flex justify-center relative z-0">
+                            <div className="w-[320px] h-[320px] md:w-[600px] md:h-[600px] text-[#f26522] flex justify-center items-center">
+                                <svg 
+                                    viewBox="0 0 380 380" 
+                                    className="w-full h-full fill-current" 
+                                    preserveAspectRatio="xMidYMid meet"
+                                >
+                                    <path ref={pathRef} d={workSteps[0].svgPath} />
+                                </svg>
+                            </div>
+                        </div>
+
+                        {/* Right: Description (Arrow side-by-side with text, text size reduced) */}
+                        <div className="w-full md:w-1/4 flex justify-center md:justify-start z-10 h-[100px] md:h-[150px] items-center md:-translate-x-12">
+                            <div className="flex flex-row md:flex-row justify-center items-center gap-4 md:gap-6 w-full max-w-[420px]">
+                                <div className="text-[#f26522] shrink-0">
+                                    <svg width="60" height="20" viewBox="0 0 60 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 10l56 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M48 2l10 8-10 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </div>
+                                <AnimatePresence mode="wait">
+                                    <motion.p 
+                                        key={activeStep.id + "-desc"}
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.3 }}
+                                        className="text-base md:text-lg lg:text-xl text-black leading-snug font-normal text-left"
+                                    >
+                                        {activeStep.description}
+                                    </motion.p>
+                                </AnimatePresence>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+}
