@@ -5,13 +5,13 @@ import Image from "next/image";
 
 export default function SocialMediaSpecialists() {
     return (
-        <section className="w-full relative bg-transparent py-16 md:py-24 overflow-hidden">
-            <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center md:items-stretch gap-12 lg:gap-16">
+        <section className="w-full relative bg-transparent py-12 md:py-24 overflow-hidden">
+            <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col-reverse md:flex-row items-center md:items-stretch gap-10 md:gap-12 lg:gap-16">
                 
                 {/* Left Side: Portrait Image Container */}
-                <div className="w-full md:w-5/12 lg:w-1/2 flex justify-center md:justify-start pl-0 md:pl-4">
+                <div className="w-full md:w-5/12 lg:w-1/2 flex justify-center md:justify-start pl-0 md:pl-4 mb-6 md:mb-0">
                     {/* Constrained slim portrait Box with 20px corners */}
-                    <div className="relative w-[85%] max-w-[380px] h-[95vh] rounded-[20px] overflow-hidden shadow-sm">
+                    <div className="relative w-full md:w-[85%] max-w-[380px] h-[60vh] md:h-[95vh] rounded-[20px] overflow-hidden shadow-sm">
                         <Image 
                             src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" 
                             alt="Office meeting room" 
@@ -22,7 +22,7 @@ export default function SocialMediaSpecialists() {
                 </div>
 
                 {/* Right Side: Content Box */}
-                <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col justify-center py-8">
+                <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col justify-center py-4 md:py-8 text-center md:text-left items-center md:items-start">
                     <div className="max-w-[650px]">
                         <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-bold tracking-tighter leading-[1] text-[#1a1a1a] mb-8 lowercase">
                             we are social media specialists.
