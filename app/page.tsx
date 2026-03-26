@@ -1,5 +1,4 @@
 import SocialMediaSpecialists from "./components/SocialMediaSpecialists";
-import WhoWeAre from "./components/WhoWeAre";
 import Hero from "./components/Hero";
 import ImpactSection from "./components/ImpactSection";
 import WhatWeDo from "./components/WhatWeDo";
@@ -13,7 +12,6 @@ export default function Home() {
       <Hero />
       <ImpactSection />
       <SocialMediaSpecialists />
-      <WhoWeAre />
       <WhatWeDo />
       <WhyBrandsWorkWithUs />
       <HowWeWork />

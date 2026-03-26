@@ -1,3 +1,8 @@
+# Who We Are Section (Component Reference)
+
+This file contains the legacy `WhoWeAre.tsx` component that was removed from the homepage for later reference.
+
+```tsx
 "use client";
 
 import React from "react";
@@ -174,3 +179,4 @@ export default function WhoWeAre() {
         </section>
     );
 }
+```
