@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ArrowUpRight, Camera as Instagram, Aperture as Dribbble, Bookmark, Briefcase as Linkedin } from "lucide-react";
 import InteractiveDotGrid from "./InteractiveDotGrid";
 import { motion, useSpring, useMotionValue } from "framer-motion";
+import GetStartedModal from "./GetStartedModal";
 
 function SocialCard({ social, isLast }: { social: any, isLast: boolean }) {
     const cardRef = useRef<HTMLAnchorElement>(null);
@@ -71,6 +72,7 @@ function SocialCard({ social, isLast }: { social: any, isLast: boolean }) {
 }
 
 export default function Footer() {
+    const [isGetStartedOpen, setIsGetStartedOpen] = useState(false);
 
     // Social links mimicking the design attachment
     const socialLinks = [
@@ -143,10 +145,13 @@ export default function Footer() {
 
                     {/* Right: Huge Button */}
                     <div className="relative z-10 flex items-center md:items-start justify-end w-full md:w-auto mt-4 md:mt-0 pr-4 md:pr-0">
-                        <Link href="#" className="group bg-[#1a1a1a] text-white px-10 md:px-12 py-5 md:py-6 rounded-full flex items-center justify-center gap-4 hover:bg-black transition-all hover:scale-[1.02] shadow-xl w-full md:w-auto">
+                        <button 
+                            onClick={() => setIsGetStartedOpen(true)}
+                            className="group bg-[#1a1a1a] text-white px-10 md:px-12 py-5 md:py-6 rounded-full flex items-center justify-center gap-4 hover:bg-black transition-all hover:scale-[1.02] shadow-xl w-full md:w-auto"
+                        >
                             <ArrowUpRight className="w-6 h-6 md:w-8 md:h-8 font-light text-white group-hover:rotate-12 transition-transform duration-300" strokeWidth={1.5} />
                             <span className="text-2xl md:text-3xl font-normal tracking-wide">Get Started</span>
-                        </Link>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -213,6 +218,8 @@ export default function Footer() {
                 }
             `}</style>
 
+            {/* Get Started Modal Overlay */}
+            <GetStartedModal isOpen={isGetStartedOpen} onClose={() => setIsGetStartedOpen(false)} />
         </footer>
     );
 }
