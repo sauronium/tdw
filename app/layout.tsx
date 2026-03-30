@@ -1,17 +1,32 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const hagrid = localFont({
+  src: [
+    { path: "../public/HAGRID-REGULAR-TRIAL.ttf", weight: "300", style: "normal" },
+    { path: "../public/HAGRID-REGULAR-TRIAL.ttf", weight: "400", style: "normal" },
+    { path: "../public/HAGRID-REGULAR-TRIAL.ttf", weight: "500", style: "normal" },
+    { path: "../public/HAGRID-REGULAR-TRIAL.ttf", weight: "700", style: "normal" },
+    { path: "../public/HAGRID-REGULAR-TRIAL.ttf", weight: "800", style: "normal" }
+  ],
+  variable: "--font-hagrid",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const inter = localFont({
+  src: [
+    {
+      path: '../public/Inter-VariableFont_opsz,wght.ttf',
+      style: 'normal',
+    },
+    {
+      path: '../public/Inter-Italic-VariableFont_opsz,wght.ttf',
+      style: 'italic',
+    },
+  ],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -28,9 +43,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${hagrid.variable}`}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`antialiased bg-background text-foreground`}
       >
         <Header />
         <main>

@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
+import { whatWeDoHeading, serviceCardStyles } from "@/site-data/homepage/what-we-do";
 
 interface Service {
     number: string;
@@ -93,12 +94,14 @@ const Card: React.FC<CardProps> = ({
                     {/* Main Text Content - Moved up */}
                     <div className="flex flex-col md:flex-row justify-between items-start w-full h-full">
                         <div className="max-w-4xl flex flex-col justify-start pointer-events-auto mt-0">
-                            <h3 className="text-5xl md:text-8xl font-normal tracking-tight leading-[1] mb-6">
-                                {title}
-                            </h3>
-                            <p className="text-xl md:text-3xl font-light opacity-90 mb-12 max-w-xl leading-snug">
-                                {description}
-                            </p>
+                            <h3 className="text-5xl md:text-8xl font-normal tracking-tight leading-[1] mb-6"
+                        style={{ fontFamily: serviceCardStyles.title.fontFamily }}
+                    >
+                        {title}
+                    </h3>
+                    <p className="text-xl md:text-3xl font-light opacity-90 mb-12 max-w-xl leading-snug">
+                        {description}
+                    </p>
                         </div>
                     </div>
                 </div>
@@ -145,7 +148,9 @@ export default function WhatWeDo() {
         <section className="bg-[#fdf8f2]">
             {/* Title Section - Scrolls away normally */}
             <div className="w-full pt-32 pb-20 flex flex-col items-center text-center px-4">
-                <h2 className="text-6xl md:text-8xl font-medium tracking-tight text-black leading-tight">
+                <h2 className="text-6xl md:text-8xl font-medium tracking-tight text-black leading-tight"
+                    style={{ fontFamily: whatWeDoHeading.fontFamily }}
+                >
                     What We Do
                 </h2>
             </div>
@@ -155,11 +160,11 @@ export default function WhatWeDo() {
                 {services.map((service, index) => {
                     // Last card shouldn't scale down, it should just scroll.
                     // Previous cards scale down significantly to "fall back".
-                    // index 0 -> scales to 0.85
-                    // index 1 -> scales to 0.90
-                    // index 2 -> scales to 0.95
+                    // index 0 -> scales to 0.70
+                    // index 1 -> scales to 0.80
+                    // index 2 -> scales to 0.90
                     // index 3 -> stays 1
-                    const targetScale = 1 - (services.length - 1 - index) * 0.05;
+                    const targetScale = 1 - (services.length - 1 - index) * 0.1;
                     return (
                         <Card
                             key={index}

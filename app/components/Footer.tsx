@@ -7,6 +7,7 @@ import { ArrowUpRight, Camera as Instagram, Aperture as Dribbble, Bookmark, Brie
 import InteractiveDotGrid from "./InteractiveDotGrid";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import GetStartedModal from "./GetStartedModal";
+import { footerCTA } from "@/site-data/shared/footer";
 
 function SocialCard({ social, isLast }: { social: any, isLast: boolean }) {
     const cardRef = useRef<HTMLAnchorElement>(null);
@@ -138,7 +139,10 @@ export default function Footer() {
                 <div className="relative z-10 w-full max-w-[1440px] px-0 md:px-4 flex flex-col md:flex-row justify-between items-start md:items-center">
                     {/* Left: Let's Jam */}
                     <div className="flex flex-col relative z-10">
-                        <h2 className="text-[5rem] md:text-[8rem] font-medium tracking-tight text-[#1a1a1a] leading-none mb-10 md:mb-0">
+                        <h2
+                            className="text-[5rem] md:text-[8rem] font-medium tracking-tight text-[#1a1a1a] leading-none mb-10 md:mb-0"
+                            style={{ fontFamily: footerCTA.headlineFontFamily }}
+                        >
                             Let&apos;s Jam.
                         </h2>
                     </div>

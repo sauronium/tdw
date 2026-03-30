@@ -13,6 +13,7 @@ try {
 }
 
 import { workSteps } from "./data-how-we-work";
+import { howWeWorkHeading, howWeWorkStepText } from "@/site-data/homepage/how-we-work";
 
 export default function HowWeWork() {
     const containerRef = useRef<HTMLElement>(null);
@@ -39,47 +40,43 @@ export default function HowWeWork() {
                             // (0.5 hold) + (1 morph + 0.5 hold)*4
                             const time = self.progress * 6.5;
                             let index = 0;
-                            // Check the time checkpoints evenly split between the morph transitions
-                            if (time >= 5.5) index = 4;
-                            else if (time >= 4.0) index = 3;
-                            else if (time >= 2.5) index = 2;
-                            else if (time >= 1.0) index = 1;
+                            
+                            // Trigger the state change at the start of original morph phases
+                            if (time >= 5.0) index = 4;
+                            else if (time >= 3.5) index = 3;
+                            else if (time >= 2.0) index = 2;
+                            else if (time >= 0.5) index = 1;
                             
                             setActiveIndex(index);
                         }
                     }
                 });
 
-                // Setup the morphing timeline with pauses
-                if (MorphSVGPlugin) {
-                    // Start by holding the first shape
+                // Create dummy timeline steps to provide correct scroll distance
+                tl.to({}, { duration: 0.5 });
+                workSteps.forEach((step, i) => {
+                    if (i === 0) return;
+                    tl.to({}, { duration: 1 });
                     tl.to({}, { duration: 0.5 });
-
-                    workSteps.forEach((step, i) => {
-                        if (i === 0) return; // skip initial
-                        
-                        // Morph to the next shape
-                        tl.to(pathRef.current, {
-                            morphSVG: step.svgPath,
-                            duration: 1,
-                            ease: "power1.inOut" // adds a slight easing to the morph instead of linear
-                        });
-                        
-                        // Pause/hold at the new shape
-                        tl.to({}, { duration: 0.5 });
-                    });
-                } else {
-                    // Fallback dummy timeline if no MorphSVG
-                     workSteps.forEach((step, i) => {
-                        if (i === 0) return;
-                        tl.to(pathRef.current, { opacity: 1, duration: 1.5 });
-                     });
-                }
+                });
+                
             }, containerRef);
             
             return () => ctx.revert();
         }
     }, []);
+
+    // Independent Morph Animation - Always completes shape when activeIndex changes
+    useEffect(() => {
+        if (typeof window !== "undefined" && pathRef.current && MorphSVGPlugin) {
+            gsap.to(pathRef.current, {
+                morphSVG: workSteps[activeIndex].svgPath,
+                duration: 0.8,
+                ease: "power2.out",
+                overwrite: "auto"
+            });
+        }
+    }, [activeIndex]);
 
     const activeStep = workSteps[activeIndex];
 
@@ -89,7 +86,9 @@ export default function HowWeWork() {
             {/* Header: Moved OUT of the pinning section so it scrolls away naturally before we hit center viewport! */}
             <div className="w-full pt-20 pb-10 md:pt-32 md:pb-16">
                 <div className="text-center max-w-4xl mx-auto px-4">
-                    <h2 className="text-5xl md:text-7xl font-normal tracking-tight text-black mb-6 md:mb-10 leading-tight">
+                    <h2 className="text-5xl md:text-7xl font-normal tracking-tight text-black mb-6 md:mb-10 leading-tight"
+                        style={{ fontFamily: howWeWorkHeading.titleFontFamily }}
+                    >
                         How We Work
                     </h2>
                     <p className="text-lg md:text-2xl text-black max-w-2xl mx-auto leading-relaxed">
@@ -116,6 +115,7 @@ export default function HowWeWork() {
                                     exit={{ opacity: 0, y: -20 }}
                                     transition={{ duration: 0.3 }}
                                     className="text-5xl md:text-6xl lg:text-7xl font-normal text-black tracking-tight translate-x-0 md:translate-x-12"
+                                    style={{ fontFamily: howWeWorkStepText.title.fontFamily }}
                                 >
                                     {activeStep.title}
                                 </motion.h3>

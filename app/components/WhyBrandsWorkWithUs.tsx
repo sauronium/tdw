@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { whyBrandsHeading } from "@/site-data/homepage/why-brands-work-with-us";
 
 const stats = [
     {
@@ -46,7 +47,9 @@ export default function WhyBrandsWorkWithUs() {
             <div className="w-[85vw] flex flex-col items-center">
                 {/* Header */}
                 <div className="text-center max-w-4xl mb-10">
-                    <h2 className="text-6xl md:text-8xl font-medium tracking-tight text-black mb-8 leading-tight">
+                    <h2 className="text-6xl md:text-8xl font-medium tracking-tight text-black mb-8 leading-tight"
+                        style={{ fontFamily: whyBrandsHeading.titleFontFamily }}
+                    >
                         Why Brands <br /> Work With Us
                     </h2>
                     <p className="text-xl md:text-2xl text-gray-800 max-w-2xl mx-auto leading-relaxed">

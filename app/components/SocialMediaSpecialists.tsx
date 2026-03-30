@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { socialMediaCopy } from "@/site-data/homepage/social-media-specialists";
 
 export default function SocialMediaSpecialists() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -120,8 +121,11 @@ export default function SocialMediaSpecialists() {
                     {/* Right Side: Content Box */}
                     <div className="w-full md:w-7/12 lg:w-1/2 flex flex-col justify-center py-4 md:py-8 text-center md:text-left items-center md:items-start relative z-10 lg:pl-10">
                         <div className="max-w-[650px]">
-                            <h2 className="text-5xl md:text-6xl lg:text-[4.5rem] font-bold tracking-tighter leading-[1] text-[#1a1a1a] mb-8 lowercase">
-                                we are social media specialists.
+                            <h2
+                                className="text-5xl md:text-6xl lg:text-[4.5rem] font-bold tracking-tighter leading-[1] text-[#1a1a1a] mb-8 lowercase"
+                                style={{ fontFamily: socialMediaCopy.heading.fontFamily }}
+                            >
+                                {socialMediaCopy.heading.text}
                             </h2>
                             
                             <p className="text-base md:text-[17px] text-[#222] leading-[1.6] md:leading-relaxed font-medium">

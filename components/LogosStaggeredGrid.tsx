@@ -4,6 +4,7 @@ import React from "react";
 import { StaggeredGrid, BentoItem } from "@/components/ui/staggered-grid";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { Code as Github } from "lucide-react";
+import { clientsHeading, clientLogos, clientsGridConfig } from "@/site-data/homepage/our-clients";
 
 export default function LogosStaggeredGrid() {
   // Use abstract images via unsplash or placehold for shapes
@@ -17,8 +18,11 @@ export default function LogosStaggeredGrid() {
       <section className="w-full relative bg-[#fdf8f2] pt-20 flex flex-col items-center overflow-hidden">
         {/* Simple Section Heading */}
         <div className="text-center max-w-4xl mx-auto px-4 w-full">
-            <h2 className="text-5xl md:text-7xl font-normal tracking-tight text-black leading-tight">
-                Our Clients
+            <h2
+                className="text-5xl md:text-7xl font-normal tracking-tight text-black leading-tight"
+                style={{ fontFamily: clientsHeading.fontFamily }}
+            >
+                {clientsHeading.text}
             </h2>
         </div>
 
