@@ -86,7 +86,8 @@ export default function HowWeWork() {
             {/* Header: Moved OUT of the pinning section so it scrolls away naturally before we hit center viewport! */}
             <div className="w-full pt-20 pb-10 md:pt-32 md:pb-16">
                 <div className="text-center max-w-4xl mx-auto px-4">
-                    <h2 className="text-5xl md:text-7xl font-normal tracking-tight text-black mb-6 md:mb-10 leading-tight"
+                    <h2
+                        className="text-5xl md:text-7xl font-normal tracking-tight text-black mb-6 md:mb-10 leading-tight"
                         style={{ fontFamily: howWeWorkHeading.titleFontFamily }}
                     >
                         How We Work

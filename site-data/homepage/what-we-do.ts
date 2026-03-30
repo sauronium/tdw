@@ -17,6 +17,8 @@ export interface ServiceCard {
   backgroundColor: string;
   /** Optional deep-link for the "Know more" button */
   href: string;
+  /** Image URL for the placeholder card */
+  image: string;
 }
 
 // ── Service Cards ─────────────────────────────────────────────
@@ -29,6 +31,7 @@ export const services: ServiceCard[] = [
     backgroundTailwind: "bg-[#0b1221]",
     backgroundColor: "#0b1221",
     href: "/services/web-design",
+    image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80",
   },
   {
     number: "02",
@@ -38,6 +41,7 @@ export const services: ServiceCard[] = [
     backgroundTailwind: "bg-[#ff5a26]",
     backgroundColor: "#ff5a26",
     href: "/services/digital-marketing",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80",
   },
   {
     number: "03",
@@ -46,6 +50,7 @@ export const services: ServiceCard[] = [
     backgroundTailwind: "bg-[#008ff5]",
     backgroundColor: "#008ff5",
     href: "/services/social-media",
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80",
   },
   {
     number: "04",
@@ -55,6 +60,7 @@ export const services: ServiceCard[] = [
     backgroundTailwind: "bg-[#6bd4a1]",
     backgroundColor: "#6bd4a1",
     href: "/services/brand-strategy",
+    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
   },
 ];
 

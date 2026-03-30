@@ -2,43 +2,9 @@
 
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
-import { whatWeDoHeading, serviceCardStyles } from "@/site-data/homepage/what-we-do";
+import { whatWeDoHeading, serviceCardStyles, services, ServiceCard } from "@/site-data/homepage/what-we-do";
 
-interface Service {
-    number: string;
-    title: string;
-    description: string;
-    color: string;
-}
-
-const services: Service[] = [
-    {
-        number: "01",
-        title: "Web Design & Development",
-        description: "Creating stunning, high-performance websites that capture your brand's essence and convert visitors into customers.",
-        color: "bg-[#0b1221]", // Dark
-    },
-    {
-        number: "02",
-        title: "Digital Marketing",
-        description: "Data-driven strategies to boost your online presence, drive traffic, and generate qualified leads for your business.",
-        color: "bg-[#ff5a26]", // Orange
-    },
-    {
-        number: "03",
-        title: "Social Media Management",
-        description: "Campaigns that move the needle, not just the metrics.",
-        color: "bg-[#008ff5]", // Blue
-    },
-    {
-        number: "04",
-        title: "Brand Strategy",
-        description: "Defining your unique voice and position in the market to build a lasting connection with your audience.",
-        color: "bg-[#6bd4a1]", // Green
-    },
-];
-
-interface CardProps extends Service {
+interface CardProps extends ServiceCard {
     i: number;
     progress: MotionValue<number>;
     range: [number, number];
@@ -50,7 +16,8 @@ const Card: React.FC<CardProps> = ({
     title,
     description,
     number,
-    color,
+    backgroundTailwind,
+    image,
     progress,
     range,
     targetScale,
@@ -73,7 +40,7 @@ const Card: React.FC<CardProps> = ({
                     scale,
                     top: `calc(5vh)`,
                 }}
-                className={`relative flex flex-col justify-between w-[90vw] h-[85vh] rounded-[40px] p-6 md:p-10 text-white shadow-xl origin-top ${color} overflow-hidden`}
+                className={`relative flex flex-col justify-between w-[90vw] h-[85vh] rounded-[40px] p-6 md:p-10 text-white shadow-xl origin-top ${backgroundTailwind} overflow-hidden`}
             >
                 {/* Number - Absolute Top Right */}
                 <div className="absolute top-6 right-6 md:top-10 md:right-10 z-30">
@@ -106,9 +73,13 @@ const Card: React.FC<CardProps> = ({
                     </div>
                 </div>
 
-                {/* Image Placeholder - Right Side, Animated */}
-                <div className="hidden md:block absolute right-12 bottom-12 lg:right-20 lg:bottom-16 w-[160px] lg:w-[240px] h-[224px] lg:h-[320px] bg-[#fcfcfc] rounded-[30px] shadow-sm rotate-[6deg] pointer-events-none z-10">
-                    {/* Solid card look */}
+                {/* Image Illustration - Right Side */}
+                <div className="hidden md:block absolute right-12 bottom-12 lg:right-20 lg:bottom-16 w-[180px] lg:w-[320px] h-[260px] lg:h-[420px] rounded-[30px] shadow-sm rotate-[6deg] pointer-events-none z-10 overflow-hidden bg-black/10 border-4 border-white/10">
+                    <img 
+                        src={image} 
+                        alt={title}
+                        className="w-full h-full object-cover"
+                    />
                 </div>
 
                 {/* Floating Button - Absolute Positioned */}
