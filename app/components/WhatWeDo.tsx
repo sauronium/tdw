@@ -60,21 +60,28 @@ const Card: React.FC<CardProps> = ({
 
                     {/* Main Text Content - Moved up */}
                     <div className="flex flex-col md:flex-row justify-between items-start w-full h-full">
-                        <div className="max-w-4xl flex flex-col justify-start pointer-events-auto mt-0">
-                            <h3 className="text-5xl md:text-8xl font-normal tracking-tight leading-[1] mb-6"
-                        style={{ fontFamily: serviceCardStyles.title.fontFamily }}
-                    >
-                        {title}
-                    </h3>
-                    <p className="text-xl md:text-3xl font-light opacity-90 mb-12 max-w-xl leading-snug">
-                        {description}
-                    </p>
+                        <div className="max-w-3xl lg:max-w-4xl flex flex-col justify-start pointer-events-auto mt-0">
+                            <h3 className="text-4xl md:text-6xl lg:text-[76px] font-normal tracking-tight leading-[0.95] md:leading-[1] mb-5 md:mb-6"
+                                style={{ fontFamily: serviceCardStyles.title.fontFamily }}
+                            >
+                                {title}
+                            </h3>
+                            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light opacity-90 mb-8 max-w-sm md:max-w-md lg:max-w-xl leading-relaxed">
+                                {description}
+                            </p>
                         </div>
                     </div>
                 </div>
 
                 {/* Image Illustration - Right Side */}
-                <div className="hidden md:block absolute right-12 bottom-12 lg:right-20 lg:bottom-16 w-[180px] lg:w-[320px] h-[260px] lg:h-[420px] rounded-[30px] shadow-sm rotate-[6deg] pointer-events-none z-10 overflow-hidden bg-black/10 border-4 border-white/10">
+                <div 
+                    className={`hidden md:block absolute right-8 bottom-8 lg:right-16 lg:bottom-12 w-[180px] lg:w-[260px] xl:w-[300px] aspect-[3/4] rounded-[30px] shadow-sm pointer-events-none z-10 overflow-hidden bg-black/10 border-4 md:border-8 border-black/10 ${
+                        i % 4 === 0 ? '-rotate-[6deg]' : 
+                        i % 4 === 1 ? 'rotate-[4deg]' : 
+                        i % 4 === 2 ? '-rotate-[8deg]' : 
+                        'rotate-[5deg]'
+                    }`}
+                >
                     <img 
                         src={image} 
                         alt={title}
