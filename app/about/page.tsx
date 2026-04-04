@@ -1,4 +1,6 @@
 import DifferentSection from "./components/DifferentSection";
+import TeamSection from "./components/TeamSection";
+import AboutMarquee from "./components/AboutMarquee";
 
 export const metadata = {
     title: "About Us | The Designers World",
@@ -22,6 +24,12 @@ export default function AboutPage() {
 
             {/* The Requested Section */}
             <DifferentSection />
+
+            {/* Staggered Grid Member Card Section */}
+            <TeamSection />
+
+            {/* Marquee strip — before footer */}
+            <AboutMarquee />
 
         </div>
     );

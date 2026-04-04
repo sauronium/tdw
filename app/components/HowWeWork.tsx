@@ -30,9 +30,10 @@ export default function HowWeWork() {
             let ctx = gsap.context(() => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
+                        markers:true,
                         trigger: containerRef.current,
                         start: "center center",
-                        end: "+=800%", // Long scroll distance
+                        end: "+=400%", // Long scroll distance
                         pin: true,
                         scrub: 0.5,
                         onUpdate: (self) => {
@@ -74,6 +75,7 @@ export default function HowWeWork() {
                 duration: 0.8,
                 ease: "power2.out",
                 overwrite: "auto"
+        
             });
         }
     }, [activeIndex]);
@@ -125,7 +127,7 @@ export default function HowWeWork() {
 
                         {/* Center: Morphing Shape */}
                         <div className="w-full md:w-2/4 flex justify-center relative z-0">
-                            <div className="w-[320px] h-[320px] md:w-[600px] md:h-[600px] text-[#f26522] flex justify-center items-center">
+                            <div className="w-[256px] h-[256px] md:w-[480px] md:h-[480px] text-[#f26522] flex justify-center items-center">
                                 <svg 
                                     viewBox="0 0 380 380" 
                                     className="w-full h-full fill-current" 
