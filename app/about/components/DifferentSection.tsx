@@ -13,21 +13,24 @@ const TrainCard = ({
     index: number;
     progress: MotionValue<number>;
 }) => {
-    // 2. The Delay: Each subsequent card starts its journey slightly later (6% later per card)
-    const delay = index * 0.06;
+    // 2. The Delay: Reduced the gap to roughly 8.5% (a 30% decrease from the previous 12%)
+    const delay = index * 0.085;
 
-    // 3. The Timeline: Maps exactly when this specific card hits the 5 checkpoints of the curve
+    // 3. The Timeline: Slightly relaxed the travel duration so they move a bit more naturally 
+    // without cutting off the last cards.
     const inputPoints = [
-        0.1 + delay,  // Start (Off-screen Bottom Right)
-        0.3 + delay,  // Quarter way (Moving up and left)
-        0.5 + delay,  // Apex (Center screen)
-        0.7 + delay,  // Three-quarters (Moving down and left)
-        0.9 + delay   // End (Off-screen Bottom Left)
+        0.05 + delay,  // Start (Off-screen Bottom Right)
+        0.22 + delay,  // Quarter way (Moving up and left)
+        0.39 + delay,  // Apex (Center screen)
+        0.56 + delay,  // Three-quarters (Moving down and left)
+        0.73 + delay   // End (Off-screen Bottom Left)
     ];
 
-    // 4. The Path: Identical for every card, creating the "train track"
-    const x = useTransform(progress, inputPoints, ["120vw", "50vw", "0vw", "-50vw", "-120vw"]);
-    const y = useTransform(progress, inputPoints, ["100vh", "20vh", "-5vh", "20vh", "100vh"]);
+    // Adjusted to curve over the left side of the screen and overlap the title
+    const x = useTransform(progress, inputPoints, ["120vw", "40vw", "-15vw", "-60vw", "-120vw"]);
+    
+    // Propel the apex higher upwards (-25vh) so it physically crosses over the static title
+    const y = useTransform(progress, inputPoints, ["100vh", "15vh", "-25vh", "20vh", "100vh"]);
     
     // The rotation dynamically matches the tangent of the curve to steer the buggy
     const rotate = useTransform(progress, inputPoints, [-45, -20, 0, 20, 45]);
@@ -65,11 +68,8 @@ export default function DifferentSection() {
         restDelta: 0.001
     });
 
-    const titleY = useTransform(smoothProgress, [0, 0.15], ["0%", "-200%"]);
-    const titleOpacity = useTransform(smoothProgress, [0, 0.1], [1, 0]);
+    // The fade effect / titleY have been removed so the title stays visible without fading
 
-    // Note: I removed the static tailwind 'rotate' and 'translateY' properties from the data 
-    // because the dynamic train track rotation handles steering them around the corner perfectly.
     const cards = [
         {
             title: "Design + development in one team.",
@@ -95,21 +95,18 @@ export default function DifferentSection() {
 
     return (
         <section ref={containerRef} className="h-[500vh] relative bg-[#fdf8f2]">
-            <div className="sticky top-0 h-screen overflow-hidden flex flex-col justify-center px-4 md:px-8 w-full">
+            {/* Added pt-24 and removed justify-center so the title sits closer to the top */}
+            <div className="sticky top-0 h-screen overflow-hidden flex flex-col justify-start pt-24 px-4 md:px-8 w-full">
 
-                {/* Main Heading */}
-                <motion.div
-                    style={{ y: titleY, opacity: titleOpacity }}
-                    className="text-center mb-16 md:mb-24 mt-[-5vh] absolute w-full inset-x-0 top-[20vh] md:top-[25vh] z-0"
-                >
-                    <h2 className="text-6xl md:text-7xl lg:text-[100px] font-medium tracking-tight text-[#171717] leading-[1.1]">
+                {/* Main Heading - Left-aligned, no scroll, statically anchored behind the cards */}
+                <div className="text-left mb-0 md:mb-4 relative z-0">
+                    <h2 className="text-5xl md:text-7xl lg:text-[100px] font-medium tracking-tight text-[#171717] leading-[1.1]">
                         What Makes<br />us Different
                     </h2>
-                </motion.div>
+                </div>
 
                 {/* Train Track Container */}
-                {/* Changed to flex-center and absolute children so they all share the exact same spatial origin */}
-                <div className="relative w-full h-[500px] flex items-center justify-center overflow-visible">
+                <div className="relative w-full h-[500px] flex items-center justify-center overflow-visible mt-8">
                     {cards.map((card, idx) => (
                         <TrainCard 
                             key={idx} 

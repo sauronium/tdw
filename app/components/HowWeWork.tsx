@@ -30,7 +30,7 @@ export default function HowWeWork() {
             let ctx = gsap.context(() => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
-                        markers:true,
+                        //markers:true,
                         trigger: containerRef.current,
                         start: "center center",
                         end: "+=400%", // Long scroll distance

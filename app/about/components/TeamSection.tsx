@@ -86,7 +86,7 @@ export default function TeamSection() {
     const isInView = useInView(sectionRef, { once: true, margin: "-150px" }); // Trigger when section is cleanly in view
 
     return (
-        <section ref={sectionRef} className="w-full py-24 md:py-32 bg-[#fdf8f2] px-4 md:px-8 overflow-hidden">
+        <section ref={sectionRef} className="w-full pt-24 md:pt-32 pb-8 bg-[#fdf8f2] px-4 md:px-8 overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 
                 <div className="mb-16 md:mb-32 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
