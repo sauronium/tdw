@@ -126,7 +126,7 @@ const NavItem = ({
   const itemRef = useRef<HTMLDivElement>(null);
   const active = isActive(item.href);
 
-  const bgClass = item.bgClass || 'bg-white border border-gray-100';
+  const bgClass = item.bgClass || 'bg-white';
   const textClass = item.textClass || 'text-gray-900';
   const activeBgClass = item.activeBgClass || 'bg-black';
   const activeTextClass = item.activeTextClass || 'text-white';
@@ -341,7 +341,7 @@ export default function Header() {
               <nav className="mt-3 w-full pl-8">
                 <ul className="flex flex-col justify-end items-end gap-1">
                   {navItems.map((item, index) => {
-                    const bgClass = item.bgClass || 'bg-white border border-gray-100';
+                    const bgClass = item.bgClass || 'bg-white';
                     const textClass = item.textClass || 'text-gray-900';
                     const activeBgClass = item.activeBgClass || 'bg-black';
                     const activeTextClass = item.activeTextClass || 'text-white';
