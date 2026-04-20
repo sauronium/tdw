@@ -179,7 +179,7 @@ export const servicesData: Record<string, ServiceData> = {
   "graphic-design": {
     slug: "graphic-design",
     heroBgColor: "#ff5a26",
-    heroHeadline: "graphic design agency\nfor creative teams.",
+    heroHeadline: "Professional Graphic Design Services That\nMake Your Brand Unforgettable.",
     cards: [
       { id: "1", backgroundColor: "#000000", image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80", video: "https://www.w3schools.com/html/mov_bbb.mp4" },
       { id: "2", backgroundColor: "#ef6c57", image: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=600&q=80" },
@@ -188,16 +188,139 @@ export const servicesData: Record<string, ServiceData> = {
     ],
     servicesIncluded: [
        {
-        id: "brand-identity",
-        title: "Brand\nIdentity",
+        id: "logo-design",
+        title: "Logo Design &\nBrand Identity",
         items: [
-          "We design memorable brand identities that resonate with your target audience and stand out in the market.",
-          "Our process includes logo design, color typography, and comprehensive brand guidelines.",
-          "We ensure your brand tells a compelling story across all touchpoints."
+          "We design custom logos that capture the essence of your brand — memorable, scalable, and versatile.",
+          "Our brand identity design process includes colour palette development, typography selection, iconography, and visual style guidelines.",
+          "Every logo we create goes through multiple concept rounds, refinements, and client feedback cycles."
         ],
         image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80"
+      },
+       {
+        id: "social-media",
+        title: "Social Media Graphics\n& Content Design",
+        items: [
+          "We design scroll-stopping social media graphics — tailored for Instagram, Facebook, LinkedIn, and more.",
+          "Every social media design is created with platform-specific dimensions, safe zones, and visual best practices.",
+          "Our designs are optimised for both organic reach and paid social campaigns."
+        ],
+        image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80"
+      },
+       {
+        id: "marketing-creatives",
+        title: "Marketing &\nAdvertising Creatives",
+        items: [
+          "We create high-converting marketing creatives for digital ads, email headers, and landing page graphics.",
+          "Every advertising creative is designed with A/B testing in mind to optimise performance.",
+          "We combine persuasive copywriting with strategic visual design to drive measurable results."
+        ],
+        image: "https://images.unsplash.com/photo-1611162618071-b39a2ec055ce?auto=format&fit=crop&w=800&q=80"
+      },
+       {
+        id: "print-design",
+        title: "Print Design &\nMarketing Collateral",
+        items: [
+          "We design premium print materials with print-ready files that ensure sharp, professional output every time.",
+          "Every print design is created in CMYK colour mode with proper bleed, trim marks, and resolution settings.",
+          "We handle both single-page designs and multi-page layout work, including paper stock recommendations."
+        ],
+        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
       }
-    ]
+    ],
+    process: {
+      label: "Process",
+      heading: "How We Design Visuals That Drive Results.",
+      subheading: "A structured graphic design process — from creative brief to final delivery.",
+      steps: [
+        {
+          id: "discovery",
+          number: "1.",
+          title: "Discovery",
+          description: "Every graphic design project begins with a detailed creative brief to ensure every visual decision is strategic and informed."
+        },
+        {
+          id: "research",
+          number: "2.",
+          title: "Research & Moodboarding",
+          description: "We analyse industry trends, competitor visual strategies, and audience preferences to create a mood board."
+        },
+        {
+          id: "concept",
+          number: "3.",
+          title: "Concept Development",
+          description: "Our designers develop multiple initial concepts based on the approved creative direction."
+        },
+        {
+          id: "execution",
+          number: "4.",
+          title: "Design Execution",
+          description: "Once the concept is finalised, we move into full design production, crafting every element with pixel-perfect precision."
+        },
+        {
+          id: "refinement",
+          number: "5.",
+          title: "Feedback & Refinement",
+          description: "We share the work with you for review and gather detailed feedback to refine everything until it's exactly right."
+        },
+        {
+          id: "delivery",
+          number: "6.",
+          title: "Final Delivery",
+          description: "All approved designs are exported in print-ready and web-optimised formats, organised in a structured file package."
+        }
+      ]
+    },
+    techStack: [
+      { id: "photoshop", name: "Adobe Photoshop" },
+      { id: "illustrator", name: "Adobe Illustrator" },
+      { id: "indesign", name: "Adobe InDesign" },
+      { id: "aftereffects", name: "Adobe After Effects" },
+      { id: "premiere", name: "Adobe Premiere Pro" },
+      { id: "figma", name: "Figma" },
+      { id: "canva", name: "Canva Pro" },
+      { id: "corel", name: "CorelDRAW" },
+      { id: "blender", name: "Blender" },
+      { id: "procreate", name: "Procreate" }
+    ],
+    deliverables: {
+      label: "Deliverables",
+      heading: "What You Get.",
+      subheading: "Every creative asset you need — designed, refined, and delivered in production-ready formats.",
+      items: [
+        {
+          id: "logo",
+          title: "Custom Logo & Brand Mark",
+          description: "Professionally designed custom logo with all variations delivered in vector and raster formats ready for web and print."
+        },
+        {
+          id: "identity",
+          title: "Complete Brand Identity System",
+          description: "A cohesive visual identity including colour palette, typography hierarchy, iconography, and comprehensive brand guidelines."
+        },
+        {
+          id: "social-kit",
+          title: "Social Media Design Kit",
+          description: "A complete set of branded social media templates sized and optimised for every major platform."
+        },
+        {
+          id: "print-materials",
+          title: "Print-Ready Marketing Materials",
+          description: "Print designs delivered in CMYK with proper bleed, trim marks, and high resolution ready for professional printing."
+        },
+        {
+          id: "ad-creatives",
+          title: "Advertising & Campaign Creatives",
+          description: "A full set of digital advertising creatives in multiple sizes and variations for A/B testing and optimisation."
+        },
+        {
+          id: "packaging",
+          title: "Packaging & Label Design",
+          description: "Product packaging delivered with accurate die-line files, print specifications, and colour-separated artwork."
+        }
+      ]
+    },
+    ctaText: "Let's Design Something\nYour Audience Can't Look Away From."
   },
   "motion-graphics": {
     slug: "motion-graphics",

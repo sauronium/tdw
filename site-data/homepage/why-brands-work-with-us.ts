@@ -1,140 +1,138 @@
 // ─────────────────────────────────────────────────────────────
 //  HOMEPAGE › WHY BRANDS WORK WITH US SECTION
-//  Controls all card data (stat cards + video cards),
-//  colors, interaction styles, and copy
+//  Edit stat values, labels, videos, and heading copy here.
 // ─────────────────────────────────────────────────────────────
-import { fonts } from "../tokens";
+import { fonts, fontSizes } from "../tokens";
 
 // ── Types ─────────────────────────────────────────────────────
 export interface StatCard {
   type: "stat";
-  /** Large number displayed at the top of the card */
-  value: string;
-  label: string;
+  value:    string;
+  label:    string;
   subLabel: string;
-  /** Tailwind background class */
   backgroundTailwind: string;
-  /** Hex value for reference */
-  backgroundColor: string;
-  /** Initial CSS rotation class (Tailwind) */
+  backgroundColor:    string;
   rotation: string;
-  /** Base z-index class (Tailwind) */
-  zIndex: string;
+  zIndex:   string;
 }
 
 export interface VideoCard {
   type: "video";
-  /** Video source URL */
-  src: string;
-  alt: string;
-  /** Initial CSS rotation class (Tailwind) */
+  src:      string;
+  alt:      string;
   rotation: string;
-  /** Base z-index class (Tailwind) */
-  zIndex: string;
+  zIndex:   string;
 }
 
 export type WhyBrandsCard = StatCard | VideoCard;
 
-// ── Cards Data ────────────────────────────────────────────────
+// ── Cards ─────────────────────────────────────────────────────
+// Six cards alternate stat → video → stat → video → stat → video.
+// z-[1] to z-[6] stack bottom to top; hover sets z-[20].
 export const whyBrandsCards: WhyBrandsCard[] = [
   {
-    type: "stat",
-    value: "10M+",
-    label: "Lorem Ipsum",
-    subLabel: "Lorem Ipsum lorem ipsum lorem",
+    type:               "stat",
+    value:              "10M+",
+    label:              "Audience Reach",
+    subLabel:           "Monthly impressions delivered across active client campaigns",
     backgroundTailwind: "bg-[#008ff5]",
-    backgroundColor: "#008ff5",
-    rotation: "-rotate-6",
-    zIndex: "z-10",
+    backgroundColor:    "#008ff5",
+    rotation:           "-rotate-6",
+    zIndex:             "z-[1]",
   },
   {
-    type: "video",
-    src: "https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4",
-    alt: "Team collaboration",
+    type:     "video",
+    src:      "https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4",
+    alt:      "Team collaboration",
     rotation: "-rotate-3",
-    zIndex: "z-20",
+    zIndex:   "z-[2]",
   },
   {
-    type: "stat",
-    value: "30+",
-    label: "Lorem Ipsum",
-    subLabel: "Lorem Ipsum lorem ipsum lorem",
+    type:               "stat",
+    value:              "50+",
+    label:              "Brands Elevated",
+    subLabel:           "Businesses we have helped grow with design-led creative direction",
     backgroundTailwind: "bg-[#6bd4a1]",
-    backgroundColor: "#6bd4a1",
-    rotation: "rotate-3",
-    zIndex: "z-30",
+    backgroundColor:    "#6bd4a1",
+    rotation:           "rotate-3",
+    zIndex:             "z-[3]",
   },
   {
-    type: "video",
-    src: "https://videos.pexels.com/video-files/853789/853789-hd_1920_1080_25fps.mp4",
-    alt: "Workspace",
+    type:     "video",
+    src:      "https://videos.pexels.com/video-files/853789/853789-hd_1920_1080_25fps.mp4",
+    alt:      "Creative workspace",
     rotation: "rotate-6",
-    zIndex: "z-40",
+    zIndex:   "z-[4]",
+  },
+  {
+    type:               "stat",
+    value:              "98%",
+    label:              "Client Satisfaction",
+    subLabel:           "Of clients return for repeat projects or ongoing retainers",
+    backgroundTailwind: "bg-[#a364ff]",
+    backgroundColor:    "#a364ff",
+    rotation:           "-rotate-2",
+    zIndex:             "z-[5]",
+  },
+  {
+    type:     "video",
+    src:      "https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_25fps.mp4",
+    alt:      "Creative process in action",
+    rotation: "rotate-4",
+    zIndex:   "z-[6]",
   },
 ];
 
-// ── Section Heading Copy ────────────────────────────────────────────
+// ── Section Heading ───────────────────────────────────────────
 export const whyBrandsHeading = {
-  title: "Why Brands \nWork With Us",
-  titleFontFamily: fonts.heading,
-  titleFontSize: "text-6xl md:text-8xl",
-  titleFontWeight: "font-medium",
+  title:              "Why Brands \nWork With Us",
+  titleFontFamily:    fonts.heading,
+  titleFontSize:      fontSizes.sectionXL,        // "text-6xl md:text-8xl"
+  titleFontWeight:    "font-medium",
   titleLetterSpacing: "tracking-tight",
-  titleColor: "#000000",
+  titleColor:         "#000000",
   titleColorTailwind: "text-black",
-  titleLineHeight: "leading-tight",
-  titleMarginBottom: "mb-8",
+  titleLineHeight:    "leading-tight",
+  titleMarginBottom:  "mb-8",
 
-  subtitle:
-    "The Designers World is built on a mix of creative thinking and clear systems, so projects feel inspiring but also stay under control.",
-  subtitleFontSize: "text-xl md:text-2xl",
-  subtitleColor: "#1f2937",
+  subtitle:              "We combine creative precision with commercial thinking — so your brand doesn't just look good, it works hard.",
+  subtitleFontSize:      fontSizes.description,   // "text-lg md:text-2xl"
+  subtitleColor:         "#1f2937",
   subtitleColorTailwind: "text-gray-800",
-  subtitleLineHeight: "leading-relaxed",
+  subtitleLineHeight:    "leading-relaxed",
 };
 
 // ── Card Shared Styles ────────────────────────────────────────
 export const whyBrandsCardStyles = {
-  /** Base card dimensions (mobile / desktop) */
-  width: "w-[340px] md:w-[375px]",
-  height: "h-[430px] md:h-[475px]",
-  borderRadius: "rounded-[19px]",
+  width:  "w-[280px] md:w-[240px] lg:w-[280px] xl:w-[320px]",
+  height: "h-[360px] md:h-[310px] lg:h-[360px] xl:h-[400px]",
 
-  /** Hover state: card straightens, scales up */
+  borderRadius:  "rounded-[19px]",
+  overlapMargin: "ml-0 md:-ml-16 lg:-ml-20 xl:-ml-24 md:first:ml-0 my-4 md:my-0",
   hoverRotation: "rotate-0",
-  hoverScale: "scale-110",
+  hoverScale:    "scale-110",
+  hoverMargin:   "mx-6 md:mx-8 lg:mx-10 xl:mx-12 my-4 md:my-0",
+  siblingScale:  "scale-95",
 
-  /** Non-hovered sibling dimming */
-  siblingScale: "scale-95",
-
-  /** Default overlap between stacked cards on desktop */
-  overlapMargin: "md:-ml-12",
-
-  // ── Stat card text styles ─────────────────────────────────
   stat: {
-    valueFontSize: "text-6xl",
-    valueFontWeight: "font-medium",
-    valueLetterSpacing: "tracking-tighter",
-    labelFontSize: "text-2xl",
-    labelFontWeight: "font-medium",
+    valueFontSize:     fontSizes.statNumber,      // "text-6xl"
+    valueFontWeight:   "font-medium",
+    valueTracking:     "tracking-tighter",
+    labelFontSize:     "text-2xl",
+    labelFontWeight:   "font-medium",
     labelMarginBottom: "mb-3",
-    subLabelFontSize: "text-sm",
-    subLabelOpacity: "opacity-80",
-    textColor: "text-white",
-    dividerColor: "bg-white/30",
-    padding: "p-8",
+    subLabelFontSize:  fontSizes.label,           // "text-sm"
+    subLabelOpacity:   "opacity-80",
+    textColor:         "text-white",
+    dividerColor:      "bg-white/30",
+    padding:           "p-8",
   },
 };
 
 // ── Section Layout ────────────────────────────────────────────
 export const whyBrandsLayout = {
-  background: {
-    color: "#fdf8f2",
-    tailwind: "bg-[#fdf8f2]",
-  },
-  paddingY: "py-24 md:py-32",
-  /** Width of the section content area */
-  contentWidth: "w-[85vw]",
-  /** Card row height on desktop */
+  background:    { color: "#fdf8f2", tailwind: "bg-[#fdf8f2]" },
+  paddingY:      "py-24 md:py-32",
+  contentWidth:  "w-[85vw]",
   cardRowHeight: "md:h-[600px]",
 } as const;

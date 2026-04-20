@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E '\\\\.\\(tsx?|jsx|css|json|md\\)$')",
+      "Bash(npx tsc *)"
+    ]
+  }
+}

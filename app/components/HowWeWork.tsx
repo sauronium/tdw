@@ -1,10 +1,9 @@
 "use client";
 
-import React, { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-// Attempt to import MorphSVG. If it fails due to trial/club membership, we will still have the animation structure in place.
 let MorphSVGPlugin: any;
 try {
     MorphSVGPlugin = require("gsap/dist/MorphSVGPlugin").MorphSVGPlugin;
@@ -12,8 +11,14 @@ try {
     console.warn("MorphSVGPlugin not found.");
 }
 
-import { workSteps } from "./data-how-we-work";
-import { howWeWorkHeading, howWeWorkStepText } from "@/site-data/homepage/how-we-work";
+import {
+    workSteps,
+    howWeWorkHeading,
+    howWeWorkStepText,
+    howWeWorkShapeColor,
+    howWeWorkArrow,
+    howWeWorkBackground,
+} from "@/site-data/homepage/how-we-work";
 
 export default function HowWeWork() {
     const containerRef = useRef<HTMLElement>(null);
@@ -30,73 +35,92 @@ export default function HowWeWork() {
             let ctx = gsap.context(() => {
                 const tl = gsap.timeline({
                     scrollTrigger: {
-                        //markers:true,
                         trigger: containerRef.current,
                         start: "center center",
-                        end: "+=400%", // Long scroll distance
+                        end: "+=400%",
                         pin: true,
                         scrub: 0.5,
                         onUpdate: (self) => {
-                            // The timeline has a total duration of 6.5
-                            // (0.5 hold) + (1 morph + 0.5 hold)*4
                             const time = self.progress * 6.5;
                             let index = 0;
-                            
-                            // Trigger the state change at the start of original morph phases
                             if (time >= 5.0) index = 4;
                             else if (time >= 3.5) index = 3;
                             else if (time >= 2.0) index = 2;
                             else if (time >= 0.5) index = 1;
-                            
                             setActiveIndex(index);
                         }
                     }
                 });
 
-                // Create dummy timeline steps to provide correct scroll distance
                 tl.to({}, { duration: 0.5 });
-                workSteps.forEach((step, i) => {
+                workSteps.forEach((_step, i) => {
                     if (i === 0) return;
                     tl.to({}, { duration: 1 });
                     tl.to({}, { duration: 0.5 });
                 });
-                
+
             }, containerRef);
-            
+
             return () => ctx.revert();
         }
     }, []);
 
-    // Independent Morph Animation - Always completes shape when activeIndex changes
+    const svgContainerRef = useRef<HTMLDivElement>(null);
+    const isInitialRender = useRef(true);
+
     useEffect(() => {
-        if (typeof window !== "undefined" && pathRef.current && MorphSVGPlugin) {
-            gsap.to(pathRef.current, {
-                morphSVG: workSteps[activeIndex].svgPath,
-                duration: 0.8,
-                ease: "power2.out",
+        if (typeof window !== "undefined" && pathRef.current && svgContainerRef.current) {
+
+            if (isInitialRender.current) {
+                isInitialRender.current = false;
+                if (MorphSVGPlugin) {
+                    gsap.set(pathRef.current, { morphSVG: workSteps[activeIndex].svgPath });
+                }
+                return;
+            }
+
+            const tl = gsap.timeline({ overwrite: "auto" });
+            tl.to(svgContainerRef.current, { scale: 1.15, duration: 0.2,  ease: "power1.out" })
+              .to(svgContainerRef.current, { scale: 0.95,  duration: 0.15, ease: "power1.in"  })
+              .to(svgContainerRef.current, { scale: 1.2,   duration: 0.2,  ease: "power1.out" })
+              .to(svgContainerRef.current, { scale: 1,     duration: 0.85, ease: "bounce.out" });
+
+            gsap.to(svgContainerRef.current, {
+                rotation: "+=360",
+                duration: 1.4,
+                transformOrigin: "50% 50%",
+                ease: "back.out(1.2)",
                 overwrite: "auto"
-        
             });
+
+            if (MorphSVGPlugin) {
+                gsap.to(pathRef.current, {
+                    morphSVG: workSteps[activeIndex].svgPath,
+                    duration: 0.8,
+                    delay: 0.35,
+                    ease: "power2.out",
+                    overwrite: "auto"
+                });
+            }
         }
     }, [activeIndex]);
 
     const activeStep = workSteps[activeIndex];
 
     return (
-        <div className="w-full bg-[#fdf8f2]">
-            
-            {/* Header: Moved OUT of the pinning section so it scrolls away naturally before we hit center viewport! */}
-            <div className="w-full pt-20 pb-10 md:pt-32 md:pb-16">
+        <div className={`w-full ${howWeWorkBackground.tailwind}`}>
+
+            {/* Header — scrolls away before the pinned section activates */}
+            <div className={`w-full ${howWeWorkHeading.paddingTop} ${howWeWorkHeading.paddingBottom}`}>
                 <div className="text-center max-w-4xl mx-auto px-4">
                     <h2
-                        className="text-5xl md:text-7xl font-normal tracking-tight text-black mb-6 md:mb-10 leading-tight"
+                        className={`${howWeWorkHeading.titleFontSize} ${howWeWorkHeading.titleFontWeight} ${howWeWorkHeading.titleLetterSpacing} ${howWeWorkHeading.titleColorTailwind} ${howWeWorkHeading.titleMarginBottom} ${howWeWorkHeading.titleLineHeight}`}
                         style={{ fontFamily: howWeWorkHeading.titleFontFamily }}
                     >
-                        How We Work
+                        {howWeWorkHeading.title}
                     </h2>
-                    <p className="text-lg md:text-2xl text-black max-w-2xl mx-auto leading-relaxed">
-                        The Designers World is built on a mix of creative thinking and clear
-                        systems, so projects feel inspiring but also stay under control.
+                    <p className={`${howWeWorkHeading.subtitleFontSize} ${howWeWorkHeading.subtitleColorTailwind} max-w-2xl mx-auto ${howWeWorkHeading.subtitleLineHeight}`}>
+                        {howWeWorkHeading.subtitle}
                     </p>
                 </div>
             </div>
@@ -104,20 +128,19 @@ export default function HowWeWork() {
             {/* Pinned Section */}
             <section ref={containerRef} className="relative w-full flex justify-center h-screen overflow-hidden">
                 <div className="w-full max-w-screen-2xl px-4 flex flex-col items-center h-full justify-center">
-                    
-                    {/* Steps Layout (Perfectly centered vertically in the viewport) */}
+
                     <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-0 w-full max-w-7xl mx-auto relative mt-0">
-                        
-                        {/* Left: Title (Reverted back to slightly smaller text size) */}
+
+                        {/* Left: Step title */}
                         <div className="w-full md:w-1/4 flex justify-center md:justify-end z-20 h-[100px] md:h-[150px] items-center">
                             <AnimatePresence mode="wait">
-                                <motion.h3 
+                                <motion.h3
                                     key={activeStep.id + "-title"}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -20 }}
                                     transition={{ duration: 0.3 }}
-                                    className="text-5xl md:text-6xl lg:text-7xl font-normal text-black tracking-tight translate-x-0 md:translate-x-12"
+                                    className={`${howWeWorkStepText.title.fontSize} ${howWeWorkStepText.title.fontWeight} ${howWeWorkStepText.title.colorTailwind} ${howWeWorkStepText.title.letterSpacing} translate-x-0 md:translate-x-12`}
                                     style={{ fontFamily: howWeWorkStepText.title.fontFamily }}
                                 >
                                     {activeStep.title}
@@ -125,12 +148,16 @@ export default function HowWeWork() {
                             </AnimatePresence>
                         </div>
 
-                        {/* Center: Morphing Shape */}
+                        {/* Center: Morphing shape */}
                         <div className="w-full md:w-2/4 flex justify-center relative z-0">
-                            <div className="w-[256px] h-[256px] md:w-[480px] md:h-[480px] text-[#f26522] flex justify-center items-center">
-                                <svg 
-                                    viewBox="0 0 380 380" 
-                                    className="w-full h-full fill-current" 
+                            <div
+                                ref={svgContainerRef}
+                                className="w-[256px] h-[256px] md:w-[480px] md:h-[480px] flex justify-center items-center"
+                                style={{ color: howWeWorkShapeColor.fill }}
+                            >
+                                <svg
+                                    viewBox="0 0 350 350"
+                                    className="w-full h-full fill-current"
                                     preserveAspectRatio="xMidYMid meet"
                                 >
                                     <path ref={pathRef} d={workSteps[0].svgPath} />
@@ -138,23 +165,29 @@ export default function HowWeWork() {
                             </div>
                         </div>
 
-                        {/* Right: Description (Arrow side-by-side with text, text size reduced) */}
+                        {/* Right: Description */}
                         <div className="w-full md:w-1/4 flex justify-center md:justify-start z-10 h-[100px] md:h-[150px] items-center md:-translate-x-12">
-                            <div className="flex flex-row md:flex-row justify-center items-center gap-4 md:gap-6 w-full max-w-[420px]">
-                                <div className="text-[#f26522] shrink-0">
-                                    <svg width="60" height="20" viewBox="0 0 60 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 10l56 0" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                                        <path d="M48 2l10 8-10 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <div className="flex flex-row justify-center items-center gap-4 md:gap-6 w-full max-w-[420px]">
+                                <div className="shrink-0" style={{ color: howWeWorkArrow.stroke }}>
+                                    <svg
+                                        width={howWeWorkArrow.width}
+                                        height={howWeWorkArrow.height}
+                                        viewBox="0 0 60 20"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path d="M0 10l56 0" stroke="currentColor" strokeWidth={howWeWorkArrow.strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M48 2l10 8-10 8" stroke="currentColor" strokeWidth={howWeWorkArrow.strokeWidth} strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
                                 </div>
                                 <AnimatePresence mode="wait">
-                                    <motion.p 
+                                    <motion.p
                                         key={activeStep.id + "-desc"}
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         exit={{ opacity: 0 }}
                                         transition={{ duration: 0.3 }}
-                                        className="text-base md:text-lg lg:text-xl text-black leading-snug font-normal text-left"
+                                        className={`${howWeWorkStepText.description.fontSize} ${howWeWorkStepText.description.colorTailwind} ${howWeWorkStepText.description.lineHeight} ${howWeWorkStepText.description.fontWeight} text-left`}
                                     >
                                         {activeStep.description}
                                     </motion.p>

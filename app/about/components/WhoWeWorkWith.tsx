@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const clients = [
     {
         title: "Startups",
-        desc: "That need to look product-ready (and investor-ready).",
+        desc: "From brand identity to website launch, we help startups build a bold digital presence that looks professional, attracts investors, and wins customers from day one.",
         bg: "#ed6e33",
         icon: (
             // Rocket SVG
@@ -20,7 +20,7 @@ const clients = [
     },
     {
         title: "Small Businesses",
-        desc: 'Ready to upgrade from "just a logo" to a real brand system.',
+        desc: "We help small businesses go beyond a basic logo — building complete brand systems, high-performing websites, and digital marketing campaigns that drive real local growth.",
         bg: "#4a88f5",
         icon: (
             // Building SVG
@@ -36,7 +36,7 @@ const clients = [
     },
     {
         title: "Premium Brands",
-        desc: "Discretion, and design that feels expensive for the right reasons.",
+        desc: "For established brands that demand the best — we deliver refined graphic design, flawless web development, and premium digital marketing that reflects your brand's true value.",
         bg: "#6bb88b",
         icon: (
             // Award SVG
@@ -68,7 +68,7 @@ export default function WhoWeWorkWith() {
 
                 {/* Title */}
                 <h2 className="text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight text-[#171717] text-center leading-[1.1] mb-16 md:mb-24">
-                    Who we<br />work with
+                    Built for Businesses Like Yours
                 </h2>
 
                 {/* Cards */}

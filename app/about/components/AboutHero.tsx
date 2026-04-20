@@ -21,9 +21,16 @@ export default function AboutHero() {
             {/* Text Section - 95vh height to leave ~5vh for the bottom image to peek */}
             <div className="w-full h-[95vh] flex flex-col items-center justify-center px-4">
                 <h1 className="text-4xl md:text-6xl lg:text-[6rem] leading-[0.95] font-bold text-[#171717] text-center tracking-tighter">
-                    meet the social team<br />
-                    behind leading brands.
+                    A Studio Born from Expertise
                 </h1>
+                <div className="mt-8 flex flex-col gap-6 max-w-3xl text-center text-lg md:text-xl font-light text-[#171717]/80">
+                    <p>
+                        At The Designers World, we are a team of passionate creative professionals with 7+ years of hands-on experience delivering exceptional results for high-end clients across industries. Based in New Delhi, India, we've come together to build a studio where design, content, and code work in perfect harmony. We understand what premium clients expect — precision, creativity, and results that speak for themselves. Every project we take on is a commitment to excellence. Your brand is in the right hands.
+                    </p>
+                    <p>
+                        We build websites that don't just look great — they perform. From sleek UI to seamless functionality, every site we craft is designed to captivate your audience, strengthen your brand, and turn visitors into loyal customers.
+                    </p>
+                </div>
             </div>
 
             {/* Parallax Image Section - 100vh height & 90vw width */}

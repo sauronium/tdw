@@ -270,7 +270,7 @@ export default function Header() {
     { label: 'Work', href: '/work' },
     {
       label: 'Start a project',
-      href: '/start-project',
+      href: '/contact',
       bgClass: 'bg-[#ff5a26]',
       textClass: 'text-white',
       activeBgClass: 'bg-black',

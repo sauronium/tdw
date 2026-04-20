@@ -1,110 +1,161 @@
 // ─────────────────────────────────────────────────────────────
 //  GLOBAL › DESIGN TOKENS
 //  Single source of truth for colors, typography, spacing,
-//  and animation easings used across the entire site
+//  and animation values used across the entire site.
+//
+//  HOW TO EDIT:
+//  ┌─────────────────────────────────────────────────────┐
+//  │ Colors     → edit hex values under `colors`         │
+//  │ Font sizes → edit class strings under `fontSizes`   │
+//  │ Layout     → edit values under `layout`             │
+//  │ Fonts      → set in app/globals.css via CSS vars    │
+//  └─────────────────────────────────────────────────────┘
+//
+//  IMPORTANT: Tailwind class strings (e.g. "text-5xl md:text-7xl")
+//  must be written as full literals so Tailwind's scanner can
+//  detect and include them. Never build class names dynamically
+//  from color values (e.g. `bg-[${color}]`).
+//  For dynamic inline styles use the `colors.*` hex values
+//  with React's `style` prop instead.
 // ─────────────────────────────────────────────────────────────
 
 // ── Brand Colors ──────────────────────────────────────────────
+// Use these hex values in `style={{ color: colors.primary }}`
+// or `style={{ backgroundColor: colors.background }}`.
+// For static Tailwind classes use the full string (e.g. "bg-[#fdf8f2]")
+// stored in the section-specific data files.
 export const colors = {
-  /** Primary brand orange used for CTAs, accents, and shapes */
-  primary:    "#f26522",
-  /** Slightly brighter variant used in the header CTA */
-  primaryAlt: "#ff5a26",
+  // Primary brand
+  primary:       "#f26522",   // Orange — CTAs, accents, shapes
+  primaryAlt:    "#ff5a26",   // Brighter orange — header CTA button
 
-  /** Background: warm off-white used for most page backgrounds */
-  background: "#fdf8f2",
+  // Backgrounds
+  background:    "#fdf8f2",   // Warm off-white — main page background
+  dark:          "#0b1221",   // Deep navy — dark service cards
 
-  /** Deep navy used for dark service cards */
-  dark:       "#0b1221",
-  /** Near-black for body text and heading text */
-  nearBlack:  "#1a1a1a",
+  // Text
+  nearBlack:     "#1a1a1a",   // Near-black — body text and headings
+  darkTitle:     "#171717",   // Slightly darker variant for headings
 
-  /** Accent purple / violet used in links and stack images */
-  purple:     "#8c6bf7",
-  /** Accent cyan / teal for stack images */
-  teal:       "#00c0b5",
-  /** Accent blue used in stat cards */
-  blue:       "#008ff5",
-  /** Accent mint green used in stat cards */
-  green:      "#6bd4a1",
-  /** Soft pink used in header icon button */
-  pink:       "#ffcdfa",
+  // Accent palette (stat cards, image borders, tag colors)
+  purple:        "#8c6bf7",   // Violet
+  teal:          "#00c0b5",   // Cyan / teal
+  blue:          "#008ff5",   // Blue
+  green:         "#6bd4a1",   // Mint green
+  pink:          "#ffcdfa",   // Soft pink — header icon button
 
-  /** Footer mobile background */
+  // Footer
   footerMobile:  "#f4ecef",
-  /** Footer desktop background */
   footerDesktop: "#f6f6fb",
 } as const;
 
-// ── Typography ────────────────────────────────────────────────
+// ── Font Families ─────────────────────────────────────────────
+// Reference these in `style={{ fontFamily: fonts.heading }}`.
+// The CSS variables are defined via Next.js localFont() in layout.tsx
+// and registered in app/globals.css using `@theme inline`.
 export const fonts = {
-  /** Hagrid — used for ALL headings (h1–h6) */
-  heading: "var(--font-hagrid)" as string,
-  /** Inter — used for body copy, subtitles, labels, captions */
-  body: "var(--font-inter)" as string,
+  heading: "var(--font-hagrid)" as string,  // Hagrid — all h1–h6
+  body:    "var(--font-inter)"  as string,  // Inter — body, subtitles, labels
 } as const;
 
-export const typography = {
-  /** Base body font — Inter */
-  fontFamily: fonts.body,
-  /** Heading font — Hagrid */
-  headingFontFamily: fonts.heading,
+// ── Responsive Font Sizes ─────────────────────────────────────
+// Each value is a complete Tailwind responsive class chain.
+// Use directly in className: className={`${fontSizes.pageTitle} font-medium`}
+//
+// Scale overview:
+//   pageTitle  →  biggest heading on a page (h1)
+//   sectionXL  →  large section h2 headings
+//   sectionLG  →  standard section h2 headings
+//   stepTitle  →  step / card h3 headings
+//   cardTitle  →  smaller card headings
+//   tagline    →  short bold phrase displayed large
+//   subtitle   →  hero sub-headline
+//   description→  section description paragraph
+//   bodyXL/LG/MD/SM → paragraph text at different scales
+//   workTitle  →  work page full-bleed heading
+//   statNumber →  large stat/number displays
+//   label*     →  small print, tags, captions
+export const fontSizes = {
+  // ─ Page hero (h1) ──────────────────────────────────────────
+  /** Main page title: "The Designers World" */
+  pageTitle:   "text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7.5rem]",
+  /** Work page full-bleed title */
+  workTitle:   "text-5xl sm:text-6xl md:text-[6rem] lg:text-[7.5rem] xl:text-[8rem]",
 
-  sizes: {
-    /** Section hero headings (desktop) */
-    displayXL: "text-8xl",
-    displayLG: "text-7xl",
-    displayMD: "text-6xl",
-    displaySM: "text-5xl",
+  // ─ Section headings (h2) ───────────────────────────────────
+  /** Largest section heading — "Why Brands Work With Us", "Our Work" */
+  sectionXL:   "text-6xl md:text-8xl",
+  /** Standard section heading — "How We Work", "Expert Support, Always" */
+  sectionLG:   "text-5xl md:text-7xl",
+  /** Section heading with extra-large desktop size — "What Makes Us Different" */
+  sectionLGXL: "text-5xl md:text-7xl lg:text-[100px]",
 
-    /** Body text */
-    bodyLG: "text-2xl",
-    bodyMD: "text-xl",
-    bodySM: "text-lg",
-    bodyXS: "text-base",
+  // ─ Content headings (h3) ───────────────────────────────────
+  /** Step / process title — "Triangle", "Discovery" */
+  stepTitle:   "text-5xl md:text-6xl lg:text-7xl",
+  /** Standard card heading */
+  cardTitle:   "text-[22px] md:text-[26px] lg:text-[30px]",
 
-    /** Labels / tags / small print */
-    label:   "text-sm",
-    labelXS: "text-xs",
-  },
+  // ─ Taglines & subtitles ────────────────────────────────────
+  /** Short bold tagline: "Less Noise, More Impact" */
+  tagline:     "text-2xl md:text-5xl",
+  /** Hero sub-headline under pageTitle */
+  subtitle:    "text-lg sm:text-xl md:text-2xl lg:text-3xl",
+  /** Section description paragraph under a heading */
+  description: "text-lg md:text-2xl",
 
-  weights: {
-    light:    "font-light",
-    normal:   "font-normal",
-    medium:   "font-medium",
-    semibold: "font-semibold",
-    bold:     "font-bold",
-  },
+  // ─ Body text ───────────────────────────────────────────────
+  /** Extra-large body: long pull-quote paragraphs */
+  bodyXL:      "text-xl md:text-3xl",
+  /** Medium body: step descriptions, card copy */
+  bodyLG:      "text-base md:text-lg lg:text-xl",
+  /** Standard body: secondary descriptions */
+  bodySM:      "text-base md:text-[17px]",
 
-  tracking: {
-    tight:   "tracking-tight",
-    tighter: "tracking-tighter",
-    normal:  "tracking-normal",
-    wide:    "tracking-wide",
-  },
+  // ─ Stat display ────────────────────────────────────────────
+  /** Big number in stat cards: "10M+", "99%" */
+  statNumber:  "text-6xl",
+
+  // ─ Labels & captions ───────────────────────────────────────
+  label:       "text-sm",
+  labelXS:     "text-xs",
 } as const;
 
-// ── Spacing ───────────────────────────────────────────────────
-export const spacing = {
-  /** Horizontal page padding */
-  pagePaddingX: "px-4 md:px-8",
-  /** Common section vertical padding */
-  sectionPaddingY: "py-24 md:py-32",
-  /** Max width used by all content containers */
-  contentMaxWidth: "max-w-[1440px]",
+// ── Layout & Spacing ─────────────────────────────────────────
+// Reusable class chains for consistent page structure.
+// Apply `layout.maxWidth` + `mx-auto` on every content container.
+export const layout = {
+  /** Global content max-width — apply on all full-width containers */
+  maxWidth:         "max-w-[1440px]",
+
+  /** Standard horizontal padding (mobile → desktop) */
+  pagePaddingX:     "px-4 md:px-8",
+
+  /** Wider horizontal padding for about/work pages */
+  widePaddingX:     "px-8 md:px-16",
+
+  /** Standard section vertical padding */
+  sectionPaddingY:  "py-24 md:py-32",
+
+  /** Top padding that clears the fixed navigation bar */
+  headerClearance:  "pt-20 md:pt-32",
+
+  /** Content area widths */
+  contentWidth:     "w-[85vw]",
+  wideWidth:        "w-[95vw]",
 } as const;
 
 // ── Border Radius ─────────────────────────────────────────────
 export const radii = {
-  sm:    "rounded-lg",
-  md:    "rounded-2xl",
-  lg:    "rounded-[24px]",
-  xl:    "rounded-[30px]",
-  xxl:   "rounded-[40px]",
-  pill:  "rounded-full",
+  sm:   "rounded-lg",
+  md:   "rounded-2xl",
+  lg:   "rounded-[24px]",
+  xl:   "rounded-[30px]",
+  xxl:  "rounded-[40px]",
+  pill: "rounded-full",
 } as const;
 
-// ── Shadows ───────────────────────────────────────────────────
+// ── Box Shadows ───────────────────────────────────────────────
 export const shadows = {
   sm:  "shadow-sm",
   md:  "shadow-md",
@@ -115,11 +166,11 @@ export const shadows = {
 
 // ── Animation Easings ─────────────────────────────────────────
 export const easings = {
-  /** Standard ease for hover transitions */
+  /** Standard ease for hover/focus transitions */
   standard:     "ease-out",
-  /** GSAP morph easing */
+  /** GSAP easing for SVG morph transitions */
   morphEase:    "power1.inOut",
-  /** Framer Motion spring for cursor tracking */
+  /** Framer Motion spring config for cursor tracking */
   cursorSpring: { damping: 25, stiffness: 250, mass: 0.5 },
 } as const;
 
@@ -129,4 +180,42 @@ export const zIndex = {
   raised:  "z-10",
   overlay: "z-20",
   modal:   "z-50",
+} as const;
+
+// ── Legacy aliases (kept for backward compatibility) ──────────
+// Prefer `fontSizes.*` and `layout.*` for new code.
+export const spacing = {
+  pagePaddingX:    layout.pagePaddingX,
+  sectionPaddingY: layout.sectionPaddingY,
+  contentMaxWidth: layout.maxWidth,
+} as const;
+
+export const typography = {
+  fontFamily:        fonts.body,
+  headingFontFamily: fonts.heading,
+  sizes: {
+    displayXL: "text-8xl",
+    displayLG: "text-7xl",
+    displayMD: "text-6xl",
+    displaySM: "text-5xl",
+    bodyLG:    "text-2xl",
+    bodyMD:    "text-xl",
+    bodySM:    "text-lg",
+    bodyXS:    "text-base",
+    label:     "text-sm",
+    labelXS:   "text-xs",
+  },
+  weights: {
+    light:    "font-light",
+    normal:   "font-normal",
+    medium:   "font-medium",
+    semibold: "font-semibold",
+    bold:     "font-bold",
+  },
+  tracking: {
+    tight:   "tracking-tight",
+    tighter: "tracking-tighter",
+    normal:  "tracking-normal",
+    wide:    "tracking-wide",
+  },
 } as const;

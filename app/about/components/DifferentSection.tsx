@@ -1,52 +1,62 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring, MotionValue } from "framer-motion";
+import { motion, useScroll, useSpring, type MotionValue } from "framer-motion";
+import { useTransform } from "framer-motion";
+import {
+    differentCards,
+    differentHeading,
+    differentCardStyles,
+    differentLayout,
+    type DifferentCard,
+} from "@/site-data/about/different-section";
 
-// 1. We extract the Card into its own component to safely use Framer Motion hooks per-card
-const TrainCard = ({
+// Vw values that control the staggered column layout
+const CARD_VW = 22;   // each card column width (~300px on 1440px screen)
+const GAP_VW  = 1.5;  // gap between columns
+
+const SlideCard = ({
     card,
     index,
-    progress
+    progress,
 }: {
-    card: any;
+    card: DifferentCard;
     index: number;
     progress: MotionValue<number>;
 }) => {
-    // 2. The Delay: Reduced the gap to roughly 8.5% (a 30% decrease from the previous 12%)
-    const delay = index * 0.085;
+    const stagger  = index * 0.03;
+    const t0 = 0.06 + stagger;
+    const t1 = 0.17 + stagger;
+    const t2 = 0.27 + stagger;
+    const t3 = 0.38 + stagger;
 
-    // 3. The Timeline: Slightly relaxed the travel duration so they move a bit more naturally 
-    // without cutting off the last cards.
-    const inputPoints = [
-        0.05 + delay,  // Start (Off-screen Bottom Right)
-        0.22 + delay,  // Quarter way (Moving up and left)
-        0.39 + delay,  // Apex (Center screen)
-        0.56 + delay,  // Three-quarters (Moving down and left)
-        0.73 + delay   // End (Off-screen Bottom Left)
-    ];
+    const finalXVw = index * (CARD_VW + GAP_VW);
 
-    // Adjusted to curve over the left side of the screen and overlap the title
-    const x = useTransform(progress, inputPoints, ["120vw", "40vw", "-15vw", "-60vw", "-120vw"]);
-    
-    // Propel the apex higher upwards (-25vh) so it physically crosses over the static title
-    const y = useTransform(progress, inputPoints, ["100vh", "15vh", "-25vh", "20vh", "100vh"]);
-    
-    // The rotation dynamically matches the tangent of the curve to steer the buggy
-    const rotate = useTransform(progress, inputPoints, [-45, -20, 0, 20, 45]);
+    const x = useTransform(progress,
+        [t0,       t1,                          t2,                   t3],
+        ["110vw",  `${55 + finalXVw * 0.4}vw`, `${finalXVw + 1}vw`,  `${finalXVw}vw`]
+    );
+    const y = useTransform(progress,
+        [t0,      t1,     t2,     t3],
+        ["70vh",  "-5vh", "-2vh", "0vh"]
+    );
+    const rotate = useTransform(progress,
+        [t0,  t1,  t2,  t3],
+        [12,  -3,  1,   0]
+    );
 
     return (
         <motion.div
-            style={{ x, y, rotate, zIndex: 10 - index }}
-            className={`absolute w-[260px] h-[340px] md:w-[280px] md:h-[380px] lg:w-[320px] lg:h-[420px] p-6 md:p-8 rounded-[32px] text-white shadow-xl ${card.bg} text-left flex flex-col justify-between shrink-0 will-change-transform`}
+            style={{ x, y, rotate, position: "absolute", left: 0, top: 0, zIndex: index + 10 }}
+            className={`${differentCardStyles.width} ${differentCardStyles.height} ${differentCardStyles.padding} ${differentCardStyles.borderRadius} shadow-2xl ${card.bg} flex flex-col justify-between shrink-0 will-change-transform`}
         >
             <div>
-                <h3 className="text-[28px] md:text-[32px] font-medium leading-[1.15] tracking-tight mb-4 text-[#fdf8f2]">
+                <h3 className={`${differentCardStyles.title.fontSize} ${differentCardStyles.title.fontWeight} ${differentCardStyles.title.lineHeight} ${differentCardStyles.title.letterSpacing} ${differentCardStyles.title.colorTailwind}`}>
                     {card.title}
                 </h3>
             </div>
             <div>
-                <p className="text-base md:text-lg opacity-90 leading-snug font-light text-[#fdf8f2]">
+                <p className={`${differentCardStyles.desc.fontSize} ${differentCardStyles.desc.opacity} ${differentCardStyles.desc.lineHeight} ${differentCardStyles.desc.fontWeight} ${differentCardStyles.desc.colorTailwind}`}>
                     {card.desc}
                 </p>
             </div>
@@ -62,57 +72,33 @@ export default function DifferentSection() {
         offset: ["start start", "end end"]
     });
 
-    const smoothProgress = useSpring(scrollYProgress, {
-        stiffness: 50,
-        damping: 20,
-        restDelta: 0.001
-    });
-
-    // The fade effect / titleY have been removed so the title stays visible without fading
-
-    const cards = [
-        {
-            title: "Design + development in one team.",
-            desc: "So your vision doesn't get \"lost in handover\" and show up as a distant cousin at launch.",
-            bg: "bg-[#6bb88b]"
-        },
-        {
-            title: "We design for outcomes, not applause",
-            desc: "clarity, consistency, and conversion over noise.",
-            bg: "bg-[#ed6e33]"
-        },
-        {
-            title: "Premium polish, practical brains.",
-            desc: "beautiful on the outside, built right underneath.",
-            bg: "bg-[#4a88f5]"
-        },
-        {
-            title: "Swift execution, uncompromising quality.",
-            desc: "no drawn out timelines or endless revisions, just results.",
-            bg: "bg-[#a364ff]"
-        }
-    ];
+    const smoothProgress = useSpring(scrollYProgress, { stiffness: 50, damping: 20, restDelta: 0.001 });
 
     return (
-        <section ref={containerRef} className="h-[500vh] relative bg-[#fdf8f2]">
-            {/* Added pt-24 and removed justify-center so the title sits closer to the top */}
-            <div className="sticky top-0 h-screen overflow-hidden flex flex-col justify-start pt-24 px-4 md:px-8 w-full">
+        <section ref={containerRef} className={`${differentLayout.scrollHeight} relative ${differentLayout.background.tailwind}`}>
+            <div className={`sticky top-0 h-screen overflow-hidden relative ${differentLayout.paddingX}`}>
 
-                {/* Main Heading - Left-aligned, no scroll, statically anchored behind the cards */}
-                <div className="text-left mb-0 md:mb-4 relative z-0">
-                    <h2 className="text-5xl md:text-7xl lg:text-[100px] font-medium tracking-tight text-[#171717] leading-[1.1]">
+                {/* Section title — behind the cards (z-0) */}
+                <div className={`absolute ${differentLayout.titleTopOffset} left-8 md:left-16 right-0`} style={{ zIndex: 0 }}>
+                    <h2
+                        className={`${differentHeading.fontSize} ${differentHeading.fontWeight} ${differentHeading.letterSpacing} ${differentHeading.colorTailwind} ${differentHeading.lineHeight}`}
+                        style={{ fontFamily: differentHeading.fontFamily }}
+                    >
                         What Makes<br />us Different
                     </h2>
                 </div>
 
-                {/* Train Track Container */}
-                <div className="relative w-full h-[500px] flex items-center justify-center overflow-visible mt-8">
-                    {cards.map((card, idx) => (
-                        <TrainCard 
-                            key={idx} 
-                            card={card} 
-                            index={idx} 
-                            progress={smoothProgress} 
+                {/* Cards — absolutely positioned to fly in over the title */}
+                <div
+                    className="absolute left-8 md:left-16 right-0"
+                    style={{ top: differentLayout.cardsTopOffset, height: differentLayout.cardsHeight }}
+                >
+                    {differentCards.map((card, idx) => (
+                        <SlideCard
+                            key={idx}
+                            card={card}
+                            index={idx}
+                            progress={smoothProgress}
                         />
                     ))}
                 </div>

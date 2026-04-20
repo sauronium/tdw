@@ -1,26 +1,36 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
 import { heroData } from "@/site-data/homepage/hero";
 
 export default function Hero() {
+    const { heading, subheadline, layout } = heroData;
+
     return (
-        <section className="flex flex-col items-center justify-center min-h-[50vh] px-4 pt-20 pb-24 md:pb-32 text-center w-full max-w-[1440px] mx-auto">
+        <section className={`flex flex-col items-center justify-center ${layout.minHeight} ${layout.paddingX} ${layout.paddingTop} ${layout.paddingBottom} text-center w-full ${layout.maxWidth} mx-auto`}>
             <div className="flex flex-col items-center w-full translate-y-[5vh]">
-                <div className="relative w-full max-w-7xl flex items-center justify-center">
-                    <Image
-                        src="/heading.svg"
-                        alt="We build websites"
-                        width={1200}
-                        height={300}
-                        className="w-full h-auto object-contain"
-                        priority
-                    />
+                <div className="relative w-full max-w-7xl flex items-center justify-center px-4">
+                    <h1 className={`${heading.fontSize} ${heading.fontWeight} ${heading.color} ${heading.letterSpacing} ${heading.lineHeight} whitespace-nowrap`}>
+                        {heading.text}
+                    </h1>
                 </div>
-                <h2 className="text-3xl md:text-5xl font-light text-black mt-6 tracking-tight" style={{ fontFamily: heroData.subheadline.fontFamily }}>
-                    {heroData.subheadline.text}
+                <h2
+                    className={`${subheadline.fontSize} ${subheadline.fontWeight} ${subheadline.color} ${subheadline.marginTop} ${subheadline.letterSpacing} px-4 whitespace-nowrap`}
+                    style={{ fontFamily: subheadline.fontFamily }}
+                >
+                    {subheadline.text}
                 </h2>
+                
+                {heroData.punchline && (
+                    <p className={`${heroData.punchline.fontSize} ${heroData.punchline.fontWeight} ${heroData.punchline.color} ${heroData.punchline.marginTop} px-4`}>
+                        {heroData.punchline.text}
+                    </p>
+                )}
+                
+                {heroData.paragraph && (
+                    <p className={`${heroData.paragraph.fontSize} ${heroData.paragraph.fontWeight} ${heroData.paragraph.color} ${heroData.paragraph.marginTop} ${heroData.paragraph.maxWidth} px-4`}>
+                        {heroData.paragraph.text}
+                    </p>
+                )}
             </div>
         </section>
     );
