@@ -104,7 +104,7 @@ export const socialMediaLayout = {
 // smoothProgress fractions that control when each card appears.
 // Adjust to speed up or slow down the card reveal sequence.
 export const socialMediaScrollCheckpoints = {
-  card1: { start: 0,    end: 0.40 },
-  card2: { start: 0.40, end: 0.60 },
-  card3: { start: 0.60, end: 1.00 },
+  card1: { start: 0.20, end: 0.46 },
+  card2: { start: 0.46, end: 0.72 },
+  card3: { start: 0.72, end: 1.00 },
 } as const;

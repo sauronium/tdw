@@ -27,29 +27,38 @@ function CardItem({
     const cardAnimate = (() => {
         switch (state) {
             case "hidden":
-                return { opacity: 0, y: "120%", width: "48px", height: "48px", borderRadius: "50%", scale: 1, rotate: 0, transition: { duration: 0 } };
+                return { 
+                    opacity: 0, 
+                    y: "40vh", 
+                    width: "48px", 
+                    height: "48px", 
+                    borderRadius: "50%", 
+                    scale: 1, 
+                    rotate: 0, 
+                    transition: { duration: 0, ease: "easeOut" as const } 
+                };
             case "entering":
                 return {
-                    opacity:      [0,      1,      1,      1,      1     ],
-                    y:            ["120%", "0%",   "0%",   "0%",   "0%"  ],
-                    scale:        [1,      1,      0.4,    1.06,   1     ],
+                    opacity:      [0, 1,      1,      1,      1     ],
+                    y:            ["40vh", "0%",   "0%",   "0%",   "0%"  ],
+                    scale:        [1,      1,      0.6,    1.06,   1     ],
                     width:        ["48px", "48px", "48px", "100%", "100%"],
                     height:       ["48px", "48px", "48px", "100%", "100%"],
                     borderRadius: ["50%",  "50%",  "50%",  "20px", "20px"],
                     rotate:       [0,      0,      0,      rotate * 1.5, rotate],
-                    transition:   { duration: 0.9, times: [0, 0.2, 0.45, 0.78, 1], ease: "easeInOut" as const },
+                    transition:   { duration: 1.0, times: [0, 0.3, 0.5, 0.8, 1], ease: "easeInOut" as const },
                 };
             case "active":
                 return { opacity: 1, y: "0%", scale: 1, width: "100%", height: "100%", borderRadius: "20px", rotate, transition: { duration: 0.5, ease: "easeOut" as const } };
             case "exiting":
-                return { opacity: 1, y: "130%", scale: 1, width: "100%", height: "100%", borderRadius: "20px", rotate, transition: { duration: 0.38, ease: [0.4, 0, 0.6, 1] as [number, number, number, number] } };
+                return { opacity: 1, y: "130%", x: 0, scale: 1, width: "100%", height: "100%", borderRadius: "20px", rotate, transition: { duration: 0.38, ease: [0.4, 0, 0.6, 1] as [number, number, number, number] } };
         }
     })();
 
     const imageAnimate = (() => {
         switch (state) {
             case "hidden":   return { opacity: 0, scale: 1.1, transition: { duration: 0 } };
-            case "entering": return { opacity: [0, 0, 1, 1] as number[], scale: [1.1, 1.1, 1, 1] as number[], transition: { duration: 0.9, times: [0, 0.45, 0.78, 1], ease: "easeOut" as const } };
+            case "entering": return { opacity: [0, 0, 1, 1] as number[], scale: [1.1, 1.1, 1, 1] as number[], transition: { duration: 1.0, times: [0, 0.5, 0.8, 1], ease: "easeOut" as const } };
             case "active":   return { opacity: 1, scale: 1, transition: { duration: 0.5 } };
             case "exiting":  return { opacity: 1, scale: 1, transition: { duration: 0.5 } };
         }
@@ -58,7 +67,7 @@ function CardItem({
     return (
         <motion.div
             className="absolute inset-0 m-auto overflow-hidden shadow-2xl"
-            initial={{ opacity: 0, y: "120%", width: "48px", height: "48px", borderRadius: "50%", scale: 1 }}
+            initial={{ opacity: 0, y: "40vh", width: "48px", height: "48px", borderRadius: "50%", scale: 1 }}
             animate={cardAnimate}
             onAnimationComplete={() => { if (state === "entering") onEnteringComplete(); }}
             style={{ backgroundColor: item.placeholderColor }}
