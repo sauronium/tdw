@@ -24,6 +24,7 @@ const Card = ({
     number,
     backgroundTailwind,
     image,
+    imageAlt,
     progress,
     range,
     targetScale,
@@ -73,7 +74,7 @@ const Card = ({
 
                 {/* Illustration — bottom right, desktop only */}
                 <div className={`${serviceCardStyles.illustration.visibility} ${serviceCardStyles.illustration.position} ${serviceCardStyles.illustration.width} ${serviceCardStyles.illustration.aspectRatio} ${serviceCardStyles.illustration.borderRadius} shadow-sm pointer-events-none ${serviceCardStyles.illustration.zIndex} overflow-hidden bg-black/10 ${serviceCardStyles.illustration.border} ${rotations[i % 4]}`}>
-                    <img src={image} alt={title} className="w-full h-full object-cover" />
+                    <img src={image} alt={imageAlt} className="w-full h-full object-cover" />
                 </div>
 
                 {/* Know more button — bottom left */}

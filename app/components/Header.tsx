@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef, MouseEvent } from 'react';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
+import { headerLogo } from '@/site-data/shared/header';
 
 interface NavItemDefinition {
   label: string;
@@ -295,10 +296,10 @@ export default function Header() {
         >
           <div className="w-[8.0625rem] h-auto lg:w-[12rem] flex justify-center">
             <Image
-              width={200}
-              height={50}
-              src="/tdw-logo.svg"
-              alt="Logo"
+              width={headerLogo.width}
+              height={headerLogo.height}
+              src={headerLogo.src}
+              alt={headerLogo.alt}
               className="w-full h-auto"
             />
           </div>

@@ -50,7 +50,7 @@ function WorkCard({ caseItem, isLast }: { caseItem: typeof casesData[0]; isLast:
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out ${isHovered ? "opacity-0" : "opacity-100"}`}
       />
       <div className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${isHovered ? "opacity-100" : "opacity-0"}`}>
-        <Image src={caseItem.image} alt={caseItem.title} fill className="object-cover" />
+        <Image src={caseItem.image} alt={caseItem.imageAlt} fill className="object-cover" />
       </div>
       <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-end bg-gradient-to-t from-black/60 via-transparent to-transparent">
         <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">

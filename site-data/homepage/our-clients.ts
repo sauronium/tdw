@@ -16,13 +16,21 @@ export const clientsHeading = {
   lineHeight: "leading-tight",
 };
 
+// ── Types ─────────────────────────────────────────────────────
+export interface ClientLogo {
+  src: string;
+  alt: string;
+}
+
 // ── Logo Images ───────────────────────────────────────────────
-// Replace placeholder URLs with actual client logo paths once available.
-// Each entry's index is also used as the image's aria-label.
-export const clientLogos: string[] = Array.from(
+// Replace placeholder entries with actual client logo paths.
+// Update `src` (image URL or local path) and `alt` (client name) for each.
+export const clientLogos: ClientLogo[] = Array.from(
   { length: 40 },
-  (_, i) =>
-    `https://placehold.co/400x300/e9ecef/adb5bd?text=LOGO+${i + 1}`
+  (_, i) => ({
+    src: `https://placehold.co/400x300/e9ecef/adb5bd?text=LOGO+${i + 1}`,
+    alt: `Client logo ${i + 1}`,
+  })
 );
 
 // ── Grid Config ───────────────────────────────────────────────

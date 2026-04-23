@@ -19,6 +19,8 @@ export interface ServiceCard {
   href: string;
   /** Illustration image shown on the right side of the card */
   image: string;
+  /** Alt text for the illustration image */
+  imageAlt: string;
 }
 
 // ── Service Cards ─────────────────────────────────────────────
@@ -33,6 +35,7 @@ export const services: ServiceCard[] = [
     backgroundColor:    "#0b1221",
     href:               "/services/web-design-and-development",
     image:              "https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&q=80",
+    imageAlt:           "Web design and development workspace",
   },
   {
     number:             "02",
@@ -42,6 +45,7 @@ export const services: ServiceCard[] = [
     backgroundColor:    "#ff5a26",
     href:               "/services/digital-marketing",
     image:              "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80",
+    imageAlt:           "Digital marketing strategy illustration",
   },
   {
     number:             "03",
@@ -51,6 +55,7 @@ export const services: ServiceCard[] = [
     backgroundColor:    "#008ff5",
     href:               "/services/social-media-management",
     image:              "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&q=80",
+    imageAlt:           "Social media management on mobile",
   },
   {
     number:             "04",
@@ -60,6 +65,7 @@ export const services: ServiceCard[] = [
     backgroundColor:    "#6bd4a1",
     href:               "/services/brand-strategy",
     image:              "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
+    imageAlt:           "Brand strategy and identity design",
   },
 ];
 

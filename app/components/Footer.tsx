@@ -7,7 +7,7 @@ import { ArrowUpRight, Camera as Instagram, Aperture as Dribbble, Bookmark, Brie
 import InteractiveDotGrid from "./InteractiveDotGrid";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import GetStartedModal from "./GetStartedModal";
-import { footerCTA } from "@/site-data/shared/footer";
+import { footerCTA, footerTeamAvatars } from "@/site-data/shared/footer";
 
 function SocialCard({ social, isLast }: { social: any, isLast: boolean }) {
     const cardRef = useRef<HTMLAnchorElement>(null);
@@ -169,21 +169,15 @@ export default function Footer() {
                         <div className="flex items-center gap-5">
                             {/* Overlapping Faces */}
                             <div className="flex -space-x-4">
-                                <img
-                                    className="w-12 h-12 md:w-14 md:h-14 border-2 border-white rounded-full object-cover z-[3]"
-                                    src="https://api.dicebear.com/7.x/notionists/svg?seed=Mia"
-                                    alt="Team member"
-                                />
-                                <img
-                                    className="w-12 h-12 md:w-14 md:h-14 border-2 border-white rounded-full object-cover z-[2]"
-                                    src="https://api.dicebear.com/7.x/notionists/svg?seed=Liam"
-                                    alt="Team member"
-                                />
-                                <img
-                                    className="w-12 h-12 md:w-14 md:h-14 border-2 border-white rounded-full object-cover z-[1]"
-                                    src="https://api.dicebear.com/7.x/notionists/svg?seed=Olivia"
-                                    alt="Team member"
-                                />
+                                {footerTeamAvatars.map((avatar, idx) => (
+                                    <img
+                                        key={idx}
+                                        className="w-12 h-12 md:w-14 md:h-14 border-2 border-white rounded-full object-cover"
+                                        style={{ zIndex: footerTeamAvatars.length - idx }}
+                                        src={avatar.src}
+                                        alt={avatar.alt}
+                                    />
+                                ))}
                             </div>
                             
                             {/* Mini Text */}

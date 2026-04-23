@@ -25,7 +25,7 @@ export default function LogosStaggeredGrid() {
                 </div>
 
                 <StaggeredGrid
-                    images={clientLogos}
+                    images={clientLogos.map((l) => l.src)}
                     bentoItems={bentoItems}
                     centerText={clientsGridConfig.centerText}
                     showFooter={clientsGridConfig.showFooter}
