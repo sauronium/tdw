@@ -7,7 +7,7 @@ import { ArrowUpRight, Camera as Instagram, Aperture as Dribbble, Bookmark, Brie
 import InteractiveDotGrid from "./InteractiveDotGrid";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import GetStartedModal from "./GetStartedModal";
-import { footerCTA, footerTeamAvatars } from "@/site-data/shared/footer";
+import { footerCTA, footerBackground } from "@/site-data/shared/footer";
 
 function SocialCard({ social, isLast }: { social: any, isLast: boolean }) {
     const cardRef = useRef<HTMLAnchorElement>(null);
@@ -126,11 +126,11 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="w-full relative bg-[#f4ecef] md:bg-[#f6f6fb] overflow-hidden pt-10 pb-8 border-t border-black/5">
+        <footer className={`w-full relative ${footerBackground.tailwind} overflow-hidden pt-10 pb-8 border-t border-black/5`}>
             
             {/* Top Section Wrapper - Break out to 100vw for background, keep content padded */}
             <div 
-                className="relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-24 mb-6 md:mb-10 px-4 flex justify-center"
+                className={`relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-24 mb-6 md:mb-10 px-4 flex justify-center ${footerBackground.tailwind}`}
             >
                 {/* High-performance physics Canvas dot pattern */}
                 <InteractiveDotGrid />
@@ -196,7 +196,7 @@ export default function Footer() {
                 {/* Bottom Section: Social Links Grid */}
                 {/* Horizontal scrolling wrapper on mobile to prevent squishing */}
                 <div className="w-full overflow-x-auto pb-4 hide-scrollbar">
-                    <div className="flex flex-row md:grid md:grid-cols-6 min-w-[900px] md:min-w-full rounded-2xl md:rounded-[24px] overflow-hidden border border-black/10 bg-[#f8f9ff]/50 backdrop-blur-sm shadow-sm">
+                    <div className="flex flex-row md:grid md:grid-cols-6 min-w-[900px] md:min-w-full rounded-2xl md:rounded-[24px] overflow-hidden border border-black/10 bg-[#fdf8f2]/50 backdrop-blur-sm shadow-sm">
                         {socialLinks.map((social, idx) => (
                             <SocialCard key={social.name} social={social} isLast={idx === socialLinks.length - 1} />
                         ))}

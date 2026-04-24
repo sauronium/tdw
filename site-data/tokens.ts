@@ -45,8 +45,8 @@ export const colors = {
   pink:          "#ffcdfa",   // Soft pink — header icon button
 
   // Footer
-  footerMobile:  "#f4ecef",
-  footerDesktop: "#f6f6fb",
+  footerMobile:  "#fdf8f2",
+  footerDesktop: "#fdf8f2",
 } as const;
 
 // ── Font Families ─────────────────────────────────────────────

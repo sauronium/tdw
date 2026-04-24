@@ -54,7 +54,7 @@ export const socialMediaImages: StackImage[] = [
 // ── Right Side Copy ───────────────────────────────────────────
 export const socialMediaCopy = {
   heading: {
-    text:         "we make brands impossible to ignore.",
+    text:         "A Studio Built on Strategy, Creativity, and 10+ Years of Expertise.",
     fontFamily:   fonts.heading,
     fontSize:     "text-5xl md:text-6xl lg:text-[4.5rem]",
     fontWeight:   "font-bold",
@@ -67,9 +67,9 @@ export const socialMediaCopy = {
   },
 
   body: [
-    "We craft smart, data-driven marketing strategies that put your brand in front of the right audience at the right time. From SEO to social media, we drive real traffic, real engagement, and real results that grow your business.",
-    "We manage your social presence with strategy, creativity, and consistency. From content creation to community engagement, we build audiences that genuinely connect with your brand — turning followers into fans and fans into loyal customers.",
-    "Your brand is more than a logo — it's your story, your promise, your identity. We dig deep to understand your business and craft a strategy that positions you powerfully in the market, making your brand impossible to ignore."
+    "The Designers World was founded with a clear mission — to give businesses access to world-class graphic design, custom web development, data-driven digital marketing, and professional motion graphics, all from a single creative team. Based in New Delhi, India, our studio brings together specialists who've spent over a decade working with brands across industries — from ambitious startups to established enterprises. We don't just make things look good. We build brand systems, digital experiences, and marketing strategies that are engineered to grow your business.",
+    "",
+    ""
   ],
 
   bodyStyles: {

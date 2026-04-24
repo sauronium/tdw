@@ -7,7 +7,7 @@
 export const impactSectionData = {
   // ── Primary Tagline ───────────────────────────────────────
   tagline: {
-    text: "Less Noise, More Impact",
+    text: "The Designers World | Creative Design, Marketing & Web Development Studio",
     /** Background pill color */
     backgroundColor: "#f26522",
     backgroundTailwind: "bg-[#f26522]",
@@ -57,10 +57,10 @@ export const impactSectionData = {
   // ── Scroll Animation Keyframes ────────────────────────────
   // All values are fractions of scrollYProgress (0 → 1)
   animation: {
-    outerRotation:  { from: 0,    to: 1    },
-    textSlideUp:    { start: 0.15, end: 0.45 },
-    textSlideYPx:   { from: 0,    to: -100 },
-    innerScale:     { start: 0.40, end: 0.80 },
+    outerRotation: { from: 0, to: 1 },
+    textSlideUp: { start: 0.15, end: 0.45 },
+    textSlideYPx: { from: 0, to: -100 },
+    innerScale: { start: 0.40, end: 0.80 },
   },
 
   // ── Down Arrow ────────────────────────────────────────────

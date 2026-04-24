@@ -10,10 +10,10 @@ import { fonts } from "../tokens";
 
 // ── Types ─────────────────────────────────────────────────────
 export interface WorkStep {
-  id:          string;
-  title:       string;
+  id: string;
+  title: string;
   description: string;
-  svgPath:     string;
+  svgPath: string;
 }
 
 // ── Process Steps ─────────────────────────────────────────────
@@ -21,93 +21,93 @@ export interface WorkStep {
 // Each step morphs into the next shape as the user scrolls down.
 export const workSteps: WorkStep[] = [
   {
-    id:          "discover",
-    title:       "Discovery",
-    description: "We start by understanding your business, goals, target audience, and challenges to build a strong foundation for everything ahead.",
-    svgPath:     "M 175 10 L 335 310 L 15 310 Z",
+    id: "discover",
+    title: "Discovery",
+    description: "We start by understanding your business, goals, target audience, and challenges. This deep-dive ensures every decision we make is aligned with your brand and built on a strong strategic foundation.",
+    svgPath: "M 175 10 L 335 310 L 15 310 Z",
   },
   {
-    id:          "strategy",
-    title:       "Strategy",
-    description: "We craft a focused plan — defining the right approach, timeline, and creative direction tailored specifically to your brand and objectives.",
-    svgPath:     "M 35 35 L 315 35 L 315 315 L 35 315 Z",
+    id: "strategy",
+    title: "Strategy",
+    description: "We define a clear roadmap — the right approach, timeline, deliverables, and creative direction tailored specifically to your brand objectives and market positioning.",
+    svgPath: "M 35 35 L 315 35 L 315 315 L 35 315 Z",
   },
   {
-    id:          "creation",
-    title:       "Creation",
-    description: "Our team gets to work — designing, developing, and producing content with precision, creativity, and attention to every detail.",
-    svgPath:     "M 175 5 L 336.7 122.5 L 274.9 312.5 L 75.1 312.5 L 13.3 122.5 Z",
+    id: "creation",
+    title: "Creation",
+    description: "Our team gets to work — designing, developing, and producing content with precision, creativity, and attention to every detail. Nothing ships without meeting our quality standards.",
+    svgPath: "M 175 5 L 336.7 122.5 L 274.9 312.5 L 75.1 312.5 L 13.3 122.5 Z",
   },
   {
-    id:          "review",
-    title:       "Review",
-    description: "We share the work with you, gather feedback, and refine until every element feels exactly right and meets your expectations.",
-    svgPath:     "M 175 5 L 322.2 90 L 322.2 260 L 175 345 L 27.8 260 L 27.8 90 Z",
+    id: "review",
+    title: "Review",
+    description: "We present the work, gather your feedback, and refine until every element feels right. Collaboration is at the heart of our process — your input shapes the final result.",
+    svgPath: "M 175 5 L 322.2 90 L 322.2 260 L 175 345 L 27.8 260 L 27.8 90 Z",
   },
   {
-    id:          "launch",
-    title:       "Launch",
-    description: "Your project goes live! We ensure a smooth delivery and stay by your side with support to make sure everything performs perfectly.",
-    svgPath:     "M 175 5 C 268.9 5 345 81.1 345 175 C 345 268.9 268.9 345 175 345 C 81.1 345 5 268.9 5 175 C 5 81.1 81.1 5 175 5 Z",
+    id: "launch",
+    title: "Launch",
+    description: "Your project goes live with a smooth delivery process. We don't disappear after launch — we stay by your side with dedicated support to make sure everything performs perfectly.",
+    svgPath: "M 175 5 C 268.9 5 345 81.1 345 175 C 345 268.9 268.9 345 175 345 C 81.1 345 5 268.9 5 175 C 5 81.1 81.1 5 175 5 Z",
   },
 ];
 
 // ── Section Heading ───────────────────────────────────────────
 export const howWeWorkHeading = {
-  title:              "How We Work",
-  titleFontFamily:    fonts.heading,
-  titleFontSize:      "text-5xl md:text-7xl",
-  titleFontWeight:    "font-normal",
+  title: "How We Work — From Brief to Launch.",
+  titleFontFamily: fonts.heading,
+  titleFontSize: "text-5xl md:text-7xl",
+  titleFontWeight: "font-normal",
   titleLetterSpacing: "tracking-tight",
-  titleColor:         "#000000",
+  titleColor: "#000000",
   titleColorTailwind: "text-black",
-  titleLineHeight:    "leading-tight",
-  titleMarginBottom:  "mb-6 md:mb-10",
-  paddingTop:         "pt-20 md:pt-32",
-  paddingBottom:      "pb-10 md:pb-16",
+  titleLineHeight: "leading-tight",
+  titleMarginBottom: "mb-6 md:mb-10",
+  paddingTop: "pt-20 md:pt-32",
+  paddingBottom: "pb-10 md:pb-16",
 
-  subtitle:              "We follow a clear, creative process that keeps your project on track — from the first conversation to the final delivery, every step is intentional.",
-  subtitleFontSize:      "text-lg md:text-2xl",
-  subtitleColor:         "#000000",
+  subtitle: "We follow a structured creative process that keeps your project on track, on budget, and on brand — from the first conversation to the final delivery.",
+  subtitleFontSize: "text-lg md:text-2xl",
+  subtitleColor: "#000000",
   subtitleColorTailwind: "text-black",
-  subtitleLineHeight:    "leading-relaxed",
+  subtitleLineHeight: "leading-relaxed",
 };
 
 // ── Morphing Shape Color ──────────────────────────────────────
 export const howWeWorkShapeColor = {
-  fill:    "#f26522",
-  tailwind:"text-[#f26522]",
+  fill: "#f26522",
+  tailwind: "text-[#f26522]",
 };
 
 // ── Arrow Between Shape and Description ───────────────────────
 export const howWeWorkArrow = {
-  stroke:      "#f26522",
+  stroke: "#f26522",
   strokeWidth: 2,
-  width:       60,
-  height:      20,
+  width: 60,
+  height: 20,
 };
 
 // ── Step Text Styles ──────────────────────────────────────────
 export const howWeWorkStepText = {
   title: {
-    fontFamily:   fonts.heading,
-    fontSize:     "text-5xl md:text-6xl lg:text-7xl",
-    fontWeight:   "font-normal",
-    color:        "#000000",
-    colorTailwind:"text-black",
-    letterSpacing:"tracking-tight",
+    fontFamily: fonts.heading,
+    fontSize: "text-5xl md:text-6xl lg:text-7xl",
+    fontWeight: "font-normal",
+    color: "#000000",
+    colorTailwind: "text-black",
+    letterSpacing: "tracking-tight",
   },
   description: {
-    fontSize:     "text-base md:text-lg lg:text-xl",
-    fontWeight:   "font-normal",
-    color:        "#000000",
-    colorTailwind:"text-black",
-    lineHeight:   "leading-snug",
+    fontSize: "text-base md:text-lg lg:text-xl",
+    fontWeight: "font-normal",
+    color: "#000000",
+    colorTailwind: "text-black",
+    lineHeight: "leading-snug",
   },
 };
 
 // ── Section Background ────────────────────────────────────────
 export const howWeWorkBackground = {
-  color:   "#fdf8f2",
-  tailwind:"bg-[#fdf8f2]",
+  color: "#fdf8f2",
+  tailwind: "bg-[#fdf8f2]",
 } as const;

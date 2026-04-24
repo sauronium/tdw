@@ -30,7 +30,7 @@ export const services: ServiceCard[] = [
   {
     number:             "01",
     title:              "Web Design & Development",
-    description:        "• Custom Website Design • Mobile Responsive Layout • SEO-Friendly Development • Speed & Performance Optimisation • 1 Month Free Support",
+    description:        "• We design and develop custom websites that combine stunning UI/UX design with fast, SEO-friendly, mobile-responsive development. From business websites and e-commerce stores to web applications — every site we build is crafted to captivate your audience, strengthen your online presence, and turn visitors into paying customers.",
     backgroundTailwind: "bg-[#0b1221]",
     backgroundColor:    "#0b1221",
     href:               "/services/web-design-and-development",
@@ -40,7 +40,7 @@ export const services: ServiceCard[] = [
   {
     number:             "02",
     title:              "Digital Marketing",
-    description:        "• SEO & Keyword Strategy • Google & Meta Paid Ads • Email Marketing Campaigns • Monthly Performance Reports • Competitor Analysis",
+    description:        "• We create and execute data-driven digital marketing campaigns — from search engine optimisation and Google Ads to social media marketing, social media management, and email automation. Whether it's building your brand on Instagram, running high-performing ad campaigns on Meta, or growing an engaged community across platforms — every strategy we build is focused on putting your brand in front of the right audience at the right time, delivering measurable ROI and sustainable business growth.",
     backgroundTailwind: "bg-[#ff5a26]",
     backgroundColor:    "#ff5a26",
     href:               "/services/digital-marketing",
@@ -50,7 +50,7 @@ export const services: ServiceCard[] = [
   {
     number:             "03",
     title:              "Social Media Management",
-    description:        "• Profile Setup & Optimisation • Content Creation & Scheduling • Daily/Weekly Posting • Audience Engagement & Replies • Monthly Insights & Analytics",
+    description:        "• We craft high-impact graphic design — from logo and brand identity to social media creatives, packaging, print collateral, and marketing materials. Every design we produce is rooted in strategy, built for consistency, and designed to make your brand stand out in a crowded market across every platform and touchpoint.",
     backgroundTailwind: "bg-[#008ff5]",
     backgroundColor:    "#008ff5",
     href:               "/services/social-media-management",
@@ -60,7 +60,7 @@ export const services: ServiceCard[] = [
   {
     number:             "04",
     title:              "Brand Strategy",
-    description:        "• Brand Identity & Logo Design • Brand Voice & Tone Guidelines • Market & Competitor Research • Visual Style Guide • Brand Positioning Strategy",
+    description:        "• We produce professional motion graphics and video content — social media Reels and Shorts, explainer videos, advertising video ads, product demos, and brand films. Every video we create is optimised for the platforms that matter — Instagram, YouTube, Facebook, LinkedIn — and designed to capture attention in the first second.",
     backgroundTailwind: "bg-[#6bd4a1]",
     backgroundColor:    "#6bd4a1",
     href:               "/services/brand-strategy",

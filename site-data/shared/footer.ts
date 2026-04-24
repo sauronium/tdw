@@ -96,7 +96,7 @@ export const footerSocialCardStyles = {
   grid: {
     borderRadius: "rounded-2xl md:rounded-[24px]",
     border: "border border-black/10",
-    background: "bg-[#f8f9ff]/50",
+    background: "bg-[#fdf8f2]/50",
     backdropBlur: "backdrop-blur-sm",
     shadow: "shadow-sm",
   },
@@ -135,9 +135,9 @@ export const footerContactPrompt = {
 // ── Footer Background ─────────────────────────────────────────
 export const footerBackground = {
   /** Mobile and desktop differ in the original */
-  mobile: "#f4ecef",
-  desktop: "#f6f6fb",
-  tailwind: "bg-[#f4ecef] md:bg-[#f6f6fb]",
+  mobile: "#fdf8f2",
+  desktop: "#fdf8f2",
+  tailwind: "bg-[#fdf8f2]",
   borderTop: "border-t border-black/5",
   paddingTop: "pt-10",
   paddingBottom: "pb-8",
