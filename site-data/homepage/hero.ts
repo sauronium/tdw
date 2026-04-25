@@ -8,22 +8,22 @@ export const heroData = {
   // ── Main Heading ──────────────────────────────────────────
   heading: {
     text: "Creative Design, Marketing & Web Development Studio for Growing Brands.",
-    fontSize: fontSizes.pageTitle,    // "text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[7.5rem]"
+    fontSize: "text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[7.5rem]",
     fontWeight: "font-medium",
     color: "text-black",
     letterSpacing: "tracking-tighter",
-    lineHeight: "leading-none",
+    lineHeight: "leading-none text-balance",
   },
 
   // ── Sub-headline ──────────────────────────────────────────
   subheadline: {
     text: "One Studio. Four Powerful Services. Results That Speak for Themselves.",
     fontFamily: fonts.heading,
-    fontSize: fontSizes.subtitle,     // "text-lg sm:text-xl md:text-2xl lg:text-3xl"
+    fontSize: "text-lg sm:text-xl md:text-2xl lg:text-3xl",
     fontWeight: "font-light",
     color: "text-black",
     marginTop: "mt-8",
-    letterSpacing: "tracking-tight",
+    letterSpacing: "tracking-tight text-balance",
   },
 
   // ── Punchline ─────────────────────────────────────────────

@@ -17,10 +17,10 @@ export const impactSectionData = {
     paddingY: "py-3 md:py-6",
     borderRadius: "rounded-md",
     /** Font sizing */
-    fontSize: "text-2xl md:text-5xl",
+    fontSize: "text-lg sm:text-xl md:text-4xl lg:text-5xl",
     fontWeight: "font-medium",
     letterSpacing: "tracking-normal",
-    whiteSpace: "whitespace-nowrap",
+    whiteSpace: "whitespace-normal md:whitespace-nowrap text-center",
   },
 
   // ── Section Background ────────────────────────────────────

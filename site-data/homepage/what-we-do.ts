@@ -73,7 +73,7 @@ export const services: ServiceCard[] = [
 export const whatWeDoHeading = {
   text:         "What We Do",
   fontFamily:   fonts.heading,
-  fontSize:     "text-6xl md:text-8xl",
+  fontSize:     "text-5xl md:text-6xl lg:text-8xl text-balance",
   fontWeight:   "font-medium",
   letterSpacing:"tracking-tight",
   color:        "#000000",
@@ -105,7 +105,7 @@ export const serviceCardStyles = {
   // Service title (h3)
   title: {
     fontFamily:   fonts.heading,
-    fontSize:     "text-4xl md:text-6xl lg:text-[76px]",
+    fontSize:     "text-3xl sm:text-4xl md:text-5xl lg:text-[76px] break-words",
     fontWeight:   "font-normal",
     letterSpacing:"tracking-tight",
     lineHeight:   "leading-[0.95] md:leading-[1]",
@@ -115,7 +115,7 @@ export const serviceCardStyles = {
 
   // Service description paragraph
   description: {
-    fontSize:   "text-base sm:text-lg md:text-xl lg:text-2xl",
+    fontSize:   "text-sm sm:text-base md:text-lg lg:text-2xl",
     fontWeight: "font-light",
     opacity:    "opacity-90",
     lineHeight: "leading-relaxed",

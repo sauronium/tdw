@@ -75,6 +75,12 @@ function SocialCard({ social, isLast }: { social: any, isLast: boolean }) {
 export default function Footer() {
     const [isGetStartedOpen, setIsGetStartedOpen] = useState(false);
 
+    const footerTeamAvatars = [
+        { src: "https://i.pravatar.cc/100?img=1", alt: "Team member 1" },
+        { src: "https://i.pravatar.cc/100?img=2", alt: "Team member 2" },
+        { src: "https://i.pravatar.cc/100?img=3", alt: "Team member 3" },
+    ];
+
     // Social links mimicking the design attachment
     const socialLinks = [
         { 
