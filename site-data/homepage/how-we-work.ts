@@ -56,7 +56,7 @@ export const workSteps: WorkStep[] = [
 export const howWeWorkHeading = {
   title: "How We Work — From Brief to Launch.",
   titleFontFamily: fonts.heading,
-  titleFontSize: "text-5xl md:text-7xl",
+  titleFontSize: "text-4xl md:text-5xl lg:text-7xl text-balance",
   titleFontWeight: "font-normal",
   titleLetterSpacing: "tracking-tight",
   titleColor: "#000000",
@@ -67,7 +67,7 @@ export const howWeWorkHeading = {
   paddingBottom: "pb-10 md:pb-16",
 
   subtitle: "We follow a structured creative process that keeps your project on track, on budget, and on brand — from the first conversation to the final delivery.",
-  subtitleFontSize: "text-lg md:text-2xl",
+  subtitleFontSize: "text-base md:text-lg lg:text-2xl text-balance",
   subtitleColor: "#000000",
   subtitleColorTailwind: "text-black",
   subtitleLineHeight: "leading-relaxed",
@@ -91,14 +91,14 @@ export const howWeWorkArrow = {
 export const howWeWorkStepText = {
   title: {
     fontFamily: fonts.heading,
-    fontSize: "text-5xl md:text-6xl lg:text-7xl",
+    fontSize: "text-4xl md:text-5xl lg:text-7xl break-words",
     fontWeight: "font-normal",
     color: "#000000",
     colorTailwind: "text-black",
     letterSpacing: "tracking-tight",
   },
   description: {
-    fontSize: "text-base md:text-lg lg:text-xl",
+    fontSize: "text-sm md:text-base lg:text-xl",
     fontWeight: "font-normal",
     color: "#000000",
     colorTailwind: "text-black",

@@ -8,7 +8,7 @@ import { fonts } from "../tokens";
 export const clientsHeading = {
   text: "Our Clients",
   fontFamily: fonts.heading,
-  fontSize: "text-5xl md:text-7xl",
+  fontSize: "text-4xl md:text-5xl lg:text-7xl text-balance",
   fontWeight: "font-normal",
   letterSpacing: "tracking-tight",
   color: "#000000",

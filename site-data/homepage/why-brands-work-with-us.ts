@@ -87,7 +87,7 @@ export const whyBrandsCards: WhyBrandsCard[] = [
 export const whyBrandsHeading = {
   title:              "Why Brands \nWork With Us",
   titleFontFamily:    fonts.heading,
-  titleFontSize:      fontSizes.sectionXL,        // "text-6xl md:text-8xl"
+  titleFontSize:      "text-5xl md:text-6xl lg:text-8xl text-balance",
   titleFontWeight:    "font-medium",
   titleLetterSpacing: "tracking-tight",
   titleColor:         "#000000",
@@ -96,7 +96,7 @@ export const whyBrandsHeading = {
   titleMarginBottom:  "mb-8",
 
   subtitle:              "We combine creative precision with commercial thinking — so your brand doesn't just look good, it works hard.",
-  subtitleFontSize:      fontSizes.description,   // "text-lg md:text-2xl"
+  subtitleFontSize:      "text-base md:text-xl lg:text-2xl text-balance",
   subtitleColor:         "#1f2937",
   subtitleColorTailwind: "text-gray-800",
   subtitleLineHeight:    "leading-relaxed",
