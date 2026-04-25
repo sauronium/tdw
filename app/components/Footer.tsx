@@ -7,7 +7,7 @@ import { ArrowUpRight, Camera as Instagram, Aperture as Dribbble, Bookmark, Brie
 import InteractiveDotGrid from "./InteractiveDotGrid";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import GetStartedModal from "./GetStartedModal";
-import { footerCTA, footerBackground } from "@/site-data/shared/footer";
+import { footerCTA, footerBackground, footerTeamAvatars } from "@/site-data/shared/footer";
 
 function SocialCard({ social, isLast }: { social: any, isLast: boolean }) {
     const cardRef = useRef<HTMLAnchorElement>(null);
