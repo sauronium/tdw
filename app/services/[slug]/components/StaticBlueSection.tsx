@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ServiceData } from "../data";
+import { ServiceData } from "@/site-data/services/data";
 
 export default function StaticBlueSection({ data }: { data: ServiceData }) {
     if (!data.ctaText) return null;

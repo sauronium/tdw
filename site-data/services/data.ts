@@ -1,9 +1,8 @@
 export interface ServiceCard {
   id: string;
   backgroundColor: string;
-  image?: string;
-  video?: string;
-  title?: string;
+  title: string;
+  listItems: string[];
 }
 
 export interface ServiceIncluded {
@@ -63,12 +62,10 @@ export const servicesData: Record<string, ServiceData> = {
     heroBgColor: "#395ef0",
     heroHeadline: "web design agency\nfor leading brands.",
     cards: [
-      { id: "1", backgroundColor: "#000000", image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80", video: "https://www.w3schools.com/html/mov_bbb.mp4" },
-      { id: "2", backgroundColor: "#ef6c57", image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80" },
-      { id: "3", backgroundColor: "#fbd841", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80", video: "https://www.w3schools.com/html/mov_bbb.mp4" },
-      { id: "4", backgroundColor: "#a6c4b6", image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&q=80" },
-      { id: "5", backgroundColor: "#2d3748", image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" },
-      { id: "6", backgroundColor: "#ecc94b", image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" },
+      { id: "1", backgroundColor: "#65C495", title: "Starter Pack", listItems: ["Logo design & variations", "Business card & letterhead", "Brand colour palette", "Social media profile setup"] },
+      { id: "2", backgroundColor: "#F7C518", title: "Growth Pack", listItems: ["Everything in Starter", "Website design", "Marketing materials", "Custom illustrations"] },
+      { id: "3", backgroundColor: "#FD6824", title: "Pro Pack", listItems: ["Everything in Growth", "App design", "Motion graphics", "Full brand guidelines"] },
+      { id: "4", backgroundColor: "#408BF7", title: "Ultimate Pack", listItems: ["Everything in Pro", "Full rebrand", "Dedicated design team", "Unlimited revisions"] },
     ],
     servicesIncluded: [
       {
@@ -181,10 +178,10 @@ export const servicesData: Record<string, ServiceData> = {
     heroBgColor: "#ff5a26",
     heroHeadline: "Professional Graphic Design Services That\nMake Your Brand Unforgettable.",
     cards: [
-      { id: "1", backgroundColor: "#000000", image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80", video: "https://www.w3schools.com/html/mov_bbb.mp4" },
-      { id: "2", backgroundColor: "#ef6c57", image: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&w=600&q=80" },
-      { id: "3", backgroundColor: "#fbd841", image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" },
-      { id: "4", backgroundColor: "#a6c4b6", image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600&q=80" },
+      { id: "1", backgroundColor: "#65C495", title: "Starter Pack", listItems: ["Logo design & variations", "Business card & letterhead", "Brand colour palette", "Social media profile setup"] },
+      { id: "2", backgroundColor: "#F7C518", title: "Growth Pack", listItems: ["Everything in Starter", "Website design", "Marketing materials", "Custom illustrations"] },
+      { id: "3", backgroundColor: "#FD6824", title: "Pro Pack", listItems: ["Everything in Growth", "App design", "Motion graphics", "Full brand guidelines"] },
+      { id: "4", backgroundColor: "#408BF7", title: "Ultimate Pack", listItems: ["Everything in Pro", "Full rebrand", "Dedicated design team", "Unlimited revisions"] },
     ],
     servicesIncluded: [
        {
@@ -327,10 +324,10 @@ export const servicesData: Record<string, ServiceData> = {
     heroBgColor: "#22c55e",
     heroHeadline: "motion graphics agency\nfor modern media.",
     cards: [
-      { id: "1", backgroundColor: "#000000", image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80", video: "https://www.w3schools.com/html/mov_bbb.mp4" },
-      { id: "2", backgroundColor: "#ef6c57", image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=600&q=80" },
-      { id: "3", backgroundColor: "#fbd841", image: "https://images.unsplash.com/photo-1611162618071-b39a2ec055ce?auto=format&fit=crop&w=600&q=80" },
-      { id: "4", backgroundColor: "#a6c4b6", image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?auto=format&fit=crop&w=600&q=80" },
+      { id: "1", backgroundColor: "#65C495", title: "Starter Pack", listItems: ["Logo design & variations", "Business card & letterhead", "Brand colour palette", "Social media profile setup"] },
+      { id: "2", backgroundColor: "#F7C518", title: "Growth Pack", listItems: ["Everything in Starter", "Website design", "Marketing materials", "Custom illustrations"] },
+      { id: "3", backgroundColor: "#FD6824", title: "Pro Pack", listItems: ["Everything in Growth", "App design", "Motion graphics", "Full brand guidelines"] },
+      { id: "4", backgroundColor: "#408BF7", title: "Ultimate Pack", listItems: ["Everything in Pro", "Full rebrand", "Dedicated design team", "Unlimited revisions"] },
     ],
     servicesIncluded: [
        {

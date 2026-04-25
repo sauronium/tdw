@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ServiceProcess } from "../data";
+import { ServiceProcess } from "@/site-data/services/data";
 
 export default function ProcessSection({ process }: { process: ServiceProcess }) {
     if (!process) return null;

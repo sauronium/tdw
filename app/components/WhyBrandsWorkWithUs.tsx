@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
     whyBrandsCards,
     whyBrandsCardStyles,
@@ -80,13 +81,12 @@ export default function WhyBrandsWorkWithUs() {
                                     onMouseEnter={() => setHoveredIndex(index)}
                                     onMouseLeave={() => setHoveredIndex(null)}
                                 >
-                                    <video
+                                    <Image
                                         src={item.src}
-                                        autoPlay
-                                        loop
-                                        muted
-                                        playsInline
-                                        className="w-full h-full object-cover"
+                                        alt={item.alt || "Brand Image"}
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="object-cover"
                                     />
                                 </div>
                             );

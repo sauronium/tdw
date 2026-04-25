@@ -7,7 +7,7 @@ import ProcessSection from "./components/ProcessSection";
 import DeliverablesSection from "./components/DeliverablesSection";
 import TechStackSection from "./components/TechStackSection";
 import StaticBlueSection from "./components/StaticBlueSection";
-import { servicesData } from "./data";
+import { servicesData } from "@/site-data/services/data";
 import Image from "next/image";
 import Header from "../../components/Header";
 // assuming Footer from app/components like other pages or we can just skip if it's in layout
@@ -48,7 +48,7 @@ export default async function ServicePage({
                   </h2>
                   <div className="relative aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-[10px]">
                     <Image 
-                      src={data.cards[0].image || ""}
+                      src={data.servicesIncluded?.[0]?.image || "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"}
                       alt="Process block"
                       fill
                       className="object-cover"

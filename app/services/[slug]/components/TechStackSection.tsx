@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { TechStackItem } from "../data";
+import { TechStackItem } from "@/site-data/services/data";
 
 export default function TechStackSection({ items }: { items: TechStackItem[] }) {
     if (!items || items.length === 0) return null;

@@ -67,6 +67,7 @@ export default function HowWeWork() {
 
     const svgContainerRef = useRef<HTMLDivElement>(null);
     const isInitialRender = useRef(true);
+    const prevActiveIndex = useRef(activeIndex);
 
     useEffect(() => {
         if (typeof window !== "undefined" && pathRef.current && svgContainerRef.current) {
@@ -76,8 +77,12 @@ export default function HowWeWork() {
                 if (MorphSVGPlugin) {
                     gsap.set(pathRef.current, { morphSVG: workSteps[activeIndex].svgPath });
                 }
+                prevActiveIndex.current = activeIndex;
                 return;
             }
+
+            const direction = activeIndex >= prevActiveIndex.current ? 1 : -1;
+            prevActiveIndex.current = activeIndex;
 
             const tl = gsap.timeline({ overwrite: "auto" });
             tl.to(svgContainerRef.current, { scale: 1.15, duration: 0.2,  ease: "power1.out" })
@@ -86,7 +91,7 @@ export default function HowWeWork() {
               .to(svgContainerRef.current, { scale: 1,     duration: 0.85, ease: "bounce.out" });
 
             gsap.to(svgContainerRef.current, {
-                rotation: "+=360",
+                rotation: direction === 1 ? "+=360" : "-=360",
                 duration: 1.4,
                 transformOrigin: "50% 50%",
                 ease: "back.out(1.2)",
@@ -152,8 +157,8 @@ export default function HowWeWork() {
                         <div className="w-full md:w-2/4 flex justify-center relative z-0">
                             <div
                                 ref={svgContainerRef}
-                                className="w-[256px] h-[256px] md:w-[480px] md:h-[480px] flex justify-center items-center"
-                                style={{ color: howWeWorkShapeColor.fill }}
+                                className="w-[256px] h-[256px] md:w-[480px] md:h-[480px] flex justify-center items-center transition-colors duration-500"
+                                style={{ color: activeStep.color }}
                             >
                                 <svg
                                     viewBox="0 0 350 350"
@@ -168,7 +173,7 @@ export default function HowWeWork() {
                         {/* Right: Description */}
                         <div className="w-full md:w-1/4 flex justify-center md:justify-start z-10 h-[100px] md:h-[150px] items-center md:-translate-x-12">
                             <div className="flex flex-row justify-center items-center gap-4 md:gap-6 w-full max-w-[420px]">
-                                <div className="shrink-0" style={{ color: howWeWorkArrow.stroke }}>
+                                <div className="shrink-0" style={{ color: activeStep.color }}>
                                     <svg
                                         width={howWeWorkArrow.width}
                                         height={howWeWorkArrow.height}

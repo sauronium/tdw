@@ -2,38 +2,16 @@
 
 import { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useMotionValueEvent, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import { ServiceData } from '../data';
-
-const VideoHoverCard = ({ src }: { src: string }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  return (
-    <video
-      ref={videoRef}
-      loop
-      muted
-      playsInline
-      className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 bg-black"
-      onMouseEnter={() => videoRef.current?.play().catch(e => console.warn('Video hover play error:', e))}
-      onMouseLeave={() => {
-        if (videoRef.current) {
-          videoRef.current.pause();
-          videoRef.current.currentTime = 0;
-        }
-      }}
-    >
-      <source src={src} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  );
-};
+import { ServiceData } from '@/site-data/services/data';
+import GetStartedModal from '../../../components/GetStartedModal';
+import { ArrowUpRight } from 'lucide-react';
 
 export default function ServicesHero({ data }: { data: ServiceData }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [ww, setWw] = useState(1200);
   const [wh, setWh] = useState(800);
   const [isUnstacked, setIsUnstacked] = useState(false);
+  const [isGetStartedOpen, setIsGetStartedOpen] = useState(false);
 
   useEffect(() => {
     const updateSize = () => {
@@ -59,8 +37,16 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
     }
   });
 
-  const cardWidth = Math.min(350, ww * 0.75);
-  // Aspect ratio makes height longer (portrait)
+  const gap = 24;
+  const isDesktop = ww >= 1024;
+  const isTablet = ww >= 768 && ww < 1024;
+  
+  const cardWidth = isDesktop 
+    ? (ww * 0.8 - gap * 3) / 4 
+    : isTablet 
+      ? (ww * 0.8 - gap * 2) / 3
+      : ww * 0.75;
+      
   const cardHeight = cardWidth * 1.55;
 
   // Map progress to cards Y. It scrolls up from bottom (showing 20% initially)
@@ -76,18 +62,12 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
   // Title fades from white to black alongside the background transition
   const titleColor = useTransform(scrollYProgress, [0.33, 0.66], ['#ffffff', '#171717']);
 
-  const gap = 24;
   const totalCards = data.cards.length;
-  // Stack spacing - how much next card peeks out (if we offset them when stacked)
   const stackSpacingX = 24; 
   const stackSpacingY = 0;
 
-  // Render cards. When !isUnstacked, they are absolute positioned forming a deck.
-  // When isUnstacked, they form a row. We can animate the `x` and `y` directly instead of a flex container to keep it seamless.
-  
-  // Total width of unstacked slider
   const fullWidthUnstacked = totalCards * cardWidth + (totalCards - 1) * gap;
-  const leftPadding = ww > 768 ? 48 : 24;
+  const leftPadding = (ww - (isDesktop ? ww * 0.8 : (isTablet ? ww * 0.8 : ww * 0.75))) / 2;
   
   return (
     <div ref={containerRef} className="relative w-full" style={{ height: '150vh' }}>
@@ -146,7 +126,7 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
               return (
                 <motion.div
                   key={card.id}
-                  className="absolute shadow-2xl overflow-hidden rounded-[10px] pointer-events-auto flex items-center justify-center"
+                  className="absolute shadow-2xl overflow-hidden rounded-[10px] pointer-events-auto group"
                   initial={false}
                   animate={{
                     x: isUnstacked ? unstackedX : stackedX,
@@ -154,6 +134,7 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
                     opacity: isHiddenInStack ? 0 : 1,
                     scale: 1, // NO height difference when stacked
                   }}
+                  whileHover={isUnstacked ? { scale: 1.05, zIndex: 50 } : undefined}
                   transition={{ 
                     type: "spring", 
                     stiffness: 150, 
@@ -170,27 +151,38 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
                 >
                   
                   <AnimatePresence>
-                    {isUnstacked && (card.image || card.video) && (
+                    {isUnstacked && (
                       <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 1.0, ease: "easeInOut" }}
-                        className="absolute inset-0 w-full h-full"
+                        className="w-full h-full p-6 md:p-8 flex flex-col relative text-white"
                       >
-                        {card.image && (
-                          <Image 
-                            src={card.image}
-                            alt="Project"
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 768px) 320px, 400px"
-                            draggable={false}
-                          />
-                        )}
-                        {card.video && (
-                          <VideoHoverCard src={card.video} />
-                        )}
+                         <h3 className="text-2xl md:text-3xl lg:text-3xl font-bold border-b-[3px] border-white/50 pb-3 mb-6 tracking-tight">
+                            {card.title}
+                         </h3>
+                         <ul className="flex flex-col gap-4 text-sm md:text-base lg:text-lg font-medium w-full flex-grow">
+                           {card.listItems?.map((item, i) => (
+                             <li key={i} className="flex items-start gap-3">
+                               <span className="w-1.5 h-1.5 mt-2 rounded-full bg-white flex-shrink-0" />
+                               <span className="leading-tight">{item}</span>
+                             </li>
+                           ))}
+                         </ul>
+
+                         {/* Get Started Button */}
+                         <button 
+                             onClick={(e) => {
+                               // Stop propagation so it doesn't interfere with drag or other things
+                               e.stopPropagation();
+                               setIsGetStartedOpen(true);
+                             }}
+                             className="group/btn bg-white text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white px-5 py-2.5 md:py-3 md:px-6 rounded-full flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-md w-max self-start mt-auto duration-300"
+                         >
+                             <span className="text-sm md:text-base font-medium tracking-wide">Get Started</span>
+                             <ArrowUpRight className="w-4 h-4 md:w-5 md:h-5 font-light group-hover/btn:rotate-12 transition-transform duration-300" strokeWidth={2} />
+                         </button>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -201,6 +193,8 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
           </motion.div>
         </motion.div>
       </div>
+
+      <GetStartedModal isOpen={isGetStartedOpen} onClose={() => setIsGetStartedOpen(false)} />
     </div>
   );
 }

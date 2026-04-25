@@ -270,7 +270,7 @@ export default function Header() {
     },
     { label: 'Work', href: '/work' },
     {
-      label: 'Start a project',
+      label: 'Contact',
       href: '/contact',
       bgClass: 'bg-[#ff5a26]',
       textClass: 'text-white',
@@ -294,7 +294,7 @@ export default function Header() {
           `}
           aria-label="Home"
         >
-          <div className="w-[8.0625rem] h-auto lg:w-[12rem] flex justify-center">
+          <div className="w-[10.5rem] h-auto lg:w-[15.6rem] flex justify-center">
             <Image
               width={headerLogo.width}
               height={headerLogo.height}

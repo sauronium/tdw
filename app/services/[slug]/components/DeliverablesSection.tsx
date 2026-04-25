@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ServiceDeliverables } from "../data";
+import { ServiceDeliverables } from "@/site-data/services/data";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function DeliverablesSection({ deliverables }: { deliverables: ServiceDeliverables }) {

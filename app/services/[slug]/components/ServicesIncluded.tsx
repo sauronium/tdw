@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
-import { ServiceIncluded } from "../data";
+import { ServiceIncluded } from "@/site-data/services/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 

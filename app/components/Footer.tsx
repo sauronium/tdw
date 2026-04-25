@@ -7,7 +7,7 @@ import { ArrowUpRight, Camera as Instagram, Aperture as Dribbble, Bookmark, Brie
 import InteractiveDotGrid from "./InteractiveDotGrid";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import GetStartedModal from "./GetStartedModal";
-import { footerCTA, footerBackground, footerTeamAvatars } from "@/site-data/shared/footer";
+import { footerCTA, footerBackground } from "@/site-data/shared/footer";
 
 function SocialCard({ social, isLast }: { social: any, isLast: boolean }) {
     const cardRef = useRef<HTMLAnchorElement>(null);
@@ -75,11 +75,7 @@ function SocialCard({ social, isLast }: { social: any, isLast: boolean }) {
 export default function Footer() {
     const [isGetStartedOpen, setIsGetStartedOpen] = useState(false);
 
-    const footerTeamAvatars = [
-        { src: "https://i.pravatar.cc/100?img=1", alt: "Team member 1" },
-        { src: "https://i.pravatar.cc/100?img=2", alt: "Team member 2" },
-        { src: "https://i.pravatar.cc/100?img=3", alt: "Team member 3" },
-    ];
+
 
     // Social links mimicking the design attachment
     const socialLinks = [
@@ -136,25 +132,25 @@ export default function Footer() {
             
             {/* Top Section Wrapper - Break out to 100vw for background, keep content padded */}
             <div 
-                className={`relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] py-24 mb-6 md:mb-10 px-4 flex justify-center ${footerBackground.tailwind}`}
+                className={`relative w-[100vw] left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] pt-12 pb-16 mb-6 md:mb-10 px-4 flex justify-center ${footerBackground.tailwind}`}
             >
                 {/* High-performance physics Canvas dot pattern */}
                 <InteractiveDotGrid />
 
                 {/* Actual Constraint Wrapper for Content */}
-                <div className="relative z-10 w-full max-w-[1440px] px-0 md:px-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div className="relative z-10 w-full max-w-[1440px] px-0 md:px-4 flex flex-col md:flex-row justify-between items-start">
                     {/* Left: Let's Jam */}
                     <div className="flex flex-col relative z-10">
                         <h2
-                            className="text-[5rem] md:text-[8rem] font-medium tracking-tight text-[#1a1a1a] leading-none mb-10 md:mb-0"
+                            className="text-4xl sm:text-5xl md:text-6xl lg:text-[5rem] font-medium tracking-tight text-[#1a1a1a] leading-[1.1] mb-10 md:mb-0 max-w-4xl text-balance"
                             style={{ fontFamily: footerCTA.headlineFontFamily }}
                         >
-                            Let&apos;s Jam.
+                            Let&apos;s Build Something Extraordinary Together.
                         </h2>
                     </div>
 
                     {/* Right: Huge Button */}
-                    <div className="relative z-10 flex items-center md:items-start justify-end w-full md:w-auto mt-4 md:mt-0 pr-4 md:pr-0">
+                    <div className="relative z-10 flex items-start justify-end w-full md:w-auto mt-4 md:pt-8 pr-4 md:pr-0 self-start">
                         <button 
                             onClick={() => setIsGetStartedOpen(true)}
                             className="group bg-[#1a1a1a] text-white px-10 md:px-12 py-5 md:py-6 rounded-full flex items-center justify-center gap-4 hover:bg-black transition-all hover:scale-[1.02] shadow-xl w-full md:w-auto"
@@ -168,40 +164,11 @@ export default function Footer() {
 
             <div className="max-w-[1440px] mx-auto px-4 md:px-8 relative z-10">
                 
-                <div className="flex flex-col w-full mb-16 md:mb-20">
 
-                    {/* Row 2: Avatars & Text block (Right-aligned under the button) */}
-                    <div className="flex justify-end w-full pt-6 md:pt-10">
-                        <div className="flex items-center gap-5">
-                            {/* Overlapping Faces */}
-                            <div className="flex -space-x-4">
-                                {footerTeamAvatars.map((avatar, idx) => (
-                                    <img
-                                        key={idx}
-                                        className="w-12 h-12 md:w-14 md:h-14 border-2 border-white rounded-full object-cover"
-                                        style={{ zIndex: footerTeamAvatars.length - idx }}
-                                        src={avatar.src}
-                                        alt={avatar.alt}
-                                    />
-                                ))}
-                            </div>
-                            
-                            {/* Mini Text */}
-                            <p className="text-[#333] text-sm md:text-base leading-snug font-medium max-w-[280px]">
-                                We&apos;re always up for a coffee and a chat,<br />
-                                <Link href="#" className="text-[#8c6bf7] hover:underline">
-                                    Send us a message
-                                </Link>{" "}
-                                and we&apos;ll get back to you!.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
 
                 {/* Bottom Section: Social Links Grid */}
                 {/* Horizontal scrolling wrapper on mobile to prevent squishing */}
-                <div className="w-full overflow-x-auto pb-4 hide-scrollbar">
+                <div className="w-full overflow-x-auto pb-4 mt-12 md:mt-20 hide-scrollbar">
                     <div className="flex flex-row md:grid md:grid-cols-6 min-w-[900px] md:min-w-full rounded-2xl md:rounded-[24px] overflow-hidden border border-black/10 bg-[#fdf8f2]/50 backdrop-blur-sm shadow-sm">
                         {socialLinks.map((social, idx) => (
                             <SocialCard key={social.name} social={social} isLast={idx === socialLinks.length - 1} />

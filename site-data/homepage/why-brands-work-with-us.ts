@@ -16,15 +16,15 @@ export interface StatCard {
   zIndex:   string;
 }
 
-export interface VideoCard {
-  type: "video";
+export interface ImageCard {
+  type: "image";
   src:      string;
   alt:      string;
   rotation: string;
   zIndex:   string;
 }
 
-export type WhyBrandsCard = StatCard | VideoCard;
+export type WhyBrandsCard = StatCard | ImageCard;
 
 // ── Cards ─────────────────────────────────────────────────────
 // Six cards alternate stat → video → stat → video → stat → video.
@@ -41,8 +41,8 @@ export const whyBrandsCards: WhyBrandsCard[] = [
     zIndex:             "z-[1]",
   },
   {
-    type:     "video",
-    src:      "https://videos.pexels.com/video-files/3129671/3129671-uhd_2560_1440_30fps.mp4",
+    type:     "image",
+    src:      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
     alt:      "Team collaboration",
     rotation: "-rotate-3",
     zIndex:   "z-[2]",
@@ -58,8 +58,8 @@ export const whyBrandsCards: WhyBrandsCard[] = [
     zIndex:             "z-[3]",
   },
   {
-    type:     "video",
-    src:      "https://videos.pexels.com/video-files/853789/853789-hd_1920_1080_25fps.mp4",
+    type:     "image",
+    src:      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
     alt:      "Creative workspace",
     rotation: "rotate-6",
     zIndex:   "z-[4]",
@@ -75,8 +75,8 @@ export const whyBrandsCards: WhyBrandsCard[] = [
     zIndex:             "z-[5]",
   },
   {
-    type:     "video",
-    src:      "https://videos.pexels.com/video-files/3129957/3129957-uhd_2560_1440_25fps.mp4",
+    type:     "image",
+    src:      "https://images.unsplash.com/photo-1542744094-24638ea0b56c?auto=format&fit=crop&w=800&q=80",
     alt:      "Creative process in action",
     rotation: "rotate-4",
     zIndex:   "z-[6]",
@@ -105,7 +105,7 @@ export const whyBrandsHeading = {
 // ── Card Shared Styles ────────────────────────────────────────
 export const whyBrandsCardStyles = {
   width:  "w-[280px] md:w-[240px] lg:w-[280px] xl:w-[320px]",
-  height: "h-[360px] md:h-[310px] lg:h-[360px] xl:h-[400px]",
+  height: "aspect-[2/3] h-auto", // using aspect ratio to keep ratio same on all screens and making it taller
 
   borderRadius:  "rounded-[19px]",
   overlapMargin: "ml-0 md:-ml-16 lg:-ml-20 xl:-ml-24 md:first:ml-0 my-4 md:my-0",
