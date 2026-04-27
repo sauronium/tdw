@@ -59,8 +59,8 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
   // We change background from 0.33 to 0.66 smoothly.
   const bgColor = useTransform(scrollYProgress, [0.33, 0.66], [data.heroBgColor, '#fdf8f2']);
   
-  // Title fades from white to black alongside the background transition
-  const titleColor = useTransform(scrollYProgress, [0.33, 0.66], ['#ffffff', '#171717']);
+  // Title is black from the start to match the light background
+  const titleColor = useTransform(scrollYProgress, [0.33, 0.66], ['#000000', '#000000']);
 
   const totalCards = data.cards.length;
   const stackSpacingX = 24; 

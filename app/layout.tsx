@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
 import Header from './components/Header';
 import Footer from './components/Footer';
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ["latin"],
+  weight: ["500"],
+  variable: "--font-bricolage",
+});
 
 const hagrid = localFont({
   src: [
@@ -43,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${hagrid.variable}`}>
+    <html lang="en" className={`${inter.variable} ${hagrid.variable} ${bricolage.variable}`}>
       <body
         className={`antialiased bg-background text-foreground`}
       >

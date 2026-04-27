@@ -9,7 +9,7 @@ export default function StaticBlueSection({ data }: { data: ServiceData }) {
     return (
         <section 
             className="relative w-full h-[80vh] md:h-screen flex items-center justify-center overflow-hidden"
-            style={{ backgroundColor: data.heroBgColor }}
+            style={{ backgroundColor: "#fd6824" }}
         >
             <div className="flex items-center justify-center p-6 md:p-12 z-10 w-full">
                 <h2 

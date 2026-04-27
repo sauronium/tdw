@@ -54,7 +54,7 @@ export const colors = {
 // The CSS variables are defined via Next.js localFont() in layout.tsx
 // and registered in app/globals.css using `@theme inline`.
 export const fonts = {
-  heading: "var(--font-hagrid)" as string,  // Hagrid — all h1–h6
+  heading: "var(--font-bricolage)" as string,  // Bricolage Grotesque — all h1–h6
   body:    "var(--font-inter)"  as string,  // Inter — body, subtitles, labels
 } as const;
 
