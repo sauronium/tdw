@@ -3,7 +3,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { motion, useScroll, useTransform, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { ServiceData } from '@/site-data/services/data';
-import GetStartedModal from '../../../components/GetStartedModal';
+import ServiceGetStartedModal from '../../../components/ServiceGetStartedModal';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function ServicesHero({ data }: { data: ServiceData }) {
@@ -12,6 +12,7 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
   const [wh, setWh] = useState(800);
   const [isUnstacked, setIsUnstacked] = useState(false);
   const [isGetStartedOpen, setIsGetStartedOpen] = useState(false);
+  const [selectedServiceTitle, setSelectedServiceTitle] = useState("");
 
   useEffect(() => {
     const updateSize = () => {
@@ -47,7 +48,7 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
       ? (ww * 0.8 - gap * 2) / 3
       : ww * 0.75;
       
-  const cardHeight = cardWidth * 1.55;
+  const cardHeight = cardWidth * 1.75;
 
   // Map progress to cards Y. It scrolls up from bottom (showing 20% initially)
   // wh - cardHeight * 0.2 puts the top 20% of the card visible at the bottom edge.
@@ -70,7 +71,7 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
   const leftPadding = (ww - (isDesktop ? ww * 0.8 : (isTablet ? ww * 0.8 : ww * 0.75))) / 2;
   
   return (
-    <div ref={containerRef} className="relative w-full" style={{ height: '150vh' }}>
+    <div ref={containerRef} className="relative w-full" style={{ height: '250vh' }}>
       
       {/* Global Seamless Background */}
       <motion.div 
@@ -176,6 +177,7 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
                              onClick={(e) => {
                                // Stop propagation so it doesn't interfere with drag or other things
                                e.stopPropagation();
+                               setSelectedServiceTitle(card.title);
                                setIsGetStartedOpen(true);
                              }}
                              className="group/btn bg-white text-[#1a1a1a] hover:bg-[#1a1a1a] hover:text-white px-5 py-2.5 md:py-3 md:px-6 rounded-full flex items-center justify-center gap-2 transition-all hover:scale-[1.02] shadow-md w-max self-start mt-auto duration-300"
@@ -194,7 +196,11 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
         </motion.div>
       </div>
 
-      <GetStartedModal isOpen={isGetStartedOpen} onClose={() => setIsGetStartedOpen(false)} />
+      <ServiceGetStartedModal 
+        isOpen={isGetStartedOpen} 
+        onClose={() => setIsGetStartedOpen(false)} 
+        serviceTitle={selectedServiceTitle} 
+      />
     </div>
   );
 }
