@@ -86,7 +86,7 @@ export default function WhoWeWorkWith() {
                         <motion.div
                             key={idx}
                             variants={cardVariants}
-                            className={`flex flex-col ${clientTypeCardStyles.borderRadius} ${clientTypeCardStyles.padding} ${clientTypeCardStyles.minHeight} ${clientTypeCardStyles.textColor} ${card.offset}`}
+                            className={`flex flex-col ${clientTypeCardStyles.borderRadius} ${clientTypeCardStyles.padding} ${clientTypeCardStyles.minHeight} ${clientTypeCardStyles.textColor} ${card.offset} transition-transform duration-300 ease-out hover:-translate-y-4 hover:scale-[1.03] hover:shadow-2xl`}
                             style={{ backgroundColor: card.color }}
                         >
                             <h3 className={`${clientTypeCardStyles.title.fontSize} ${clientTypeCardStyles.title.fontWeight} ${clientTypeCardStyles.title.lineHeight} ${clientTypeCardStyles.title.marginBottom}`}>

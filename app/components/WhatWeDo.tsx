@@ -35,7 +35,7 @@ const Card = ({
     const rotations = ["-rotate-[6deg]", "rotate-[4deg]", "-rotate-[8deg]", "rotate-[5deg]"];
 
     return (
-        <div ref={container} className="h-screen flex items-center justify-center sticky top-0">
+        <div ref={container} className={`h-screen flex items-center justify-center sticky top-0 ${i === 0 ? '' : 'mt-[40vh]'}`}>
             <motion.div
                 style={{ scale, top: "calc(5vh)" }}
                 className={`relative flex flex-col justify-between ${serviceCardStyles.width} ${serviceCardStyles.height} ${serviceCardStyles.borderRadius} ${serviceCardStyles.padding} text-white shadow-xl origin-top ${backgroundTailwind} overflow-hidden`}
@@ -48,7 +48,7 @@ const Card = ({
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col h-full pointer-events-none relative z-10">
+                <div className="flex flex-col justify-center md:justify-start h-full pointer-events-none relative z-10">
                     {/* Expertise badge */}
                     <div className={`w-full flex justify-start ${serviceCardStyles.badge.marginBottom} pointer-events-auto`}>
                         <span className={`${serviceCardStyles.badge.background} ${serviceCardStyles.badge.textColor} ${serviceCardStyles.badge.paddingX} ${serviceCardStyles.badge.paddingY} ${serviceCardStyles.badge.borderRadius} ${serviceCardStyles.badge.fontSize} ${serviceCardStyles.badge.fontWeight} ${serviceCardStyles.badge.letterSpacing}`}>
@@ -57,8 +57,8 @@ const Card = ({
                     </div>
 
                     {/* Title + description */}
-                    <div className="flex flex-col md:flex-row justify-between items-start w-full h-full">
-                        <div className="max-w-3xl lg:max-w-4xl flex flex-col justify-start pointer-events-auto mt-0">
+                    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center md:items-start w-full h-full pb-24 md:pb-32">
+                        <div className="flex flex-col justify-center md:justify-start items-center md:items-start text-center md:text-left pointer-events-auto mt-0 w-full">
                             <h3
                                 className={`${serviceCardStyles.title.fontSize} ${serviceCardStyles.title.fontWeight} ${serviceCardStyles.title.letterSpacing} ${serviceCardStyles.title.lineHeight} ${serviceCardStyles.title.marginBottom} ${serviceCardStyles.title.color}`}
                                 style={{ fontFamily: serviceCardStyles.title.fontFamily }}

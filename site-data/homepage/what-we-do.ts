@@ -115,11 +115,11 @@ export const serviceCardStyles = {
 
   // Service description paragraph
   description: {
-    fontSize:   "text-sm sm:text-base md:text-lg lg:text-2xl",
+    fontSize:   "text-sm sm:text-base md:text-lg lg:text-xl",
     fontWeight: "font-light",
     opacity:    "opacity-90",
     lineHeight: "leading-relaxed",
-    maxWidth:   "max-w-sm md:max-w-md lg:max-w-xl",
+    maxWidth:   "max-w-full md:max-w-[85%] lg:max-w-[75%] xl:max-w-[70%]",
     color:      "text-white",
   },
 
@@ -149,7 +149,7 @@ export const serviceCardStyles = {
     borderRadius:    "rounded-full",
     fontSize:        "text-lg",
     fontWeight:      "font-bold",
-    position:        "absolute bottom-8 left-8 md:bottom-16 md:left-16",
+    position:        "absolute bottom-8 left-1/2 -translate-x-1/2 md:translate-x-0 md:bottom-16 md:left-16",
     arrowSize:       "w-12 h-12",
     arrowBg:         "bg-black",
     arrowColor:      "text-white",

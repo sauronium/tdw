@@ -8,20 +8,20 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const IncludedCard = ({ item, index, total }: { item: ServiceIncluded, index: number, total: number }) => {
     // Basic sticky card layout aligned to center
     return (
-        <div className="sticky top-0 h-screen w-full flex flex-col justify-center bg-[#fdf8f2] shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.05)] overflow-hidden px-4 md:px-12 will-change-transform z-10" style={{
+        <div className={`sticky top-0 h-screen w-full flex flex-col justify-center bg-[#fdf8f2] shadow-[0_-20px_50px_-15px_rgba(0,0,0,0.05)] overflow-hidden px-4 md:px-12 will-change-transform z-10 ${index === 0 ? '' : 'mt-[40vh]'}`} style={{
             top: 0 
         }}>
             <div className="max-w-[1400px] w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                 
                 {/* Left Column: Text Content */}
-                <div className="flex flex-col items-start justify-center">
-                    <h3 className="text-4xl md:text-5xl lg:text-[4.5rem] font-medium leading-[1.05] tracking-tight text-[#171717] mb-12 lg:mb-16 whitespace-pre-line">
+                <div className="flex flex-col items-center md:items-start justify-center text-center md:text-left">
+                    <h3 className="text-4xl md:text-5xl lg:text-[4.5rem] font-medium leading-[1.05] tracking-tight text-[#171717] mb-8 lg:mb-16 whitespace-pre-line">
                         {item.title}
                     </h3>
                     
-                    <ul className="space-y-6 md:space-y-8 list-disc pl-6 text-[#171717]">
+                    <ul className="space-y-4 md:space-y-8 list-disc list-inside md:list-outside pl-0 md:pl-6 text-[#171717]">
                         {item.items.map((listItem, i) => (
-                            <li key={i} className="text-lg md:text-xl font-medium leading-relaxed max-w-xl pl-2">
+                            <li key={i} className="text-base md:text-lg lg:text-xl font-medium leading-relaxed max-w-full md:max-w-[85%] lg:max-w-[90%] md:pl-2">
                                 <span>
                                     {listItem}
                                 </span>

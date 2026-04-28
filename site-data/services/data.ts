@@ -68,7 +68,7 @@ export const servicesData: Record<string, ServiceData> = {
       { id: "2", backgroundColor: "#F7C518", title: "Business Website", listItems: ["Small businesses & startups", "Consultancies & agencies", "Service-based companies", "Portfolio & personal brands"] },
       { id: "3", backgroundColor: "#FD6824", title: " E-Commerce Store", listItems: ["Online retail & fashion brands", "D2C product businesses", "Multi-category stores", "Subscription-based products"] },
       { id: "4", backgroundColor: "#408BF7", title: "Web Application", listItems: ["SaaS platforms & dashboards", "Booking & management systems", "Client portals & tools", "API-driven applications"] },
-      { id: "3", backgroundColor: "#FD6824", title: "Custom & Enterprise", listItems: ["Large-scale enterprise solutions", "Multi-platform integrations", "Complete digital ecosystems", "Fully tailored builds from scratch"] },
+      { id: "5", backgroundColor: "#FD6824", title: "Custom & Enterprise", listItems: ["Large-scale enterprise solutions", "Multi-platform integrations", "Complete digital ecosystems", "Fully tailored builds from scratch"] },
     ],
     servicesIncluded: [
       {
@@ -488,7 +488,7 @@ export const servicesData: Record<string, ServiceData> = {
     ],
     servicesIncluded: [
       {
-        id: "animation",
+        id: "animation-1",
         title: "Social Media Video Production",
         items: [
           "We create platform-optimised short-form videos for Instagram Reels, YouTube Shorts, TikTok, Facebook, and LinkedIn with trending formats, fast-paced edits, and thumb-stopping visuals produced in platform-specific aspect ratios (9:16, 1:1, 16:9) with safe zone compliance and caption overlays.",
@@ -498,7 +498,7 @@ export const servicesData: Record<string, ServiceData> = {
         image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation",
+        id: "animation-2",
         title: "Explainer Video Production",
         items: [
           "We produce animated explainer videos that break down complex products, services, and processes into clear, engaging visual stories scripted with a strategic narrative structure of problem, solution, benefit, and CTA that drives your audience toward action.",
@@ -508,7 +508,7 @@ export const servicesData: Record<string, ServiceData> = {
         image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation",
+        id: "animation-3",
         title: "Advertising & PPC Video Ads",
         items: [
           "We create high-converting video ads for Google Ads (YouTube pre-roll, in-feed, bumper), Meta Ads (Facebook & Instagram), LinkedIn video ads, and programmatic display campaigns with attention-grabbing hooks within the first 3 seconds and strong CTAs optimised for conversion.",
@@ -518,7 +518,7 @@ export const servicesData: Record<string, ServiceData> = {
         image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation",
+        id: "animation-4",
         title: "Brand & Corporate Video Production",
         items: [
           "We produce premium brand videos and corporate films that communicate your company's story, mission, culture, and values crafted with cinematic motion graphics, professional voiceover, custom music, and brand-consistent visual styling.",
@@ -528,7 +528,7 @@ export const servicesData: Record<string, ServiceData> = {
         image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation",
+        id: "animation-5",
         title: "Product Demo & Showcase Videos",
         items: [
           "We create visually compelling product demo videos using motion graphics, screen recordings, close-up product shots, and animated infographics structured to address your customer's pain points first, then demonstrate how your product solves them.",
@@ -538,7 +538,7 @@ export const servicesData: Record<string, ServiceData> = {
         image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation",
+        id: "animation-6",
         title: "Logo Animation & Brand Motion Identity",
         items: [
           "We create custom logo animations and animated brand intros designed to reflect your brand's personality from clean minimal reveals to bold energetic motion sequences using smooth transitions, particle effects, and kinetic typography.",
@@ -548,7 +548,7 @@ export const servicesData: Record<string, ServiceData> = {
         image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation",
+        id: "animation-7",
         title: "Motion Graphics for Presentations & Events",
         items: [
           "We design animated presentation slides, event opener videos, speaker intro animations, countdown timers, and stage backdrop visuals produced with your brand identity and event theme for seamless visual consistency across all screens.",
@@ -558,7 +558,7 @@ export const servicesData: Record<string, ServiceData> = {
         image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation",
+        id: "animation-8",
         title: "Video Editing & Post-Production",
         items: [
           "We provide professional video editing and post-production cutting raw footage from any source including smartphone, DSLR, screen captures, drone footage, and stock video into polished, brand-ready videos with colour grading, sound mixing, and seamless transitions.",

@@ -17,7 +17,7 @@ export const impactSectionData = {
     paddingY: "py-3 md:py-6",
     borderRadius: "rounded-md",
     /** Font sizing */
-    fontSize: "text-lg sm:text-xl md:text-4xl lg:text-5xl",
+    fontSize: "text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl",
     fontWeight: "font-medium",
     letterSpacing: "tracking-normal",
     whiteSpace: "whitespace-normal md:whitespace-nowrap text-center",

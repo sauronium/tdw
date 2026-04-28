@@ -165,7 +165,7 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
                          <ul className="flex flex-col gap-4 text-sm md:text-base lg:text-lg font-medium w-full flex-grow">
                            {card.listItems?.map((item, i) => (
                              <li key={i} className="flex items-start gap-3">
-                               <span className="w-1.5 h-1.5 mt-2 rounded-full bg-white flex-shrink-0" />
+                               <span className="w-1 h-1 mt-2.5 rounded-full bg-white flex-shrink-0" />
                                <span className="leading-tight">{item}</span>
                              </li>
                            ))}

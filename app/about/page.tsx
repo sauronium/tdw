@@ -3,7 +3,6 @@ import TeamSection from "./components/TeamSection";
 import AboutMarquee from "./components/AboutMarquee";
 import AboutHero from "./components/AboutHero";
 import ExpertSupport from "./components/ExpertSupport";
-import WhoWeWorkWith from "./components/WhoWeWorkWith";
 
 export const metadata = {
     title: "About Us | The Designers World",
@@ -25,9 +24,6 @@ export default function AboutPage() {
             <div className="-mt-8">
                 <ExpertSupport />
             </div>
-
-            {/* Who We Work With — above the Every Craft marquee */}
-            <WhoWeWorkWith />
 
             {/* Marquee strip — before footer */}
             <AboutMarquee />

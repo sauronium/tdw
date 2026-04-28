@@ -39,34 +39,36 @@ export default async function ServicePage({
         {/* Next section */}
         <div className="flex flex-col relative z-20 pb-32 w-full pt-16 md:pt-24 bg-white">
           <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div className="flex flex-col gap-12 lg:gap-20 items-start w-full">
+              {/* Title spanning wider width */}
+              <h2 className="text-4xl md:text-5xl lg:text-[4.5rem] font-medium leading-[1.05] tracking-tight text-black max-w-5xl xl:max-w-7xl">
+                {slug === "web-design-and-development" 
+                  ? "A Web Design & Development Studio Built for Results." 
+                  : slug === "graphic-design" 
+                    ? "A Graphic Design Studio Built to Bring Your Brand to Life." 
+                    : "A Motion Graphics Studio Built to Move Your Audience."}
+              </h2>
 
-              {/* Left Column Image + Title */}
-              <div className="lg:col-span-4 flex flex-col items-start translate-y-0 md:translate-y-4">
-                <h2 className="text-4xl md:text-5xl lg:text-[4.5rem] font-medium leading-[1.05] tracking-tight text-black mb-12 block">
-                  {slug === "web-design-and-development" ? "A Web Design & Development Studio Built for Results." : "A Graphic Design Studio Built to Bring Your Brand to Life."}
-                </h2>
-                <div className="relative aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-[10px]">
+              {/* Paragraph alongside Image */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-start w-full">
+                {/* Image */}
+                <div className="relative aspect-[4/5] w-full max-w-[280px] md:max-w-[320px] overflow-hidden rounded-[10px]">
                   <Image
                     src={data.servicesIncluded?.[0]?.image || "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"}
                     alt="Process block"
                     fill
                     className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 400px"
+                    sizes="(max-width: 768px) 100vw, 320px"
                   />
                 </div>
-              </div>
 
-              {/* Right Column Text */}
-              <div className="lg:col-span-8 flex flex-col items-start justify-start pt-16 md:pt-24">
-                <p className="text-[1.5rem] sm:text-[1.75rem] md:text-[2rem] font-medium leading-[1.3] tracking-tight text-gray-900 max-w-2xl mb-12">
-                  {data.overviewText}
-                </p>
-                <AnimatedButton href="/about">
-                  about us
-                </AnimatedButton>
+                {/* Paragraph */}
+                <div className="flex flex-col items-start justify-start md:pt-8 lg:pt-12">
+                  <p className="text-[1.5rem] sm:text-[1.75rem] md:text-[2rem] font-medium leading-[1.3] tracking-tight text-gray-900 max-w-2xl">
+                    {data.overviewText}
+                  </p>
+                </div>
               </div>
-
             </div>
           </div>
         </div>

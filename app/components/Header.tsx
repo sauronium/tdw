@@ -152,13 +152,7 @@ const NavItem = ({
 
   const showText = !isScrolled || isAnyHovered;
 
-  return (
-    <li
-      className="flex flex-col items-end w-full relative group"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <Link href={item.href} className="relative block w-full flex justify-end" aria-label={item.label}>
+  const content = (
         <div
           ref={itemRef}
           onMouseMove={handleMouseMove}
@@ -213,11 +207,27 @@ const NavItem = ({
             {item.label}
           </span>
         </div>
-      </Link>
+  );
+
+  return (
+    <li
+      className="flex flex-col items-end w-full relative group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {item.href === '#' ? (
+        <div className="relative block w-full flex justify-end cursor-default" aria-label={item.label}>
+          {content}
+        </div>
+      ) : (
+        <Link href={item.href} className="relative block w-full flex justify-end" aria-label={item.label}>
+          {content}
+        </Link>
+      )}
 
       {/* Render sub items on hover for desktop */}
       {item.subItems && isRendered && (
-        <ul className={`absolute right-[calc(100%+0.5rem)] pr-2 top-0 flex flex-col items-end gap-y-1 z-40 w-max ${isHovered ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+        <ul className={`absolute right-full pr-4 top-0 flex flex-col items-end gap-y-1 z-40 w-max ${isHovered ? 'pointer-events-auto' : 'pointer-events-none'}`}>
           {item.subItems.map((sub, i) => (
             <SubNavItem key={i} item={sub} isActive={isActive} isParentHovered={isHovered} index={i} />
           ))}
@@ -261,7 +271,7 @@ export default function Header() {
     { label: 'About', href: '/about' },
     {
       label: 'Services',
-      href: '/services',
+      href: '#',
       subItems: [
         { label: 'Web design and development', href: '/services/web-design-and-development' },
         { label: 'Graphic Design', href: '/services/graphic-design' },
@@ -347,17 +357,7 @@ export default function Header() {
                     const activeBgClass = item.activeBgClass || 'bg-black';
                     const activeTextClass = item.activeTextClass || 'text-white';
                     
-                    return (
-                      <li key={item.label} className="relative flex flex-col items-end w-full">
-                        <div className="flex w-full justify-end items-center">
-                          <Link
-                            href={item.href}
-                            className="relative block"
-                            aria-label={item.label}
-                            onClick={() => {
-                              if (!item.subItems) setIsMenuOpen(false);
-                            }}
-                          >
+                    const mobileContent = (
                             <div
                               className={`
                                 relative flex justify-end items-center
@@ -373,7 +373,35 @@ export default function Header() {
                                 {item.label}
                               </span>
                             </div>
-                          </Link>
+                    );
+
+                    return (
+                      <li key={item.label} className="relative flex flex-col items-end w-full">
+                        <div className="flex w-full justify-end items-center">
+                          {item.href === '#' ? (
+                            <div
+                              className="relative block cursor-pointer"
+                              aria-label={item.label}
+                              onClick={() => {
+                                if (item.subItems) {
+                                  setExpandedMobileItem(expandedMobileItem === item.label ? null : item.label);
+                                }
+                              }}
+                            >
+                              {mobileContent}
+                            </div>
+                          ) : (
+                            <Link
+                              href={item.href}
+                              className="relative block"
+                              aria-label={item.label}
+                              onClick={() => {
+                                if (!item.subItems) setIsMenuOpen(false);
+                              }}
+                            >
+                              {mobileContent}
+                            </Link>
+                          )}
                           {item.subItems && (
                             <button
                               onClick={() => setExpandedMobileItem(expandedMobileItem === item.label ? null : item.label)}
