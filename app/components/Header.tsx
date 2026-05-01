@@ -275,7 +275,8 @@ export default function Header() {
       subItems: [
         { label: 'Web design and development', href: '/services/web-design-and-development' },
         { label: 'Graphic Design', href: '/services/graphic-design' },
-        { label: 'Motion Graphics', href: '/services/motion-graphics' }
+        { label: 'Motion Graphics', href: '/services/motion-graphics' },
+        { label: 'Digital Marketing', href: '/services/digital-marketing' }
       ]
     },
     { label: 'Work', href: '/work' },

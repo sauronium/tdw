@@ -26,16 +26,24 @@ export default async function CaseSubPage(props: any) {
             
             {/* Cinematic Hero Section */}
             <section className="relative w-[100vw] h-[100vh] overflow-hidden">
-                {/* Background Video Layer */}
+                {/* Background Layer */}
                 <div className="absolute inset-0 w-full h-full z-0">
-                    <video 
-                        src={caseData.video}
-                        autoPlay 
-                        loop 
-                        muted 
-                        playsInline 
-                        className="w-full h-full object-cover opacity-60"
-                    />
+                    {caseData.backgroundType === "image" ? (
+                        <img 
+                            src={caseData.image}
+                            alt={caseData.imageAlt}
+                            className="w-full h-full object-cover opacity-60"
+                        />
+                    ) : (
+                        <video 
+                            src={caseData.video}
+                            autoPlay 
+                            loop 
+                            muted 
+                            playsInline 
+                            className="w-full h-full object-cover opacity-60"
+                        />
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/50 pointer-events-none" />
                 </div>
 
@@ -69,13 +77,15 @@ export default async function CaseSubPage(props: any) {
             </section>
 
             {/* Image Block Section */}
-            <section className="w-[100vw] h-[90vh] relative z-20">
-                <img 
-                    src={caseData.image} 
-                    alt={caseData.title} 
-                    className="w-full h-full object-cover"
-                />
-            </section>
+            {caseData.galleryImage1 && (
+                <section className="w-[100vw] h-[90vh] relative z-20">
+                    <img 
+                        src={caseData.galleryImage1} 
+                        alt={caseData.title} 
+                        className="w-full h-full object-cover"
+                    />
+                </section>
+            )}
 
             {/* Overview Section */}
             <section className="w-full bg-[#fdf8f2] pt-24 md:pt-32 pb-16 px-6 sm:px-10 md:px-16 lg:px-24 relative z-20">
@@ -109,13 +119,13 @@ export default async function CaseSubPage(props: any) {
                     </h2>
                     
                     <div className="flex flex-col gap-4">
-                        {[1, 2, 3].map((num) => (
-                            <div key={num} className="bg-[#ede8e1] rounded-[24px] md:rounded-[32px] p-8 md:p-12 lg:px-16 lg:py-14 grid grid-cols-1 md:grid-cols-[150px_1fr] gap-6 md:gap-12">
+                        {caseData.strategicObjectives?.map((objective, idx) => (
+                            <div key={idx} className="bg-[#ede8e1] rounded-[24px] md:rounded-[32px] p-8 md:p-12 lg:px-16 lg:py-14 grid grid-cols-1 md:grid-cols-[150px_1fr] gap-6 md:gap-12">
                                 <span className="text-2xl font-bold text-[#171717]">
-                                    0{num}.
+                                    0{idx + 1}.
                                 </span>
                                 <p className="text-[#171717] text-lg md:text-[1.15rem] font-medium leading-relaxed font-sans max-w-4xl">
-                                    {caseData.fullDescription}
+                                    {objective}
                                 </p>
                             </div>
                         ))}
@@ -124,36 +134,44 @@ export default async function CaseSubPage(props: any) {
             </section>
 
             {/* Second Image Block Section */}
-            <section className="w-[100vw] h-[90vh] relative z-20">
-                <img 
-                    src={caseData.image} 
-                    alt={`${caseData.title} Image 2`} 
-                    className="w-full h-full object-cover"
-                />
-            </section>
+            {caseData.galleryImage2 && (
+                <section className="w-[100vw] h-[90vh] relative z-20">
+                    <img 
+                        src={caseData.galleryImage2} 
+                        alt={`${caseData.title} Image 2`} 
+                        className="w-full h-full object-cover"
+                    />
+                </section>
+            )}
 
             {/* Split Showcase Section */}
-            <section className="w-full bg-[#fdf8f2] py-24 md:py-32 px-6 sm:px-10 md:px-16 lg:px-24 relative z-20">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
-                    {/* Left Showcase */}
-                    <div className="w-full aspect-[4/5] rounded-[32px] md:rounded-[40px] overflow-hidden">
-                        <img 
-                            src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" 
-                            alt="Showcase Left" 
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
+            {(caseData.showcaseImageLeft || caseData.showcaseImageRight) && (
+                <section className="w-full bg-[#fdf8f2] py-24 md:py-32 px-6 sm:px-10 md:px-16 lg:px-24 relative z-20">
+                    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+                        {/* Left Showcase */}
+                        {caseData.showcaseImageLeft && (
+                            <div className="w-full aspect-[4/5] rounded-[32px] md:rounded-[40px] overflow-hidden">
+                                <img 
+                                    src={caseData.showcaseImageLeft} 
+                                    alt="Showcase Left" 
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        )}
 
-                    {/* Right Showcase (Staggered Down) */}
-                    <div className="w-full aspect-[4/5] rounded-[32px] md:rounded-[40px] overflow-hidden md:mt-32">
-                        <img 
-                            src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2564&auto=format&fit=crop" 
-                            alt="Showcase Right" 
-                            className="w-full h-full object-cover"
-                        />
+                        {/* Right Showcase (Staggered Down) */}
+                        {caseData.showcaseImageRight && (
+                            <div className={`w-full aspect-[4/5] rounded-[32px] md:rounded-[40px] overflow-hidden ${caseData.showcaseImageLeft ? "md:mt-32" : ""}`}>
+                                <img 
+                                    src={caseData.showcaseImageRight} 
+                                    alt="Showcase Right" 
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        )}
                     </div>
-                </div>
-            </section>
+                </section>
+            )}
 
             </main>
         </PageTransition>

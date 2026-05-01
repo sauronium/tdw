@@ -63,7 +63,7 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
   // Title is black from the start to match the light background
   const titleColor = useTransform(scrollYProgress, [0.33, 0.66], ['#000000', '#000000']);
 
-  const totalCards = data.cards.length;
+  const totalCards = data.cards?.length || 0;
   const stackSpacingX = 24; 
   const stackSpacingY = 0;
 
@@ -108,7 +108,7 @@ export default function ServicesHero({ data }: { data: ServiceData }) {
             animate={{ x: isUnstacked ? 0 : 0 }}
             transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
           >
-            {data.cards.map((card, index) => {
+            {(data.cards || []).map((card, index) => {
               // Stacked calculations
               const deckStackCount = Math.min(totalCards, 4);
               const stackWidth = cardWidth + (deckStackCount - 1) * stackSpacingX;

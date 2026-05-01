@@ -39,7 +39,7 @@ export default function ImpactSection() {
         <section className={`relative w-full ${impactSectionData.background.tailwind} z-10 overflow-x-clip mt-16 md:mt-32`}>
             <div ref={containerRef} className={`relative ${impactSectionData.scrollHeight} w-full ${impactSectionData.topPadding}`}>
                 <div className="sticky top-0 w-full h-screen flex flex-col items-center justify-center">
-                    <div className={`relative ${outerCircle.width} ${outerCircle.maxWidth} aspect-square flex items-center justify-center rounded-full overflow-hidden shrink-0 -translate-y-[7.5%]`}>
+                    <div className={`relative mt-32 md:mt-52 ${outerCircle.width} ${outerCircle.maxWidth} aspect-square flex items-center justify-center rounded-full overflow-hidden shrink-0 -translate-y-[7.5%]`}>
                         {/* Outer rotating circle with background image */}
                         <motion.div
                             style={{ rotate }}

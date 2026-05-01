@@ -29,6 +29,7 @@ export interface ServiceProcess {
 export interface TechStackItem {
   id: string;
   name: string;
+  image: string;
 }
 
 export interface DeliverableItem {
@@ -48,8 +49,10 @@ export interface ServiceData {
   slug: string;
   heroBgColor: string;
   heroHeadline: string;
+  overviewHeadline?: string;
+  overviewImage?: string;
   overviewText?: string;
-  cards: ServiceCard[];
+  cards?: ServiceCard[];
   servicesIncluded?: ServiceIncluded[];
   process?: ServiceProcess;
   techStack?: TechStackItem[];
@@ -62,6 +65,8 @@ export const servicesData: Record<string, ServiceData> = {
     slug: "web-design-and-development",
     heroBgColor: "#fdf8f2",
     heroHeadline: "We Design Websites That Build Brands and Drive Business.",
+    overviewHeadline: "A Web Design & Development Studio Built for Results.",
+    overviewImage: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
     overviewText: "we're the web design and development agency that elevates brands into social icons. through a blend of data, creativity and strategy, we create lasting connections and fuel engagement.",
     cards: [
       { id: "1", backgroundColor: "#65C495", title: "Landing Page", listItems: ["Product launches & campaigns", "Event promotions", "Single-service businesses", "Lead generation pages"] },
@@ -202,14 +207,14 @@ export const servicesData: Record<string, ServiceData> = {
       ]
     },
     techStack: [
-      { id: "ts", name: "TypeScript" },
-      { id: "react", name: "React" },
-      { id: "nextjs", name: "Next.js" },
-      { id: "tailwind", name: "Tailwind CSS" },
-      { id: "framer", name: "Framer Motion" },
-      { id: "figma", name: "Figma" },
-      { id: "vercel", name: "Vercel" },
-      { id: "supabase", name: "Supabase" },
+      { id: "ts", name: "TypeScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { id: "react", name: "React", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { id: "nextjs", name: "Next.js", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { id: "tailwind", name: "Tailwind CSS", image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+      { id: "framer", name: "Framer Motion", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg" },
+      { id: "figma", name: "Figma", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+      { id: "vercel", name: "Vercel", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" },
+      { id: "supabase", name: "Supabase", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
     ],
     deliverables: {
       label: "Deliverables",
@@ -269,6 +274,8 @@ export const servicesData: Record<string, ServiceData> = {
     slug: "graphic-design",
     heroBgColor: "#ff5a26",
     heroHeadline: "Professional Graphic Design Services That Make Your Brand Unforgettable.",
+    overviewHeadline: "A Graphic Design Studio Built to Bring Your Brand to Life.",
+    overviewImage: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80",
     overviewText: "we’re the graphic design agency that turns your vision into unforgettable visuals. From striking logos to complete brand identities, we combine creativity, strategy, and design excellence to make your brand stand out and leave a lasting impression.",
     cards: [
       { id: "1", backgroundColor: "#65C495", title: "Starter Pack", listItems: ["Logo design & variations", "Business card & letterhead", "Brand colour palette", "Social media profile setup"] },
@@ -414,16 +421,16 @@ export const servicesData: Record<string, ServiceData> = {
       ]
     },
     techStack: [
-      { id: "photoshop", name: "Adobe Photoshop" },
-      { id: "illustrator", name: "Adobe Illustrator" },
-      { id: "indesign", name: "Adobe InDesign" },
-      { id: "aftereffects", name: "Adobe After Effects" },
-      { id: "premiere", name: "Adobe Premiere Pro" },
-      { id: "figma", name: "Figma" },
-      { id: "canva", name: "Canva Pro" },
-      { id: "corel", name: "CorelDRAW" },
-      { id: "blender", name: "Blender" },
-      { id: "procreate", name: "Procreate" }
+      { id: "photoshop", name: "Adobe Photoshop", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" },
+      { id: "illustrator", name: "Adobe Illustrator", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" },
+      { id: "indesign", name: "Adobe InDesign", image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" },
+      { id: "aftereffects", name: "Adobe After Effects", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" },
+      { id: "premiere", name: "Adobe Premiere Pro", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" },
+      { id: "figma", name: "Figma", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+      { id: "canva", name: "Canva Pro", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" },
+      { id: "corel", name: "CorelDRAW", image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/CorelDraw_icon.svg" },
+      { id: "blender", name: "Blender", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" },
+      { id: "procreate", name: "Procreate", image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" }
     ],
     deliverables: {
       label: "Deliverables",
@@ -478,6 +485,8 @@ export const servicesData: Record<string, ServiceData> = {
     slug: "motion-graphics",
     heroBgColor: "#22c55e",
     heroHeadline: "Professional Motion Graphics & Video Production for Brands That Move Fast.",
+    overviewHeadline: "A Motion Graphics Studio Built to Move Your Audience.",
+    overviewImage: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
     overviewText: "We create high-impact motion graphics, social media videos, explainer videos, and advertising video content that captures attention, communicates your message, and drives conversions across every digital platform.",
     cards: [
       { id: "1", backgroundColor: "#65C495", title: "Social Media Video Pack", listItems: ["4 short-form videos/month (Reels)", "Caption overlays & text animations", "Platform-specific sizing & formatting", "Trending audio & sound design"] },
@@ -569,4 +578,152 @@ export const servicesData: Record<string, ServiceData> = {
       }
     ]
   },
+  "digital-marketing": {
+    slug: "digital-marketing",
+    heroBgColor: "#3b82f6",
+    heroHeadline: "Data-Driven Digital Marketing That Accelerates Growth.",
+    overviewHeadline: "A Digital Marketing Agency Built to Scale Your Growth.",
+    overviewImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    overviewText: "We are the digital marketing agency that connects your brand with the right audience. Through SEO, paid advertising, and strategic content, we drive measurable results and maximize your ROI.",
+    cards: [
+      { id: "1", backgroundColor: "#65C495", title: "SEO Pack", listItems: ["Keyword research & strategy", "On-page & technical SEO", "Local SEO & Google Business", "Content gap analysis"] },
+      { id: "2", backgroundColor: "#F7C518", title: "PPC Campaigns", listItems: ["Google Search & Display Ads", "Retargeting campaigns", "A/B testing & optimization", "Conversion tracking setup"] },
+      { id: "3", backgroundColor: "#FD6824", title: "Social Media Marketing", listItems: ["Meta (Facebook/Instagram) Ads", "LinkedIn B2B campaigns", "Audience segmentation", "Performance analytics"] },
+      { id: "4", backgroundColor: "#408BF7", title: "Email Marketing", listItems: ["Automated email sequences", "Newsletter management", "List building & segmentation", "A/B testing subject lines"] },
+      { id: "5", backgroundColor: "#8c6bf7", title: "Full-Funnel Growth", listItems: ["Omnichannel marketing strategy", "Conversion rate optimization", "Advanced analytics dashboards", "Monthly performance reporting"] },
+    ],
+    servicesIncluded: [
+      {
+        id: "search-engine-optimization",
+        title: "Search Engine Optimization (SEO)",
+        items: [
+          "We implement comprehensive SEO strategies focusing on technical health, on-page optimization, and high-quality link building to improve your organic search rankings and drive sustainable traffic.",
+          "Our approach includes deep keyword research, competitor analysis, and content gap identification to ensure your brand captures high-intent searches in your industry.",
+          "We provide monthly reporting on keyword movements, organic traffic growth, and conversion metrics so you have full transparency into your ROI."
+        ],
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "pay-per-click-advertising",
+        title: "Pay-Per-Click (PPC) Advertising",
+        items: [
+          "We design and manage high-converting PPC campaigns across Google Ads, Bing, and other search engines to capture users actively searching for your products or services.",
+          "Our team continuously optimizes bidding strategies, ad copy, and landing pages through rigorous A/B testing to lower your cost-per-acquisition (CPA) and maximize returns.",
+          "We set up advanced conversion tracking and attribution modeling to ensure every dollar spent is tracked and optimized for maximum profitability."
+        ],
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "social-media-advertising",
+        title: "Paid Social Media Advertising",
+        items: [
+          "We launch targeted ad campaigns on Meta (Facebook & Instagram), LinkedIn, TikTok, and X (Twitter) using advanced audience segmentation and retargeting strategies.",
+          "Our creative team designs scroll-stopping ad creatives and compelling copy tailored to each platform's best practices to drive engagement and conversions.",
+          "We implement full-funnel strategies, from brand awareness and lead generation to direct response and dynamic product retargeting to maximize your campaign effectiveness."
+        ],
+        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "email-marketing-automation",
+        title: "Email Marketing & Automation",
+        items: [
+          "We design and execute personalized email marketing campaigns and automated workflows that nurture leads, retain customers, and drive repeat sales.",
+          "Our strategies include welcome sequences, abandoned cart recovery, post-purchase follow-ups, and segmented newsletter broadcasts tailored to user behavior and preferences.",
+          "We continually optimize open rates, click-through rates, and conversions through A/B testing subject lines, email copy, and design layouts."
+        ],
+        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    process: {
+      label: "Process",
+      heading: "How We Drive Digital Growth.",
+      subheading: "A data-driven approach to marketing that delivers measurable results.",
+      steps: [
+        {
+          id: "audit",
+          number: "1.",
+          title: "Audit & Analysis",
+          description: "We start by auditing your current digital footprint, analyzing historical data, identifying technical bottlenecks, and evaluating competitor strategies to uncover growth opportunities."
+        },
+        {
+          id: "strategy",
+          number: "2.",
+          title: "Strategy Formulation",
+          description: "Based on our findings, we develop a comprehensive, multi-channel digital marketing strategy tailored to your business objectives, target audience, and budget."
+        },
+        {
+          id: "setup",
+          number: "3.",
+          title: "Tracking & Setup",
+          description: "Before launching any campaigns, we ensure robust analytics, conversion tracking, and pixel implementation are in place to accurately measure performance and ROI."
+        },
+        {
+          id: "execution",
+          number: "4.",
+          title: "Execution & Launch",
+          description: "We launch your campaigns across the selected channels with carefully crafted ad copy, compelling creatives, and precise targeting to reach your ideal customers."
+        },
+        {
+          id: "optimization",
+          number: "5.",
+          title: "Optimization & Scaling",
+          description: "We continuously monitor campaign performance, conducting A/B tests and making data-driven adjustments to optimize bids, targeting, and creatives for maximum efficiency."
+        },
+        {
+          id: "reporting",
+          number: "6.",
+          title: "Reporting & Insights",
+          description: "We provide transparent, detailed monthly reports and strategy reviews, breaking down key metrics, insights, and actionable recommendations for the next phase of growth."
+        }
+      ]
+    },
+    techStack: [
+      { id: "google-analytics", name: "Google Analytics 4", image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Google_Analytics_icon_%282023%29.svg" },
+      { id: "google-ads", name: "Google Ads", image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" },
+      { id: "meta-ads", name: "Meta Ads Manager", image: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
+      { id: "semrush", name: "SEMrush", image: "https://upload.wikimedia.org/wikipedia/commons/1/13/SEMrush_logo.svg" },
+      { id: "ahrefs", name: "Ahrefs", image: "https://upload.wikimedia.org/wikipedia/commons/1/10/Ahrefs_logo.svg" },
+      { id: "mailchimp", name: "Mailchimp", image: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Mailchimp_Freddie_Icon.svg" },
+      { id: "hubspot", name: "HubSpot", image: "https://upload.wikimedia.org/wikipedia/commons/f/f7/HubSpot_Logo.svg" },
+      { id: "looker-studio", name: "Looker Studio", image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Google_Looker_Logo.svg" },
+    ],
+    deliverables: {
+      label: "Deliverables",
+      heading: "What You Get.",
+      subheading: "Comprehensive marketing assets and insights to fuel your business growth.",
+      items: [
+        {
+          id: "marketing-strategy",
+          title: "Custom Marketing Strategy",
+          description: "A tailored, multi-channel digital marketing plan aligned with your business goals, target audience, and competitive landscape."
+        },
+        {
+          id: "campaign-management",
+          title: "End-to-End Campaign Management",
+          description: "Full setup, execution, and ongoing optimization of your paid search, social, and display advertising campaigns."
+        },
+        {
+          id: "seo-audits",
+          title: "Technical & On-Page SEO Audits",
+          description: "In-depth SEO health checks, keyword research documents, and actionable optimization roadmaps to improve organic visibility."
+        },
+        {
+          id: "ad-creatives-copy",
+          title: "Ad Creatives & Copywriting",
+          description: "High-converting ad creatives, persuasive ad copy, and targeted messaging designed for multiple platforms and audience segments."
+        },
+        {
+          id: "analytics-dashboards",
+          title: "Custom Analytics Dashboards",
+          description: "Real-time, interactive reporting dashboards that provide clear visibility into your key performance indicators (KPIs) and ROI."
+        },
+        {
+          id: "monthly-reporting",
+          title: "Monthly Performance Reports",
+          description: "Detailed monthly performance breakdowns with strategic insights and data-backed recommendations for continuous improvement."
+        }
+      ]
+    },
+    ctaText: "Ready to Scale Your Digital Presence?"
+  }
 };
