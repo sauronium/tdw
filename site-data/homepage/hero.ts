@@ -37,7 +37,7 @@ export const heroData = {
 
   // ── Paragraph ─────────────────────────────────────────────
   paragraph: {
-    text: "We are The Designers World — a full-service creative studio that brings together graphic design, web development, digital marketing, and motion graphics under one roof. With over 10 years of combined industry experience, we help businesses build brands that stand out, websites that convert, and campaigns that deliver measurable growth.",
+    text: "",
     fontSize: "text-base md:text-lg",
     fontWeight: "font-light",
     color: "text-gray-700",

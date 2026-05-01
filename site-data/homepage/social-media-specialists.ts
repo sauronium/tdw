@@ -6,16 +6,16 @@ import { fonts, fontSizes } from "../tokens";
 
 // ── Types ─────────────────────────────────────────────────────
 export interface StackImage {
-  id:                       number;
-  src:                      string;
-  alt:                      string;
+  id: number;
+  src: string;
+  alt: string;
   /** Background color shown during the circle-reveal entrance animation */
-  placeholderColor:         string;
+  placeholderColor: string;
   /** Tailwind class for placeholder background */
   placeholderColorTailwind: string;
-  zIndex:                   1 | 2 | 3;
+  zIndex: 1 | 2 | 3;
   /** Rotation applied when the card settles (degrees) */
-  rotate:                   number;
+  rotate: number;
 }
 
 // ── Stacking Images ───────────────────────────────────────────
@@ -23,46 +23,46 @@ export interface StackImage {
 // Update `src` to swap images; update `rotate` for tilt angle.
 export const socialMediaImages: StackImage[] = [
   {
-    id:                       1,
-    src:                      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
-    alt:                      "Content strategy session",
-    placeholderColor:         "#f26522",
+    id: 1,
+    src: "home/home_about.jpg",
+    alt: "Content strategy session",
+    placeholderColor: "#f26522",
     placeholderColorTailwind: "bg-[#f26522]",
-    zIndex:                   1,
-    rotate:                   0,
+    zIndex: 1,
+    rotate: 0,
   },
   {
-    id:                       2,
-    src:                      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80",
-    alt:                      "Creative team at work",
-    placeholderColor:         "#8c6bf7",
+    id: 2,
+    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80",
+    alt: "Creative team at work",
+    placeholderColor: "#8c6bf7",
     placeholderColorTailwind: "bg-[#8c6bf7]",
-    zIndex:                   2,
-    rotate:                   -3,
+    zIndex: 2,
+    rotate: -3,
   },
   {
-    id:                       3,
-    src:                      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
-    alt:                      "Campaign analytics and results",
-    placeholderColor:         "#00c0b5",
+    id: 3,
+    src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
+    alt: "Campaign analytics and results",
+    placeholderColor: "#00c0b5",
     placeholderColorTailwind: "bg-[#00c0b5]",
-    zIndex:                   3,
-    rotate:                   4,
+    zIndex: 3,
+    rotate: 4,
   },
 ];
 
 // ── Right Side Copy ───────────────────────────────────────────
 export const socialMediaCopy = {
   heading: {
-    text:         "A Studio Built on Strategy, Creativity, and 10+ Years of Expertise.",
-    fontFamily:   fonts.heading,
-    fontSize:     "text-5xl md:text-6xl lg:text-[4.5rem]",
-    fontWeight:   "font-bold",
-    letterSpacing:"tracking-tighter",
-    lineHeight:   "leading-[1]",
-    color:        "#1a1a1a",
-    colorTailwind:"text-[#1a1a1a]",
-    textTransform:"lowercase",
+    text: "A Studio Built on Strategy, Creativity, and 10+ Years of Expertise.",
+    fontFamily: fonts.heading,
+    fontSize: "text-5xl md:text-6xl lg:text-[4.5rem]",
+    fontWeight: "font-bold",
+    letterSpacing: "tracking-tighter",
+    lineHeight: "leading-[1]",
+    color: "#1a1a1a",
+    colorTailwind: "text-[#1a1a1a]",
+    textTransform: "lowercase",
     marginBottom: "mb-8",
   },
 
@@ -73,25 +73,25 @@ export const socialMediaCopy = {
   ],
 
   bodyStyles: {
-    fontSize:     fontSizes.bodySM,           // "text-base md:text-[17px]"
-    color:        "#222222",
-    colorTailwind:"text-[#222]",
-    lineHeight:   "leading-[1.6] md:leading-relaxed",
-    fontWeight:   "font-medium",
+    fontSize: fontSizes.bodySM,           // "text-base md:text-[17px]"
+    color: "#222222",
+    colorTailwind: "text-[#222]",
+    lineHeight: "leading-[1.6] md:leading-relaxed",
+    fontWeight: "font-medium",
   },
 };
 
 // ── Section Layout ────────────────────────────────────────────
 export const socialMediaLayout = {
-  scrollHeight:  "h-[400vh]",
-  background:    { color: "transparent", tailwind: "bg-transparent" },
+  scrollHeight: "h-[400vh]",
+  background: { color: "transparent", tailwind: "bg-transparent" },
   stickyPadding: "py-12 md:py-24",
-  maxWidth:      "max-w-[1440px]",
+  maxWidth: "max-w-[1440px]",
 
   imageSide: {
-    width:        "w-full md:w-5/12 lg:w-1/2",
-    imageMaxWidth:"max-w-[300px] lg:max-w-[320px]",
-    imageHeight:  "h-[60vh] md:h-[80vh]",
+    width: "w-full md:w-5/12 lg:w-1/2",
+    imageMaxWidth: "max-w-[300px] lg:max-w-[320px]",
+    imageHeight: "h-[60vh] md:h-[80vh]",
     borderRadius: "rounded-[20px]",
   },
 
