@@ -72,13 +72,26 @@ function CardItem({
             onAnimationComplete={() => { if (state === "entering") onEnteringComplete(); }}
             style={{ backgroundColor: item.placeholderColor }}
         >
-            <motion.img
-                src={item.src}
-                alt={item.alt}
-                className="absolute inset-0 w-full h-full object-cover"
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={imageAnimate}
-            />
+            {item.mediaType === 'video' ? (
+                <motion.video
+                    src={item.src}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    initial={{ opacity: 0, scale: 1.1 }}
+                    animate={imageAnimate as any}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                />
+            ) : (
+                <motion.img
+                    src={item.src}
+                    alt={item.alt}
+                    className="absolute inset-0 w-full h-full object-cover"
+                    initial={{ opacity: 0, scale: 1.1 }}
+                    animate={imageAnimate}
+                />
+            )}
         </motion.div>
     );
 }

@@ -53,6 +53,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${hagrid.variable} ${bricolage.variable}`}>
       <body
         className={`antialiased bg-background text-foreground`}
+        suppressHydrationWarning
       >
         <Header />
         <main>

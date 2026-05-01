@@ -42,11 +42,7 @@ export default async function ServicePage({
             <div className="flex flex-col gap-12 lg:gap-20 items-start w-full">
               {/* Title spanning wider width */}
               <h2 className="text-4xl md:text-5xl lg:text-[4.5rem] font-medium leading-[1.05] tracking-tight text-black max-w-5xl xl:max-w-7xl">
-                {slug === "web-design-and-development" 
-                  ? "A Web Design & Development Studio Built for Results." 
-                  : slug === "graphic-design" 
-                    ? "A Graphic Design Studio Built to Bring Your Brand to Life." 
-                    : "A Motion Graphics Studio Built to Move Your Audience."}
+                {data.overviewHeadline}
               </h2>
 
               {/* Paragraph alongside Image */}
@@ -54,7 +50,7 @@ export default async function ServicePage({
                 {/* Image */}
                 <div className="relative aspect-[4/5] w-full max-w-[280px] md:max-w-[320px] overflow-hidden rounded-[10px]">
                   <Image
-                    src={data.servicesIncluded?.[0]?.image || "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"}
+                    src={data.overviewImage || data.servicesIncluded?.[0]?.image || "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"}
                     alt="Process block"
                     fill
                     className="object-cover"

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { TechStackItem } from "@/site-data/services/data";
 
 export default function TechStackSection({ items }: { items: TechStackItem[] }) {
@@ -21,15 +22,20 @@ export default function TechStackSection({ items }: { items: TechStackItem[] }) 
             <div className="relative w-full flex flex-col items-center justify-center overflow-hidden">
                 {/* Marquee Wrapper */}
                 <div className="flex w-max relative group">
-                    <div className="flex animate-marquee gap-6 pr-6">
+                    <div className="flex animate-marquee gap-6 md:gap-8 pr-6 md:pr-8">
                         {displayItems.map((item, idx) => (
                             <div 
                                 key={`${item.id}-${idx}`} 
-                                className="w-[200px] h-[200px] md:w-[260px] md:h-[260px] shrink-0 bg-[#f9f5f0] rounded-[24px] flex items-center justify-center p-6 shadow-sm transition-transform hover:scale-[1.02] cursor-default"
+                                className="w-[140px] h-[140px] md:w-[180px] md:h-[180px] shrink-0 bg-[#f9f5f0] rounded-[24px] flex items-center justify-center p-6 shadow-sm transition-transform hover:scale-[1.02] cursor-default relative overflow-hidden"
                             >
-                                <span className="text-xl md:text-3xl font-semibold text-[#171717] opacity-60 text-center">
-                                    {item.name}
-                                </span>
+                                <div className="relative w-16 h-16 md:w-24 md:h-24 opacity-80 group-hover/item:opacity-100 transition-opacity">
+                                    <Image
+                                        src={item.image}
+                                        alt={item.name}
+                                        fill
+                                        className="object-contain"
+                                    />
+                                </div>
                             </div>
                         ))}
                     </div>

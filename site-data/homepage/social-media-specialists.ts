@@ -7,6 +7,7 @@ import { fonts, fontSizes } from "../tokens";
 // ── Types ─────────────────────────────────────────────────────
 export interface StackImage {
   id:                       number;
+  mediaType?:               'image' | 'video';
   src:                      string;
   alt:                      string;
   /** Background color shown during the circle-reveal entrance animation */
@@ -24,7 +25,8 @@ export interface StackImage {
 export const socialMediaImages: StackImage[] = [
   {
     id:                       1,
-    src:                      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80",
+    mediaType:                "video",
+    src:                      "https://www.pexels.com/download/video/15463088/",
     alt:                      "Content strategy session",
     placeholderColor:         "#f26522",
     placeholderColorTailwind: "bg-[#f26522]",
@@ -33,6 +35,7 @@ export const socialMediaImages: StackImage[] = [
   },
   {
     id:                       2,
+    mediaType:                "image",
     src:                      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80",
     alt:                      "Creative team at work",
     placeholderColor:         "#8c6bf7",
@@ -42,6 +45,7 @@ export const socialMediaImages: StackImage[] = [
   },
   {
     id:                       3,
+    mediaType:                "image",
     src:                      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
     alt:                      "Campaign analytics and results",
     placeholderColor:         "#00c0b5",

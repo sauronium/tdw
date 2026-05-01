@@ -89,14 +89,22 @@ const CaseLayer = ({
                 className="absolute inset-0 w-full h-full bg-black z-0" 
                 style={{ opacity: videoOpacity }}
             >
-                <video 
-                    src={data.video}
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline 
-                    className="w-full h-full object-cover opacity-60"
-                />
+                {data.backgroundType === "image" ? (
+                    <img 
+                        src={data.image}
+                        alt={data.imageAlt}
+                        className="w-full h-full object-cover opacity-60"
+                    />
+                ) : (
+                    <video 
+                        src={data.video}
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline 
+                        className="w-full h-full object-cover opacity-60"
+                    />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
             </motion.div>
 

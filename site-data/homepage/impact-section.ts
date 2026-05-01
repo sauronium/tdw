@@ -20,7 +20,7 @@ export const impactSectionData = {
     fontSize: "text-base sm:text-lg md:text-2xl lg:text-3xl xl:text-4xl",
     fontWeight: "font-medium",
     letterSpacing: "tracking-normal",
-    whiteSpace: "whitespace-normal md:whitespace-nowrap text-center",
+    whiteSpace: "whitespace-normal text-center max-w-[90vw] md:max-w-2xl lg:max-w-4xl",
   },
 
   // ── Section Background ────────────────────────────────────
