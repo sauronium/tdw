@@ -26,10 +26,6 @@ export interface StackImage {
 export const socialMediaImages: StackImage[] = [
   {
     id: 1,
-    src: "home/home_about.jpg",
-    alt: "Content strategy session",
-    placeholderColor: "#f26522",
-    id: 1,
     mediaType: "video",
     src: "/home/office.mp4",
     alt: "Content strategy session",
@@ -40,10 +36,6 @@ export const socialMediaImages: StackImage[] = [
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80",
-    alt: "Creative team at work",
-    placeholderColor: "#8c6bf7",
-    id: 2,
     mediaType: "image",
     src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80",
     alt: "Creative team at work",
@@ -53,10 +45,6 @@ export const socialMediaImages: StackImage[] = [
     rotate: -3,
   },
   {
-    id: 3,
-    src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
-    alt: "Campaign analytics and results",
-    placeholderColor: "#00c0b5",
     id: 3,
     mediaType: "image",
     src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
