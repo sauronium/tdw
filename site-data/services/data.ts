@@ -576,104 +576,47 @@ export const servicesData: Record<string, ServiceData> = {
         ],
         image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
       }
-    ]
-  },
-  "digital-marketing": {
-    slug: "digital-marketing",
-    heroBgColor: "#3b82f6",
-    heroHeadline: "Data-Driven Digital Marketing That Accelerates Growth.",
-    overviewHeadline: "A Digital Marketing Agency Built to Scale Your Growth.",
-    overviewImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-    overviewText: "We are the digital marketing agency that connects your brand with the right audience. Through SEO, paid advertising, and strategic content, we drive measurable results and maximize your ROI.",
-    cards: [
-      { id: "1", backgroundColor: "#65C495", title: "SEO Pack", listItems: ["Keyword research & strategy", "On-page & technical SEO", "Local SEO & Google Business", "Content gap analysis"] },
-      { id: "2", backgroundColor: "#F7C518", title: "PPC Campaigns", listItems: ["Google Search & Display Ads", "Retargeting campaigns", "A/B testing & optimization", "Conversion tracking setup"] },
-      { id: "3", backgroundColor: "#FD6824", title: "Social Media Marketing", listItems: ["Meta (Facebook/Instagram) Ads", "LinkedIn B2B campaigns", "Audience segmentation", "Performance analytics"] },
-      { id: "4", backgroundColor: "#408BF7", title: "Email Marketing", listItems: ["Automated email sequences", "Newsletter management", "List building & segmentation", "A/B testing subject lines"] },
-      { id: "5", backgroundColor: "#8c6bf7", title: "Full-Funnel Growth", listItems: ["Omnichannel marketing strategy", "Conversion rate optimization", "Advanced analytics dashboards", "Monthly performance reporting"] },
-    ],
-    servicesIncluded: [
-      {
-        id: "search-engine-optimization",
-        title: "Search Engine Optimization (SEO)",
-        items: [
-          "We implement comprehensive SEO strategies focusing on technical health, on-page optimization, and high-quality link building to improve your organic search rankings and drive sustainable traffic.",
-          "Our approach includes deep keyword research, competitor analysis, and content gap identification to ensure your brand captures high-intent searches in your industry.",
-          "We provide monthly reporting on keyword movements, organic traffic growth, and conversion metrics so you have full transparency into your ROI."
-        ],
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        id: "pay-per-click-advertising",
-        title: "Pay-Per-Click (PPC) Advertising",
-        items: [
-          "We design and manage high-converting PPC campaigns across Google Ads, Bing, and other search engines to capture users actively searching for your products or services.",
-          "Our team continuously optimizes bidding strategies, ad copy, and landing pages through rigorous A/B testing to lower your cost-per-acquisition (CPA) and maximize returns.",
-          "We set up advanced conversion tracking and attribution modeling to ensure every dollar spent is tracked and optimized for maximum profitability."
-        ],
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        id: "social-media-advertising",
-        title: "Paid Social Media Advertising",
-        items: [
-          "We launch targeted ad campaigns on Meta (Facebook & Instagram), LinkedIn, TikTok, and X (Twitter) using advanced audience segmentation and retargeting strategies.",
-          "Our creative team designs scroll-stopping ad creatives and compelling copy tailored to each platform's best practices to drive engagement and conversions.",
-          "We implement full-funnel strategies, from brand awareness and lead generation to direct response and dynamic product retargeting to maximize your campaign effectiveness."
-        ],
-        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
-      },
-      {
-        id: "email-marketing-automation",
-        title: "Email Marketing & Automation",
-        items: [
-          "We design and execute personalized email marketing campaigns and automated workflows that nurture leads, retain customers, and drive repeat sales.",
-          "Our strategies include welcome sequences, abandoned cart recovery, post-purchase follow-ups, and segmented newsletter broadcasts tailored to user behavior and preferences.",
-          "We continually optimize open rates, click-through rates, and conversions through A/B testing subject lines, email copy, and design layouts."
-        ],
-        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
-      }
     ],
     process: {
       label: "Process",
-      heading: "How We Drive Digital Growth.",
-      subheading: "A data-driven approach to marketing that delivers measurable results.",
+      heading: "How We Produce Motion Graphics & Video Content That Performs.",
+      subheading: "A creative video production process — from concept to final render.",
       steps: [
         {
           id: "audit",
           number: "1.",
-          title: "Audit & Analysis",
-          description: "We start by auditing your current digital footprint, analyzing historical data, identifying technical bottlenecks, and evaluating competitor strategies to uncover growth opportunities."
+          title: "Creative Brief & Discovery",
+          description: "Every motion graphics project starts with a detailed creative brief — we understand your brand, target audience, video objective, distribution platforms, and key messaging to build a clear creative direction before production begins."
         },
         {
           id: "strategy",
           number: "2.",
-          title: "Strategy Formulation",
-          description: "Based on our findings, we develop a comprehensive, multi-channel digital marketing strategy tailored to your business objectives, target audience, and budget."
+          title: "Scripting & Storyboarding",
+          description: "We write a strategic video script with a hook-driven narrative structure and translate it into a detailed storyboard — mapping out every scene, transition, text overlay, and visual element so you can see the full video concept before any animation starts."
         },
         {
           id: "setup",
           number: "3.",
-          title: "Tracking & Setup",
-          description: "Before launching any campaigns, we ensure robust analytics, conversion tracking, and pixel implementation are in place to accurately measure performance and ROI."
+          title: "Voiceover & Audio Direction",
+          description: "We source professional voiceover artists matched to your brand tone and audience — handling script recording, audio direction, and music selection (licensed royalty-free tracks or custom compositions) to set the right mood and pace for your video."
         },
         {
           id: "execution",
           number: "4.",
-          title: "Execution & Launch",
-          description: "We launch your campaigns across the selected channels with carefully crafted ad copy, compelling creatives, and precise targeting to reach your ideal customers."
+          title: "Design & Animation",
+          description: "Our motion designers bring the storyboard to life — creating custom illustrations, animated graphics, kinetic typography, character animations, and dynamic transitions with frame-by-frame precision in tools like After Effects, Premiere Pro, and Cinema 4D."
         },
         {
-          id: "optimization",
+          id: "monitoring",
           number: "5.",
-          title: "Optimization & Scaling",
-          description: "We continuously monitor campaign performance, conducting A/B tests and making data-driven adjustments to optimize bids, targeting, and creatives for maximum efficiency."
+          title: "Review & Refinement",
+          description: "We share the first draft for your review and gather detailed feedback — refining animations, timing, colour, text, audio levels, and pacing until every frame meets your expectations and aligns with your brand standards."
         },
         {
           id: "reporting",
           number: "6.",
-          title: "Reporting & Insights",
-          description: "We provide transparent, detailed monthly reports and strategy reviews, breaking down key metrics, insights, and actionable recommendations for the next phase of growth."
+          title: "Final Render & Multi-Format Delivery",
+          description: "The approved video is rendered in multiple formats and resolutions — 4K master file, web-optimised MP4, social media cuts (9:16, 1:1, 16:9), GIF versions, and transparent exports — organised and delivered ready for immediate use across all platforms."
         }
       ]
     },
@@ -690,40 +633,256 @@ export const servicesData: Record<string, ServiceData> = {
     deliverables: {
       label: "Deliverables",
       heading: "What You Get.",
-      subheading: "Comprehensive marketing assets and insights to fuel your business growth.",
+      subheading: "Every video asset your brand needs — scripted, animated, and delivered in production-ready formats across all platforms.",
       items: [
         {
           id: "marketing-strategy",
-          title: "Custom Marketing Strategy",
-          description: "A tailored, multi-channel digital marketing plan aligned with your business goals, target audience, and competitive landscape."
+          title: "Custom Motion Graphics Videos",
+          description: "You receive fully custom animated videos — no templates, no stock loops — every motion element, transition, and visual is designed from scratch to match your brand identity, message, and campaign objective."
         },
         {
           id: "campaign-management",
-          title: "End-to-End Campaign Management",
-          description: "Full setup, execution, and ongoing optimization of your paid search, social, and display advertising campaigns."
+          title: "Script & Storyboard Documents",
+          description: "Every video project comes with a professionally written script and a detailed visual storyboard — giving you full visibility into the creative direction, scene flow, and messaging before production begins."
         },
         {
           id: "seo-audits",
-          title: "Technical & On-Page SEO Audits",
-          description: "In-depth SEO health checks, keyword research documents, and actionable optimization roadmaps to improve organic visibility."
+          title: " Professional Voiceover & Sound Design",
+          description: "Your videos are delivered with professional voiceover recordings, licensed background music, and custom sound effects — mixed and mastered to broadcast-quality audio standards for a polished, premium finish."
         },
         {
           id: "ad-creatives-copy",
-          title: "Ad Creatives & Copywriting",
-          description: "High-converting ad creatives, persuasive ad copy, and targeted messaging designed for multiple platforms and audience segments."
+          title: "Multi-Platform Video Exports",
+          description: "Every video is rendered and delivered in multiple formats and aspect ratios — 16:9 (YouTube, website), 9:16 (Reels, Shorts, TikTok), 1:1 (feed posts), and 4:5 (Meta ads) — ready to publish on any platform without resizing."
         },
         {
           id: "analytics-dashboards",
-          title: "Custom Analytics Dashboards",
-          description: "Real-time, interactive reporting dashboards that provide clear visibility into your key performance indicators (KPIs) and ROI."
+          title: "Social Media Cutdowns & Teasers",
+          description: "Along with the full video, you receive shorter cutdown versions — 6-second bumpers, 15-second teasers, and 30-second social edits — optimised for paid advertising, Stories, and platform-specific attention spans."
+        },
+        {
+          id: "monthly-reporting",
+          title: "Logo Animation & Brand Motion Assets",
+          description: "You receive an animated logo reveal, animated brand intro/outro, and reusable motion elements (transitions, lower-thirds, text templates) — building a consistent motion identity across all your video content."
+        },
+        {
+          id: "monthly-reporting",
+          title: "Subtitle & Caption Files",
+          description: "Every video is delivered with embedded captions and separate subtitle files (SRT/VTT) — ensuring your content is accessible, sound-off friendly, and compliant with platform accessibility standards."
+        },
+        {
+          id: "monthly-reporting",
+          title: "Source Files & Project Archive",
+          description: "You receive organised project files — After Effects projects, Premiere Pro timelines, audio stems, and layered design assets — so your team can make future edits or hand off to another editor if needed."
+        },
+      ]
+      
+    },
+    ctaText: "Let's Turn Your Audience into Your Biggest Revenue Channel."
+  },
+
+  "digital-marketing": {
+    slug: "digital-marketing",
+    heroBgColor: "#3b82f6",
+    heroHeadline: "Digital Marketing & Social Media Agency That Drives Real Growth.",
+    overviewHeadline: "A Digital Marketing Agency Built to Grow Your Brand Online.",
+    overviewImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    overviewText: "We are a full-service digital marketing and social media agency that helps businesses dominate the digital landscape. From search engine optimisation and paid advertising to social media strategy and content marketing — every campaign we run is backed by data, driven by creativity, and focused on delivering measurable ROI. Whether you're a startup building awareness or an established brand scaling revenue, we create marketing strategies that turn clicks into customers and followers into loyal communities.",
+    cards: [
+      { id: "1", backgroundColor: "#65C495", title: "SEO Pack", listItems: ["Keyword research & strategy", "On-page & technical SEO", "Local SEO & Google Business", "Content gap analysis"] },
+      { id: "2", backgroundColor: "#F7C518", title: "PPC Campaigns", listItems: ["Google Search & Display Ads", "Retargeting campaigns", "A/B testing & optimization", "Conversion tracking setup"] },
+      { id: "3", backgroundColor: "#FD6824", title: "Social Media Marketing", listItems: ["Meta (Facebook/Instagram) Ads", "LinkedIn B2B campaigns", "Audience segmentation", "Performance analytics"] },
+      { id: "4", backgroundColor: "#408BF7", title: "Email Marketing", listItems: ["Automated email sequences", "Newsletter management", "List building & segmentation", "A/B testing subject lines"] },
+      { id: "5", backgroundColor: "#8c6bf7", title: "Full-Funnel Growth", listItems: ["Omnichannel marketing strategy", "Conversion rate optimization", "Advanced analytics dashboards", "Monthly performance reporting"] },
+    ],
+    servicesIncluded: [
+      {
+        id: "social-media-strategy",
+        title: "SSocial Media Strategy & Management",
+        items: [
+          "We build comprehensive social media strategies tailored to your brand defining content pillars, posting schedules, platform priorities, and audience targeting, with daily posting, community engagement, comment moderation, and DM handling across Instagram, Facebook, LinkedIn, X (Twitter), and YouTube.",
+          "We track and analyse social media performance metrics including reach, impressions, engagement rate, follower growth, and click-through rate, optimising your strategy monthly based on platform-specific algorithms and best practices.",
+          "We stay ahead of trending formats including Reels, Shorts, Carousels, Stories, and live content ensuring your brand stays relevant, gets maximum organic visibility, and doesn't rely solely on paid promotion."
+        ],
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "pay-per-click-advertising",
+        title: "Social Media Content Creation",
+        items: [
+          "We create scroll-stopping social media content including branded graphics, short-form video scripts, Reels and Shorts concepts, carousel posts, memes, and interactive story content all designed with your brand guidelines, colour palette, typography, and tone of voice.",
+          "We develop monthly content calendars with a strategic mix of educational, promotional, entertaining, and community-building posts that keep your audience engaged and your brand top-of-mind.",
+          "Our content creation process includes caption writing with SEO-optimised hashtag research using high-performing and niche-specific hashtags that expand your organic reach and attract your ideal audience."
+        ],
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "social-media-advertising",
+        title: "Influencer Marketing & Collaborations",
+        items: [
+          "We identify, vet, and connect your brand with the right influencers and content creators from micro-influencers with high engagement to macro-influencers with massive reach based on your target audience and campaign objectives.",
+          "Our influencer marketing strategy covers campaign planning, content briefs, deliverable timelines, performance tracking, ROI measurement, and end-to-end partnership management from outreach and negotiation to content approval and post-campaign analytics.",
+          "We leverage influencer-generated content (IGC) across your social media, ads, and website repurposing authentic creator content that builds trust and drives higher conversion rates than traditional branded content."
+        ],
+        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "email-marketing-automation",
+        title: "Social Media Advertising (Paid Social)",
+        items: [
+          "We create and manage high-performing paid social media campaigns on Instagram, Facebook, LinkedIn, YouTube, and TikTok using advanced audience targeting, retargeting, and lookalike audiences with multiple creative variations and A/B tested headlines to drive the lowest possible cost per acquisition.",
+          "We handle full campaign setup including ad account configuration, pixel installation, event tracking, custom audience creation, and campaign budget optimisation so your ads are technically sound from day one.",
+          "We scale campaigns that work by increasing budgets strategically on winning ad sets while pausing underperformers, with detailed weekly and monthly reports covering impressions, reach, CTR, CPC, ROAS, and conversion data."
+        ],
+        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "email-marketing-automation",
+        title: "Search Engine Optimisation (SEO)",
+        items: [
+          "We implement comprehensive on-page SEO including optimised meta titles, meta descriptions, heading structure, internal linking, image alt tags, and keyword-rich content placement with technical SEO audits covering site speed, mobile-friendliness, crawlability, XML sitemaps, schema markup, and Core Web Vitals.",
+          "We conduct in-depth keyword research using SEMrush, Ahrefs, and Google Keyword Planner targeting high-intent, low-competition keywords, combined with an off-page SEO strategy of ethical link building, guest posting, digital PR, and brand mention outreach.",
+          "We provide monthly SEO performance reports with keyword ranking updates, organic traffic trends, backlink growth, and actionable recommendations so you always know how your SEO investment is performing."
+        ],
+        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "search-engine-optimization-seo",
+        title: "Google Ads & Pay-Per-Click (PPC) Advertising",
+        items: [
+          "We set up and manage high-converting Google Ads campaigns including Search Ads, Display Ads, Shopping Ads, and YouTube Ads structured with tight ad groups, negative keyword lists, bid strategy optimisation, and quality score improvement.",
+          "We create compelling ad copy with strong headlines, clear value propositions, and action-driven CTAs combined with A/B testing to continuously improve click-through rates and conversion rates.",
+          "Our Google Ads management includes conversion tracking setup, remarketing audience creation, landing page alignment, and detailed performance reporting with full transparency on every rupee spent."
+        ],
+        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "search-engine-optimization-seo",
+        title: "Content Marketing & Blogging",
+        items: [
+          "We develop content marketing strategies that position your brand as an industry authority creating SEO-optimised blog posts, articles, case studies, whitepapers, and long-form content researched with targeted keyword strategy, competitor analysis, and search intent mapping.",
+          "We handle the full content pipeline from topic ideation and content calendar planning to writing, editing, on-page SEO optimisation, and publishing so your blog stays consistent without draining your team's time.",
+          "Our approach focuses on building topical authority creating content clusters around your core services and products that strengthen your website's overall SEO performance and domain relevance."
+        ],
+        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
+      },
+
+      {
+        id: "search-engine-optimization-seo",
+        title: "End-to-End Marketplace Growth Management For Amazon & Others",
+        items: [
+          "We manage your complete marketplace presence on Amazon, Flipkart, Meesho, and other leading e-commerce platforms including store setup, product listing creation, catalogue optimisation, A+ content design, and brand store development to maximise visibility and conversions.",
+          "We run and optimise marketplace advertising campaigns including Amazon Sponsored Products, Sponsored Brands, Flipkart Product Listing Ads, and deal participation strategies to drive traffic, improve Best Seller Rank (BSR), and increase your sales volume.",
+          "We handle ongoing marketplace operations including inventory coordination, pricing strategy, review management, competitor monitoring, keyword indexing, and monthly performance reporting with actionable insights to scale your marketplace revenue consistently."
+        ],
+        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
+      }
+    ],
+    process: {
+      label: "Process",
+      heading: "How We Build Digital Marketing Campaigns That Deliver Results",
+      subheading: "A data-driven marketing process — from strategy to scaling.",
+      steps: [
+        {
+          id: "audit",
+          number: "1.",
+          title: "Audit & Discovery",
+          description: "We begin every digital marketing engagement with a comprehensive audit — analysing your current online presence, website performance, social media accounts, competitor strategies, and audience behaviour to identify gaps and growth opportunities."
+        },
+        {
+          id: "strategy",
+          number: "2.",
+          title: "Strategy & Goal Setting",
+          description: "We define a clear digital marketing roadmap — setting measurable KPIs, selecting the right channels (SEO, PPC, social media, email), building audience personas, and aligning every tactic with your business revenue goals."
+        },
+        {
+          id: "setup",
+          number: "3.",
+          title: "Content & Creative Development",
+          description: "Our team creates all campaign assets — social media content, ad creatives, blog posts, email sequences, and landing page copy — ensuring every piece is on-brand, SEO-optimised, and designed to engage your target audience."
+        },
+        {
+          id: "execution",
+          number: "4.",
+          title: "Campaign Launch & Execution",
+          description: "We launch your campaigns across all selected channels with precise targeting, budget allocation, and tracking setup — from social media posting schedules and ad activation to SEO implementation and email automation workflows."
+        },
+        {
+          id: "monitoring",
+          number: "5.",
+          title: "Monitoring & Optimisation",
+          description: "We continuously monitor campaign performance in real time — adjusting bids, refining audience targeting, testing new creatives, and reallocating budgets to the highest-performing channels to maximise your return on investment."
+        },
+        {
+          id: "reporting",
+          number: "6.",
+          title: "Reporting & Scaling",
+          description: "You receive detailed monthly performance reports with traffic, engagement, conversion, and revenue data across every channel — along with strategic recommendations to scale what's working and improve what's not."
+        }
+      ]
+    },
+    techStack: [
+      { id: "google-analytics", name: "Google Analytics 4", image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Google_Analytics_icon_%282023%29.svg" },
+      { id: "google-ads", name: "Google Ads", image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" },
+      { id: "meta-ads", name: "Meta Ads Manager", image: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
+      { id: "semrush", name: "SEMrush", image: "https://upload.wikimedia.org/wikipedia/commons/1/13/SEMrush_logo.svg" },
+      { id: "ahrefs", name: "Ahrefs", image: "https://upload.wikimedia.org/wikipedia/commons/1/10/Ahrefs_logo.svg" },
+      { id: "mailchimp", name: "Mailchimp", image: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Mailchimp_Freddie_Icon.svg" },
+      { id: "hubspot", name: "HubSpot", image: "https://upload.wikimedia.org/wikipedia/commons/f/f7/HubSpot_Logo.svg" },
+      { id: "looker-studio", name: "Looker Studio", image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Google_Looker_Logo.svg" },
+    ],
+    deliverables: {
+      label: "Deliverables",
+      heading: "What You Get.",
+      subheading: "Every asset, report, and strategy document you need to grow your brand online — delivered with full transparency.",
+      items: [
+        {
+          id: "marketing-strategy",
+          title: "Custom Digital Marketing Strategy",
+          description: "You receive a tailored digital marketing strategy document — covering channel selection, audience targeting, content direction, budget allocation, and a quarterly growth roadmap aligned with your business objectives and revenue goals."
+        },
+        {
+          id: "campaign-management",
+          title: "Social Media Content & Calendar",
+          description: "You get a complete monthly social media content package — branded post designs, Reels/Shorts concepts, carousel layouts, captions with hashtag strategy, and a scheduled content calendar across all your active platforms."
+        },
+        {
+          id: "seo-audits",
+          title: "SEO Audit & Optimisation Report",
+          description: "Your website receives a full technical and on-page SEO audit — with keyword rankings, site health scores, indexation issues, backlink analysis, and a prioritised action plan to improve your organic search visibility on Google."
+        },
+        {
+          id: "ad-creatives-copy",
+          title: "Ad Campaign Setup & Creatives",
+          description: "Every paid campaign is delivered with complete ad account setup, audience targeting configuration, pixel and conversion tracking, multiple ad creative variations, and A/B testing structure — ready to drive traffic from day one."
+        },
+        {
+          id: "analytics-dashboards",
+          title: "Email Marketing Sequences",
+          description: "You receive fully designed, mobile-responsive email templates and automated sequences — welcome flows, nurture campaigns, promotional blasts, and abandoned cart recovery — set up and tested on your email marketing platform."
+        },
+        {
+          id: "monthly-reporting",
+          title: "Blog Content & SEO Articles",
+          description: "You get professionally written, SEO-optimised blog posts and articles — researched with targeted keywords, formatted with proper heading structure, internal links, and meta tags — ready to publish and rank on search engines."
         },
         {
           id: "monthly-reporting",
           title: "Monthly Performance Reports",
-          description: "Detailed monthly performance breakdowns with strategic insights and data-backed recommendations for continuous improvement."
+          description: "Every month you receive a detailed performance report covering traffic, engagement, conversions, ad spend, ROAS, keyword rankings, and social media growth — with clear insights and strategic recommendations for the next month."
+        },
+        {
+          id: "monthly-reporting",
+          title: "Competitor & Market Analysis",
+          description: "You receive a competitor benchmarking report — analysing their SEO rankings, social media presence, ad strategies, and content approach — so you understand where you stand and where the biggest opportunities lie to outperform them."
+        },
+        {
+          id: "monthly-reporting",
+          title: "Analytics & Tracking Dashboard",
+          description: "We set up a live marketing dashboard consolidating data from Google Analytics, Search Console, ad platforms, and social media — giving you real-time visibility into every metric that matters, accessible anytime."
         }
       ]
     },
-    ctaText: "Ready to Scale Your Digital Presence?"
+    ctaText: "Let's Turn Your Audience into Your Biggest Revenue Channel."
   }
 };

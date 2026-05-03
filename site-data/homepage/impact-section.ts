@@ -11,7 +11,7 @@ export const impactSectionData = {
     /** Background pill color */
     backgroundColor: "#f26522",
     backgroundTailwind: "bg-[#f26522]",
-    textColor: "text-black",
+    textColor: "text-white",
     /** Pill padding (mobile / desktop) */
     paddingX: "px-9 md:px-16",
     paddingY: "py-3 md:py-6",
@@ -65,7 +65,7 @@ export const impactSectionData = {
 
   // ── Down Arrow ────────────────────────────────────────────
   arrow: {
-    stroke: "#f26522",
+    stroke: "#ff5a26",
     strokeWidth: 2.5,
     /** SVG dimensions */
     width: 24,

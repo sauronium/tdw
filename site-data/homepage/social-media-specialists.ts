@@ -7,10 +7,10 @@ import { fonts, fontSizes } from "../tokens";
 // ── Types ─────────────────────────────────────────────────────
 export interface StackImage {
 
-  id:                       number;
-  mediaType?:               'image' | 'video';
-  src:                      string;
-  alt:                      string;
+  id: number;
+  mediaType?: 'image' | 'video';
+  src: string;
+  alt: string;
   /** Background color shown during the circle-reveal entrance animation */
   placeholderColor: string;
   /** Tailwind class for placeholder background */
@@ -29,11 +29,11 @@ export const socialMediaImages: StackImage[] = [
     src: "home/home_about.jpg",
     alt: "Content strategy session",
     placeholderColor: "#f26522",
-    id:                       1,
-    mediaType:                "video",
-    src:                      "https://www.pexels.com/download/video/15463088/",
-    alt:                      "Content strategy session",
-    placeholderColor:         "#f26522",
+    id: 1,
+    mediaType: "video",
+    src: "/home/office.mp4",
+    alt: "Content strategy session",
+    placeholderColor: "#f26522",
     placeholderColorTailwind: "bg-[#f26522]",
     zIndex: 1,
     rotate: 0,
@@ -43,11 +43,11 @@ export const socialMediaImages: StackImage[] = [
     src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80",
     alt: "Creative team at work",
     placeholderColor: "#8c6bf7",
-    id:                       2,
-    mediaType:                "image",
-    src:                      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80",
-    alt:                      "Creative team at work",
-    placeholderColor:         "#8c6bf7",
+    id: 2,
+    mediaType: "image",
+    src: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80",
+    alt: "Creative team at work",
+    placeholderColor: "#8c6bf7",
     placeholderColorTailwind: "bg-[#8c6bf7]",
     zIndex: 2,
     rotate: -3,
@@ -57,11 +57,11 @@ export const socialMediaImages: StackImage[] = [
     src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
     alt: "Campaign analytics and results",
     placeholderColor: "#00c0b5",
-    id:                       3,
-    mediaType:                "image",
-    src:                      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
-    alt:                      "Campaign analytics and results",
-    placeholderColor:         "#00c0b5",
+    id: 3,
+    mediaType: "image",
+    src: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80",
+    alt: "Campaign analytics and results",
+    placeholderColor: "#00c0b5",
     placeholderColorTailwind: "bg-[#00c0b5]",
     zIndex: 3,
     rotate: 4,
