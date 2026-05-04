@@ -23,7 +23,7 @@ export interface ClientTypeCard {
 export const clientTypeCards: ClientTypeCard[] = [
   {
     title: "Startups",
-    desc: "From brand identity and logo design to website development and social media setup — we help startups build a professional digital presence that attracts investors, wins customers, and sets the foundation for long-term growth.",
+    desc: "We help early stage startups build a strong foundation from day one. From brand identity and logo design to website development, social media setup, and launch ready marketing collateral, we create a professional digital presence that attracts investors, wins early customers, and sets the stage for long term growth.",
     bg: "bg-[#ed6e33]",
     color: "#ed6e33",
     iconKey: "startup",
@@ -31,7 +31,7 @@ export const clientTypeCards: ClientTypeCard[] = [
   },
   {
     title: "Small Businesses",
-    desc: "We help small businesses go beyond a basic logo — building complete brand systems, high-performing websites, SEO strategies, and digital marketing campaigns that drive real visibility, leads, and local growth.",
+    desc: "We help small businesses move past the basics and build real market presence. From complete brand systems and high performing websites to SEO strategies and digital marketing campaigns, we deliver everything you need to drive visibility, generate consistent leads, and grow both locally and online.",
     bg: "bg-[#4a88f5]",
     color: "#4a88f5",
     iconKey: "small-business",
@@ -39,7 +39,7 @@ export const clientTypeCards: ClientTypeCard[] = [
   },
   {
     title: "Premium Brands",
-    desc: "For established brands that demand the best — we deliver refined graphic design, flawless custom web development, premium motion graphics, and strategic digital marketing that reflects your brand's true market value.",
+    desc: "We partner with established brands that demand excellence at every touchpoint. From refined graphic design and flawless custom web development to premium motion graphics and strategic digital marketing, every project we deliver reflects your brand's true market value and reinforces your position as a category leader.",
     bg: "bg-[#6bb88b]",
     color: "#6bb88b",
     iconKey: "premium-brand",

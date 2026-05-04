@@ -64,25 +64,25 @@ export const servicesData: Record<string, ServiceData> = {
   "web-design-and-development": {
     slug: "web-design-and-development",
     heroBgColor: "#fdf8f2",
-    heroHeadline: "We Design Websites That Build Brands and Drive Business.",
-    overviewHeadline: "A Web Design & Development Studio Built for Results.",
+    heroHeadline: "We Build Websites That Power Brands & Drive Real Growth.",
+    overviewHeadline: "A Web Studio Built for Brands That Mean Business.",
     overviewImage: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
-    overviewText: "we're the web design and development agency that elevates brands into social icons. through a blend of data, creativity and strategy, we create lasting connections and fuel engagement.",
+    overviewText: "We are a creative web design and development studio building high performance websites for brands ready to grow. Every site we deliver combines user focused UI/UX design, clean front end and back end development, and SEO ready architecture, so your website doesn't just look premium, it ranks, converts, and scales with your brand.",
     cards: [
-      { id: "1", backgroundColor: "#65C495", title: "Landing Page", listItems: ["Product launches & campaigns", "Event promotions", "Single-service businesses", "Lead generation pages"] },
-      { id: "2", backgroundColor: "#F7C518", title: "Business Website", listItems: ["Small businesses & startups", "Consultancies & agencies", "Service-based companies", "Portfolio & personal brands"] },
-      { id: "3", backgroundColor: "#FD6824", title: " E-Commerce Store", listItems: ["Online retail & fashion brands", "D2C product businesses", "Multi-category stores", "Subscription-based products"] },
-      { id: "4", backgroundColor: "#408BF7", title: "Web Application", listItems: ["SaaS platforms & dashboards", "Booking & management systems", "Client portals & tools", "API-driven applications"] },
-      { id: "5", backgroundColor: "#FD6824", title: "Custom & Enterprise", listItems: ["Large-scale enterprise solutions", "Multi-platform integrations", "Complete digital ecosystems", "Fully tailored builds from scratch"] },
+      { id: "1", backgroundColor: "#65C495", title: "Landing Page", listItems: ["Product launches and campaigns", "Event promotions and registrations", "Single service businesses", "High converting lead generation pages"] },
+      { id: "2", backgroundColor: "#F7C518", title: "Business Website", listItems: ["Small businesses and startups", "Consultancies and agencies", "Service based companies", "Portfolio and personal brand websites"] },
+      { id: "3", backgroundColor: "#FD6824", title: " E-Commerce Store", listItems: ["Online retail and fashion brands", "D2C product businesses", "Multi category online stores", "ubscription based product brands"] },
+      { id: "4", backgroundColor: "#408BF7", title: "Web Application", listItems: ["SaaS platforms and dashboards", "Booking and management systems", "Client portals and internal tools", "API driven business applications"] },
+      { id: "5", backgroundColor: "#FD6824", title: "Custom & Enterprise", listItems: ["Large scale enterprise solutions", "Multi platform digital ecosystems", "Complete website and app integrations", "Fully tailored builds from scratch"] },
     ],
     servicesIncluded: [
       {
         id: "ux-strategy",
         title: "UX Strategy & Interface Design",
         items: [
-          "Our UX design process starts with deep research into your target audience, user behaviour, and business objectives, ensuring every design decision is backed by data and aligned with your goals.",
-          "We create high-fidelity UI designs that balance visual aesthetics, brand consistency, web accessibility standards (WCAG), and conversion-focused layouts that guide users toward action.",
-          "The result is a professional website interface built around intuitive navigation and clear content hierarchy that looks refined, feels effortless, and keeps bounce rates low while increasing time-on-site."
+          "Every design decision starts with deep research into your audience, user behaviour, and business goals, ensuring strategy comes before style.",
+          "We craft high fidelity UI designs that balance visual appeal, brand consistency, and accessibility (WCAG) standards, while guiding users naturally toward action.",
+          "The result is an intuitive, refined website interface with clear hierarchy that reduces bounce rates and increases time on site."
         ],
         image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
       },
@@ -90,9 +90,9 @@ export const servicesData: Record<string, ServiceData> = {
         id: "responsive-web-design",
         title: "Responsive Web Design & Mobile Optimisation",
         items: [
-          "We design and develop fully responsive websites that adapt seamlessly across desktop, tablet, and mobile, tested across Chrome, Safari, Firefox, and Edge to ensure cross-browser compatibility.",
-          "We follow a mobile-first design approach, prioritising fast load times, touch-friendly navigation, and optimised media for mobile users who make up over 60% of web traffic.",
-          "Our mobile-optimised websites meet Google's Core Web Vitals benchmarks, directly improving your search engine rankings, organic visibility, and overall user experience."
+          "Fully responsive websites tested across Chrome, Safari, Firefox, and Edge for complete cross browser compatibility on desktop, tablet, and mobile.",
+          "A mobile first design approach with fast load times, touch friendly navigation, and optimised media for the 60% of users browsing on mobile.",
+          "Built to meet Google's Core Web Vitals benchmarks, directly improving your search rankings, organic visibility, and user experience."
         ],
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
       },
@@ -100,9 +100,9 @@ export const servicesData: Record<string, ServiceData> = {
         id: "custom-web-development",
         title: "Custom Website Development",
         items: [
-          "We build custom-coded websites from scratch using modern technologies like React, Next.js, and Node.js with clean, scalable code that allows easy updates, feature additions, and third-party integrations as your business grows.",
-          "We implement secure development practices including SSL encryption, input validation, and regular code audits, with rigorous quality assurance testing across devices and browsers before any website goes live.",
-          "We also build custom functionality like booking systems, calculators, client dashboards, or any feature your business requires, all without cookie-cutter templates or page builders."
+          "Custom coded websites built using modern technologies like React, Next.js, and Node.js, with clean and scalable code that grows with your business.",
+          "Secure development practices including SSL encryption, input validation, and rigorous QA testing across every device and browser before launch.",
+          "Tailored functionality like booking systems, calculators, dashboards, and integrations, fully built for your needs without templates or page builders."
         ],
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       },
@@ -110,9 +110,9 @@ export const servicesData: Record<string, ServiceData> = {
         id: "ecommerce-web-development",
         title: "E-Commerce Website Development",
         items: [
-          "We develop high-converting e-commerce websites on platforms like Shopify, WooCommerce, and custom frameworks with secure payment gateways, product catalogue management, and a smooth checkout experience that reduces cart abandonment.",
-          "Every online store includes inventory management, order tracking, customer accounts, and automated email notifications for a seamless buying experience chosen based on your business scale and growth goals.",
-          "We optimise product pages with structured data markup (Schema), fast-loading images, and SEO-friendly URLs to help your products rank higher on Google Shopping and organic search."
+          "High converting e commerce stores on Shopify, WooCommerce, and custom frameworks with secure payment gateways and smooth checkout flows that reduce cart abandonment.",
+          "Complete store setup with inventory management, order tracking, customer accounts, and automated emails for a seamless buying experience.",
+          "Product pages optimised with structured data (Schema), fast loading images, and SEO friendly URLs to boost visibility on Google Shopping and organic search."
         ],
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       },
@@ -120,29 +120,29 @@ export const servicesData: Record<string, ServiceData> = {
         id: "website-speed-and-performance-optimisation",
         title: "Website Speed & Performance Optimisation",
         items: [
-          "We audit your website's performance using Google PageSpeed Insights, GTmetrix, and Lighthouse, identifying every bottleneck and implementing image compression, lazy loading, code minification, browser caching, and CDN integration.",
-          "Google uses page speed as a direct ranking factor, and we ensure your site meets or exceeds all Core Web Vitals thresholds for better search engine rankings and user experience.",
-          "We optimise both front-end rendering and server-side response times, ensuring your website loads in under 3 seconds even on slower mobile connections."
+          "Full performance audits using Google PageSpeed Insights, GTmetrix, and Lighthouse, followed by image compression, lazy loading, code minification, and CDN integration.",
+          "Built to meet or exceed Google's Core Web Vitals thresholds, directly boosting search rankings and overall user satisfaction.",
+          "Optimised front end and server side performance ensures your website loads in under 3 seconds, even on slower mobile networks."
         ],
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "on-page-and-technical-seo-setup",
-        title: "On-Page SEO & Technical SEO Setup",
+        id: "On Page & Technical SEO Setup",
+        title: "On Page & Technical SEO Setup",
         items: [
-          "Every website we build comes with a complete on-page SEO foundation including optimised meta titles, meta descriptions, heading structure (H1-H6), keyword-rich content placement, XML sitemaps, robots.txt, canonical tags, and structured data markup.",
-          "Our team ensures your website is fully crawlable and indexable by search engines, fixing issues related to broken links, duplicate content, or redirect chains, with Google Search Console and Analytics integration from day one.",
-          "We also optimise for local SEO with Google Business Profile integration, local schema markup, and location-based keyword targeting for businesses serving specific regions."
+          "Complete on page SEO foundation including optimised meta tags, heading structure (H1 to H6), keyword placement, XML sitemaps, robots.txt, and structured data markup.",
+          "Fully crawlable and indexable architecture with broken link checks, redirect fixes, and Google Search Console plus Analytics integration from day one.",
+          "Local SEO optimisation with Google Business Profile setup, local schema markup, and location based keyword targeting for region focused businesses."
         ],
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       },
       {
         id: "cms-development-and-website-management",
-        title: "On-Page SEO & Technical SEO Setup",
+        title: " CMS Development & Website Management",
         items: [
-          "We build easy-to-manage websites using WordPress, Webflow, and headless CMS platforms with a custom admin panel tailored to your workflow, making it simple to add blog posts, update pages, manage media, and edit SEO settings.",
-          "We configure user roles, permission levels, and content scheduling features so your team can collaborate and publish content efficiently without touching code.",
-          "Our CMS solutions are built with security best practices including regular updates, plugin audits, firewall setup, and automated backups to keep your website safe and running smoothly."
+          "Easy to manage websites built on WordPress, Webflow, or headless CMS platforms with a custom admin panel tailored to your team's workflow.",
+          "Configurable user roles, permission levels, and content scheduling so your team can publish, edit, and collaborate without ever touching code.",
+          "Built with security best practices including regular updates, plugin audits, firewall protection, and automated backups to keep your site safe."
         ],
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       },
@@ -150,62 +150,62 @@ export const servicesData: Record<string, ServiceData> = {
         id: "website-maintenance-and-ongoing-support",
         title: "Website Maintenance & Ongoing Support",
         items: [
-          "We provide ongoing website maintenance including security updates, plugin management, uptime monitoring, regular performance checks, bug fixes, content updates, feature enhancements, and design tweaks to keep your site evolving as your business grows.",
-          "We offer monthly maintenance plans with dedicated support, ensuring any issue is identified and resolved before it impacts your users or search rankings.",
-          "Every maintenance client receives a monthly website health report covering uptime, speed scores, security status, and SEO performance so you always know where your site stands."
+          "Ongoing maintenance covering security updates, plugin management, uptime monitoring, performance checks, content updates, and design tweaks as your business grows.",
+          "Monthly maintenance plans with dedicated support, ensuring every issue is identified and resolved before it impacts your users or rankings.",
+          "A monthly website health report covering uptime, speed scores, security status, and SEO performance, so you always know where your site stands."
         ],
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       }
     ],
     process: {
-      label: "Process",
-      heading: "How We Build High-Performance Websites.",
-      subheading: "A structured web design and development process from discovery to delivery.",
-      steps: [
-        {
-          id: "insight",
-          number: "1.",
-          title: "Insight",
-          description: "We start every web design project with in-depth research, understanding your brand, target audience, competitors, and business objectives to identify the challenges, opportunities, and goals that will shape your entire website strategy."
-        },
-        {
-          id: "foundation",
-          number: "2.",
-          title: "Foundation",
-          description: "We define your website's information architecture, sitemap structure, content hierarchy, and SEO keyword strategy, building a solid technical and strategic foundation before any design work begins."
-        },
-        {
-          id: "Wireframe",
-          number: "3.",
-          title: "Wireframe",
-          description: "We create detailed wireframes and low-fidelity prototypes that map out every page layout, user flow, and conversion path, ensuring the user experience is intuitive, logical, and aligned with your business goals before moving to visual design."
-        },
-        {
-          id: "Design",
-          number: "4.",
-          title: "Design",
-          description: "Our UI designers craft high-fidelity, pixel-perfect website designs in tools like Figma, focusing on brand-consistent visuals, responsive layouts, typography, colour systems, and accessibility standards that make your website look premium across every device."
-        },
-        {
-          id: "Development",
-          number: "5.",
-          title: "Development",
-          description: "We bring your designs to life with clean, scalable code using modern technologies like React, Next.js, and Node.js, building fast-loading, SEO-friendly, fully responsive websites with cross-browser compatibility and secure architecture."
-        },
-        {
-          id: "Testing",
-          number: "6.",
-          title: "Testing",
-          description: "Every website goes through rigorous quality assurance including performance testing, mobile responsiveness checks, cross-browser validation, broken link audits, page speed analysis, and Core Web Vitals optimisation to ensure everything runs flawlessly before launch."
-        },
-        {
-          id: "Launch",
-          number: "7.",
-          title: "Launch & Support",
-          description: "Your website goes live with a smooth deployment process including DNS setup, SSL configuration, analytics integration, and search engine indexing. After launch, we provide ongoing website maintenance, performance monitoring, and dedicated support to keep your site running at its best."
-        }
-      ]
+  label: "Process",
+  heading: "How We Build High Performance Websites.",
+  subheading: "A structured web design and development process from first idea to final launch.",
+  steps: [
+    {
+      id: "insight",
+      number: "01.",
+      title: "Insight",
+      description: "We dive deep into your brand, audience, competitors, and business goals to uncover the insights that shape a winning website strategy."
     },
+    {
+      id: "foundation",
+      number: "02.",
+      title: "Foundation",
+      description: "We define your site architecture, content hierarchy, and SEO keyword strategy, laying the technical and strategic groundwork before design begins."
+    },
+    {
+      id: "wireframe",
+      number: "03.",
+      title: "Wireframe",
+      description: "We map every page layout, user flow, and conversion path through detailed wireframes, making sure the experience feels intuitive before visuals come in."
+    },
+    {
+      id: "design",
+      number: "04.",
+      title: "Design",
+      description: "Our designers craft pixel perfect, high fidelity layouts in Figma with brand consistent visuals, responsive grids, and accessibility built in."
+    },
+    {
+      id: "development",
+      number: "05.",
+      title: "Development",
+      description: "We bring designs to life with clean, scalable code using React, Next.js, and Node.js, building fast, SEO ready, fully responsive websites."
+    },
+    {
+      id: "testing",
+      number: "06.",
+      title: "Testing & QA",
+      description: "Every site is tested across browsers and devices for speed, responsiveness, broken links, and Core Web Vitals before it ever goes live."
+    },
+    {
+      id: "launch",
+      number: "07.",
+      title: "Launch & Support",
+      description: "Your website goes live with full deployment, analytics, and indexing setup, followed by ongoing support to keep it running at peak performance."
+    }
+  ]
+},
     techStack: [
       { id: "ts", name: "TypeScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
       { id: "react", name: "React", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
@@ -217,607 +217,602 @@ export const servicesData: Record<string, ServiceData> = {
       { id: "supabase", name: "Supabase", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
     ],
     deliverables: {
-      label: "Deliverables",
-      heading: "What you get.",
-      subheading: "Every deliverable you need for a complete, high-performing website — from strategy to launch and beyond.",
-      items: [
-        {
-          id: "target-audience",
-          title: "Custom Website Design",
-          description: "You receive a fully custom, pixel-perfect website design tailored to your brand identity, built with modern UI principles, responsive layouts, and conversion-focused visual hierarchy that sets your business apart from competitors."
-        },
-        {
-          id: "visual-identity",
-          title: "Mobile-Responsive Development",
-          description: "Your website is developed to perform flawlessly across all devices including desktop, tablet, and mobile with adaptive layouts, touch-friendly navigation, and optimised media that deliver a seamless user experience on every screen size."
-        },
-        {
-          id: "seo-ready",
-          title: "SEO-Ready Architecture",
-          description: "Every website we deliver comes with a complete on-page SEO setup including optimised meta tags, clean URL structure, heading hierarchy, XML sitemap, schema markup, and Google Search Console integration so your site is ready to rank from day one."
-        },
-        {
-          id: "interactive-prototypes",
-          title: "UX/UI Wireframes & Prototypes",
-          description: "Before development begins, you receive detailed wireframes and interactive prototypes that map out every page layout, user flow, and content placement so you see exactly how your website will look and function before a single line of code is written."
-        },
-        {
-          id: "speed-optimised",
-          title: "Speed-Optimised Performance",
-          description: "Your website is built for speed with compressed assets, lazy loading, minified code, CDN integration, and server-side optimisation that ensures fast load times, strong Core Web Vitals scores, and a better ranking position on Google."
-        },
-        {
-          id: "cms-access",
-          title: "CMS & Admin Panel Access",
-          description: "You get full control of your website through an easy-to-use content management system, allowing you to update text, images, blog posts, and pages without any coding knowledge or dependency on a developer."
-        },
-        {
-          id: "cross-browser",
-          title: "Cross-Browser & Security Testing",
-          description: "Every website is rigorously tested across Chrome, Safari, Firefox, and Edge along with SSL encryption, firewall configuration, and security audits to ensure your site runs smoothly and keeps user data protected."
-        },
-        {
-          id: "analytics-setup",
-          title: "Analytics & Tracking Setup",
-          description: "We configure Google Analytics, conversion tracking, and event monitoring on your website, giving you clear visibility into traffic sources, user behaviour, and performance metrics so you can make data-driven decisions from launch."
-        },
-        {
-          id: "post-launch-support",
-          title: "Post-Launch Support & Maintenance",
-          description: "After your website goes live, we provide dedicated support including bug fixes, content updates, performance monitoring, security patches, and a monthly website health report to keep everything running at peak performance."
-        },
-      ]
+  label: "FAQ",
+  heading: "Frequently Asked Questions.",
+  subheading: "Everything you need to know about working with us on your web design and development project.",
+  items: [
+    {
+      id: "project-timeline",
+      title: "How long does it take to design and develop a website?",
+      description: "Most websites take 4 to 8 weeks from kickoff to launch, depending on complexity. A landing page can go live in 2 to 3 weeks, while custom web applications and large e commerce stores may take 8 to 12 weeks."
     },
-    ctaText: "Let's Build a Website Your Competitors Wish They Had."
+    {
+      id: "content-requirement",
+      title: "Do I need to provide content and images for my website?",
+      description: "You can provide your own content and images, or our team can handle copywriting, photography sourcing, and content strategy as part of the project. We make the process simple either way."
+    },
+    {
+      id: "tech-stack",
+      title: "What technologies do you use to build websites?",
+      description: "We build with modern, scalable technologies including React, Next.js, Node.js, WordPress, Webflow, and Shopify. The right stack is chosen based on your business goals, budget, and long term scalability."
+    },
+    {
+      id: "seo-included",
+      title: "Will my website be SEO ready and optimised for Google?",
+      description: "Yes, every website we build comes with complete on page SEO including meta tags, clean URLs, schema markup, XML sitemaps, and Core Web Vitals optimisation, ensuring it is ready to rank from day one."
+    },
+    {
+      id: "mobile-responsive",
+      title: "Will my website work on mobile and tablet devices?",
+      description: "Absolutely. Every website is fully responsive and tested across desktop, tablet, and mobile, with a mobile first design approach since over 60% of users browse on mobile devices."
+    },
+    {
+      id: "cms-control",
+      title: "Can I update my website on my own after launch?",
+      description: "Yes, every website comes with an easy to use CMS like WordPress, Webflow, or a custom admin panel, allowing you to update content, blogs, images, and pages without writing any code."
+    },
+    {
+      id: "post-launch-support",
+      title: "Do you provide support after the website goes live?",
+      description: "Yes, we offer dedicated post launch support including bug fixes, security updates, performance monitoring, and content updates. Monthly maintenance plans are also available for long term care."
+    },
+    {
+      id: "ecommerce-platforms",
+      title: "Can you build e commerce websites on Shopify or WooCommerce?",
+      description: "Yes, we build e commerce stores on Shopify, WooCommerce, and custom frameworks with secure payment gateways, inventory management, and SEO friendly product pages built to convert."
+    },
+    {
+      id: "ownership-rights",
+      title: "Will I own the website and source code after launch?",
+      description: "Yes, you receive full ownership of your website along with all source files, design assets, and admin access. There are no hidden lock ins or vendor dependencies."
+    }
+  ]
+},
+ctaText: "Let's Build a Website Your Competitors Wish They Had."
   },
   "graphic-design": {
     slug: "graphic-design",
-    heroBgColor: "#ff5a26",
-    heroHeadline: "Professional Graphic Design Services That Make Your Brand Unforgettable.",
+    heroBgColor: "#fdf8f2",
+    heroHeadline: "We Design Brands That Stand Out & Stay Unforgettable.",
     overviewHeadline: "A Graphic Design Studio Built to Bring Your Brand to Life.",
-    overviewImage: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80",
-    overviewText: "we’re the graphic design agency that turns your vision into unforgettable visuals. From striking logos to complete brand identities, we combine creativity, strategy, and design excellence to make your brand stand out and leave a lasting impression.",
+    overviewImage: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80",
+    overviewText: "We are a creative graphic design studio that transforms ideas into powerful visuals. Every logo, layout, and creative asset we produce is rooted in strategy and built to make your brand stand out in a crowded market. From startups crafting their first identity to established brands refreshing their visual presence, we deliver design that communicates, connects, and converts.",
     cards: [
-      { id: "1", backgroundColor: "#65C495", title: "Starter Pack", listItems: ["Logo design & variations", "Business card & letterhead", "Brand colour palette", "Social media profile setup"] },
-      { id: "2", backgroundColor: "#F7C518", title: "Social Media Pack", listItems: ["Monthly post & story templates", "Carousel & reel cover designs", "Ad creatives for paid campaigns", "Platform-specific sizing"] },
-      { id: "3", backgroundColor: "#FD6824", title: "Marketing Collateral Pack", listItems: ["Brochures & flyers", "Posters & banners", "Product catalogues", "Event & trade show materials"] },
-      { id: "4", backgroundColor: "#408BF7", title: "Full Brand Identity Pack", listItems: ["Custom logo & brand mark", "Brand guidelines document", "Stationery & collateral design", "Social media brand kit"] },
-      { id: "5", backgroundColor: "#408BF7", title: "Premium Creative Pack", listItems: ["Full brand identity & guidelines", "Social media & ad creatives", "Print & packaging design", "Presentation & pitch deck design"] },
+      { id: "1", backgroundColor: "#65C495", title: "Starter Pack", listItems: ["Logo design and brand variations", "Business card and letterhead", "Brand colour palette", "Social media profile setup"] },
+      { id: "2", backgroundColor: "#F7C518", title: "Social Media Pack", listItems: ["Monthly post and story templates", "Carousel and reel cover designs", "Ad creatives for paid campaigns", "Platform specific sizing"] },
+      { id: "3", backgroundColor: "#FD6824", title: "Marketing Collateral Pack", listItems: ["Brochures and flyers", "Posters and banners", "Product catalogues", "Event and trade show materials"] },
+      { id: "4", backgroundColor: "#408BF7", title: "Full Brand Identity Pack", listItems: ["Custom logo and brand mark", "Brand guidelines document", "Stationery and collateral design", "Social media brand kit"] },
+      { id: "5", backgroundColor: "#FD6824", title: "Premium Creative Pack", listItems: ["Full brand identity and guidelines", "Social media and ad creatives", "Print and packaging design", "Presentation and pitch deck design"] },
     ],
     servicesIncluded: [
       {
-        id: "logo-design",
+        id: "logo-brand-identity",
         title: "Logo Design & Brand Identity",
         items: [
-          "We design custom logos that capture the essence of your brand, memorable, scalable, and versatile enough to work across digital platforms, print materials, and merchandise with complete packages in all file formats including AI, EPS, SVG, PNG, and PDF.",
-          "Our brand identity design process includes colour palette development, typography selection, iconography, and visual style guidelines that create a cohesive look across every touchpoint.",
-          "Every logo goes through multiple concept rounds, refinements, and client feedback cycles to ensure the final mark represents your brand perfectly, optimised for web, social media, and high-resolution print."
+          "Custom logos that capture your brand essence, designed to be memorable, scalable, and versatile across digital platforms, print, and merchandise.",
+          "Complete brand identity systems with colour palettes, typography, iconography, and visual style guidelines that build a cohesive look.",
+          "Multiple concept rounds and refinements to ensure your final logo is delivered in every format including AI, EPS, SVG, PNG, and PDF."
         ],
-        image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "social-media-graphics",
+        id: "social-media-design",
         title: "Social Media Graphics & Content Design",
         items: [
-          "We design scroll-stopping social media graphics including post templates, story designs, carousel layouts, reel covers, and ad creatives tailored for Instagram, Facebook, LinkedIn, and more with platform-specific dimensions and safe zones.",
-          "We develop reusable content templates that allow your team to maintain a professional, on-brand social media presence without needing a designer for every post while ensuring maximum engagement and brand consistency.",
-          "Our designs are optimised for both organic reach and paid social campaigns with clear visual hierarchy, strong call-to-action placement, and thumb-stopping visuals that drive results."
+          "Scroll stopping social media graphics including post templates, story designs, carousel layouts, reel covers, and ad creatives for every major platform.",
+          "Reusable content templates that help your team maintain a consistent, on brand presence without needing a designer for every post.",
+          "Designs optimised for both organic reach and paid campaigns, with clear hierarchy and strong CTAs that drive engagement and conversion."
         ],
-        image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "marketing-creatives",
+        id: "marketing-advertising-creatives",
         title: "Marketing & Advertising Creatives",
         items: [
-          "We create high-converting marketing creatives for digital ads, Google Display Network banners, Meta ad campaigns, email headers, and landing page graphics following platform-specific ad guidelines for Google, Facebook, Instagram, LinkedIn, and YouTube.",
-          "Every advertising creative is designed with A/B testing in mind, delivering multiple variations so you can test headlines, visuals, and layouts to find what performs best.",
-          "We combine persuasive copywriting with strategic visual design to create ad creatives that grab attention in the first 2 seconds and drive measurable clicks and conversions."
+          "High converting ad creatives for Google Display, Meta, LinkedIn, and YouTube campaigns, built around platform specific guidelines and best practices.",
+          "Multiple creative variations designed for A/B testing, helping you find the headlines, visuals, and layouts that perform best.",
+          "Persuasive design paired with strategic copywriting to grab attention in the first 2 seconds and drive measurable clicks and conversions."
         ],
-        image: "https://images.unsplash.com/photo-1611162618071-b39a2ec055ce?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "print-design",
+        id: "print-marketing-collateral",
         title: "Print Design & Marketing Collateral",
         items: [
-          "We design premium print materials including business cards, letterheads, brochures, flyers, posters, banners, and catalogues in CMYK colour mode with proper bleed, trim marks, and resolution settings for flawless printing.",
-          "We handle single-page designs and multi-page layout work from product catalogues and company profiles to event invitations and trade show materials.",
-          "Our process includes paper stock recommendations, finishing options (matte, gloss, emboss, foil), and direct coordination with your printer for a hassle-free production experience."
+          "Premium print materials including business cards, letterheads, brochures, flyers, posters, and catalogues in CMYK with proper bleed and trim.",
+          "Single page and multi page layouts for product catalogues, company profiles, event invitations, and trade show materials.",
+          "Paper stock recommendations, finishing options, and direct coordination with your printer for a hassle free production experience."
         ],
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "Packaging Design",
-        title: "Packaging Design That Stands Out On The Shelf.",
+        id: "packaging-design",
+        title: "Packaging Design",
         items: [
-          "We design product packaging that stands out on shelves and screens, combining visual appeal with functional design covering structural layout, die-line creation, label design, colour selection, and typography.",
-          "We design packaging for food & beverage, cosmetics, health & wellness, fashion, electronics, and consumer goods across both retail and e-commerce formats.",
-          "Every packaging file is delivered print-ready with accurate die-lines, bleed areas, and colour specifications so your manufacturer can produce flawlessly without back-and-forth."
+          "Product packaging that stands out on shelves and screens, combining structural layout, die line creation, label design, and bold typography.",
+          "Packaging design for food and beverage, cosmetics, health and wellness, fashion, electronics, and consumer goods across retail and e commerce.",
+          "Print ready files with accurate die lines, bleed areas, and colour specifications so your manufacturer can produce flawlessly without back and forth."
         ],
-        image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "presentation-design",
+        id: "presentation-pitch-deck",
         title: "Presentation & Pitch Deck Design",
         items: [
-          "We design professional, visually engaging presentations and pitch decks for investors, clients, or internal stakeholders with clean layouts, data visualisation, iconography, and brand-consistent design.",
-          "We work with PowerPoint, Keynote, and Google Slides, delivering fully editable templates your team can reuse and customise for future presentations.",
-          "Our process includes content structuring, storytelling flow, and visual hierarchy optimisation to ensure your key message lands with maximum impact and keeps your audience focused."
+          "Professional, visually engaging presentations and pitch decks for investors, clients, and internal stakeholders with clean layouts and data visualisation.",
+          "Fully editable templates in PowerPoint, Keynote, and Google Slides that your team can reuse and customise for future presentations.",
+          "Storytelling flow and visual hierarchy optimisation to ensure your key message lands with maximum impact and audience focus."
         ],
-        image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "infographic-design",
+        id: "infographic-data-visualisation",
         title: "Infographic & Data Visualisation Design",
         items: [
-          "We transform complex data, statistics, and processes into clear, visually engaging infographics including statistical infographics, process flows, comparison charts, timelines, and interactive data visualisations.",
-          "Our infographic designs are optimised for both web and print with SEO-friendly alt text recommendations for digital use and high-resolution exports for printed materials.",
-          "Every infographic is designed with your brand colours, typography, and visual style so it integrates seamlessly with your existing marketing materials and website content."
+          "Complex data, statistics, and processes turned into clear, visually engaging infographics including charts, timelines, and process flows.",
+          "Designs optimised for both web and print, with SEO friendly alt text recommendations for digital and high resolution exports for print.",
+          "Every infographic styled with your brand colours, typography, and visual identity for seamless integration with your existing content."
         ],
-        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       },
       {
         id: "brand-guidelines",
         title: "Brand Guidelines & Visual Style Guide",
         items: [
-          "We create comprehensive brand guideline documents including logo usage rules, colour codes (HEX, RGB, CMYK, Pantone), typography hierarchy, iconography, imagery style, and spacing guidelines.",
-          "We include real-world application examples showing how your brand should appear on websites, social media, business cards, packaging, signage, and merchandise.",
-          "A well-documented brand guideline protects your visual identity as your team grows, new designers come onboard, or you work with external agencies, keeping everything aligned and professional."
+          "Comprehensive brand guideline documents covering logo usage, colour codes (HEX, RGB, CMYK, Pantone), typography, iconography, and spacing.",
+          "Real world application examples showing how your brand should appear across websites, social media, business cards, packaging, and signage.",
+          "A documented visual identity that protects your brand consistency as your team grows or you collaborate with external agencies."
         ],
-        image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80"
-      },
-
-      {
-        id: "landing-pages",
-        title: "Landing Pages That Convert",
-        items: [
-          "We create high-converting landing pages designed for a single focus — capturing leads, driving registrations, or promoting specific products or offers.",
-          "Our landing page design process includes conversion-focused copywriting, persuasive CTAs, visual hierarchy optimisation, and mobile-first responsive layouts built to maximise performance.",
-          "We can integrate directly with your marketing tools, providing landing pages that work seamlessly with Mailchimp, HubSpot, or other lead management platforms."
-        ],
-        image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       }
     ],
     process: {
-      label: "Process",
-      heading: "How We Design Visuals That Drive Results.",
-      subheading: "A structured graphic design process  from creative brief to final delivery.",
-      steps: [
-        {
-          id: "discovery",
-          number: "1.",
-          title: "Discovery",
-          description: "Every graphic design project begins with a detailed creative brief — we learn about your brand, target audience, competitors, design preferences, and business goals to ensure every visual decision is strategic and informed."
-        },
-        {
-          id: "research",
-          number: "2.",
-          title: "Research & Moodboarding",
-          description: "We analyse your industry trends, competitor visual strategies, and audience preferences — then create a mood board with colour directions, typography options, imagery styles, and layout references for your review and approval."
-        },
-        {
-          id: "concept",
-          number: "3.",
-          title: "Concept Development",
-          description: "Our designers develop multiple initial concepts based on the approved creative direction — exploring different visual approaches, compositions, and styles to find the strongest idea that aligns with your brand and objectives."
-        },
-        {
-          id: "execution",
-          number: "4.",
-          title: "Design Execution",
-          description: "Once the concept is finalised, we move into full design production — crafting every element with pixel-perfect precision, brand-consistent styling, and attention to detail across all required formats and sizes."
-        },
-        {
-          id: "refinement",
-          number: "5.",
-          title: "Feedback & Refinement",
-          description: "We share the work with you for review and gather detailed feedback — then refine colours, layouts, typography, and imagery until every design element meets your expectations and is ready for production."
-        },
-        {
-          id: "delivery",
-          number: "6.",
-          title: "Final Delivery",
-          description: "All approved designs are exported in print-ready and web-optimised formats — AI, EPS, SVG, PDF, PNG, and JPG — organised in a structured file package with naming conventions for easy access and future use."
-        }
-      ]
+  label: "Process",
+  heading: "How We Design Visuals That Drive Results.",
+  subheading: "A structured graphic design process from creative brief to final delivery.",
+  steps: [
+    {
+      id: "discovery",
+      number: "01.",
+      title: "Discovery",
+      description: "We start with a detailed creative brief, learning about your brand, audience, competitors, design preferences, and business goals."
     },
+    {
+      id: "research",
+      number: "02.",
+      title: "Research & Moodboarding",
+      description: "We analyse industry trends, competitor visuals, and audience preferences, then build mood boards with colour, typography, and imagery directions."
+    },
+    {
+      id: "concept",
+      number: "03.",
+      title: "Concept Development",
+      description: "Our designers create multiple initial concepts, exploring different visual approaches, compositions, and styles to find the strongest direction."
+    },
+    {
+      id: "execution",
+      number: "04.",
+      title: "Design Execution",
+      description: "We move into full production, crafting every element with pixel perfect precision and brand consistent styling across all required formats."
+    },
+    {
+      id: "refinement",
+      number: "05.",
+      title: "Feedback & Refinement",
+      description: "We share the work for review and refine colours, layouts, typography, and imagery until every element meets your expectations."
+    },
+    {
+      id: "delivery",
+      number: "06.",
+      title: "Final Delivery",
+      description: "All approved designs are exported in print ready and web optimised formats including AI, EPS, SVG, PDF, PNG, and JPG, organised in a structured file package."
+    }
+  ]
+},
     techStack: [
-      { id: "photoshop", name: "Adobe Photoshop", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg" },
+      { id: "photoshop", name: "Adobe Photoshop", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" },
       { id: "illustrator", name: "Adobe Illustrator", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" },
-      { id: "indesign", name: "Adobe InDesign", image: "https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" },
-      { id: "aftereffects", name: "Adobe After Effects", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-original.svg" },
-      { id: "premiere", name: "Adobe Premiere Pro", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-original.svg" },
+      { id: "indesign", name: "Adobe InDesign", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/indesign/indesign-original.svg" },
       { id: "figma", name: "Figma", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+      { id: "xd", name: "Adobe XD", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xd/xd-plain.svg" },
+      { id: "aftereffects", name: "Adobe After Effects", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-plain.svg" },
+      { id: "premiere", name: "Adobe Premiere Pro", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg" },
       { id: "canva", name: "Canva Pro", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" },
-      { id: "corel", name: "CorelDRAW", image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/CorelDraw_icon.svg" },
-      { id: "blender", name: "Blender", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/blender/blender-original.svg" },
-      { id: "procreate", name: "Procreate", image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" }
     ],
     deliverables: {
-      label: "Deliverables",
-      heading: "What You Get.",
-      subheading: "Every creative asset you need — designed, refined, and delivered in production-ready formats.",
-      items: [
-        {
-          id: "logo",
-          title: "Custom Logo & Brand Mark",
-          description: "You receive a professionally designed custom logo with all variations including primary, secondary, icon-only, and monochrome, delivered in vector and raster formats ready for web, print, and merchandise."
-        },
-        {
-          id: "identity",
-          title: "Complete Brand Identity System",
-          description: "Your brand gets a cohesive visual identity including colour palette with HEX, RGB, CMYK, and Pantone codes, typography hierarchy, iconography, and a comprehensive brand guidelines document."
-        },
-        {
-          id: "social-kit",
-          title: "Social Media Design Kit",
-          description: "You receive a complete set of branded social media templates including post layouts, story designs, carousel formats, highlight covers, and ad creatives sized and optimised for every major platform."
-        },
-        {
-          id: "print-materials",
-          title: "Print-Ready Marketing Materials",
-          description: "Every print design is delivered in CMYK with proper bleed, trim marks, and high resolution. Business cards, brochures, flyers, posters, and catalogues ready for professional printing without any additional preparation."
-        },
-        {
-          id: "ad-creatives",
-          title: "Advertising & Campaign Creatives",
-          description: "You get a full set of digital advertising creatives including Google Display ads, Meta ad visuals, email banners, and landing page graphics in multiple sizes and variations for A/B testing and campaign optimisation."
-        },
-        {
-          id: "packaging",
-          title: "Packaging & Label Design",
-          description: "Your product packaging is delivered with accurate die-line files, print specifications, and colour-separated artwork ready to send directly to your manufacturer for flawless production."
-        },
-        {
-          id: "presentation-templates",
-          title: "Presentation & Pitch Deck Templates",
-          description: "You receive professionally designed, fully editable presentation templates in PowerPoint, Keynote, or Google Slides structured with consistent layouts, data visualisation, and brand styling."
-        },
-        {
-          id: "icons",
-          title: "Organised Source Files & Asset Library",
-          description: "Every project is delivered with organised source files (AI, PSD, INDD, Figma) and a structured asset library making it easy for your team to access, edit, and reuse designs as your business grows."
-        }
-      ]
+  label: "FAQ",
+  heading: "Frequently Asked Questions.",
+  subheading: "Everything you need to know about working with us on your graphic design project.",
+  items: [
+    {
+      id: "project-timeline",
+      title: "How long does a graphic design project take?",
+      description: "Most projects take 1 to 4 weeks depending on scope. A logo design takes 7 to 10 days, a full brand identity 3 to 4 weeks, and ongoing social media or marketing collateral runs on a monthly retainer schedule."
     },
-    ctaText: "Let's Design Something\nYour Audience Can't Look Away From."
+    {
+      id: "design-revisions",
+      title: "How many design revisions are included?",
+      description: "We include multiple revision rounds in every project to ensure the final design meets your expectations. Most clients reach final approval within 2 to 3 rounds of refinement."
+    },
+    {
+      id: "file-formats",
+      title: "What file formats will I receive after the project?",
+      description: "You receive every design in print ready and web optimised formats including AI, EPS, SVG, PDF, PNG, and JPG, along with editable source files and brand assets."
+    },
+    {
+      id: "brand-identity",
+      title: "Do you create complete brand identity systems or just logos?",
+      description: "We design complete brand identity systems including logo, colour palette, typography, iconography, brand guidelines, and visual application examples across every touchpoint."
+    },
+    {
+      id: "social-media-design",
+      title: "Can you handle our ongoing social media design needs?",
+      description: "Yes, we offer monthly social media design packages including post templates, story designs, carousel layouts, reel covers, and ad creatives tailored for every major platform."
+    },
+    {
+      id: "print-design",
+      title: "Do you handle print production and printer coordination?",
+      description: "Yes, we deliver print ready files in CMYK with proper bleed and trim, and we coordinate directly with your printer to ensure flawless production from start to finish."
+    },
+    {
+      id: "packaging-design",
+      title: "Can you design product packaging for retail and e commerce?",
+      description: "Yes, we design packaging for food and beverage, cosmetics, fashion, electronics, and consumer goods with accurate die lines, label design, and manufacturer ready files."
+    },
+    {
+      id: "ownership-rights",
+      title: "Will I own the designs and source files after delivery?",
+      description: "Yes, you receive full ownership of your designs along with all source files, fonts, and brand assets. No hidden lock ins or licensing dependencies."
+    },
+    {
+      id: "pricing-quote",
+      title: "How much does a graphic design project cost?",
+      description: "Pricing depends on the scope, deliverables, and complexity of your project. Logo design, brand identity, social media, and print collateral each have different starting points. Share your requirements for a tailored quote."
+    }
+  ]
+},
+ctaText: "Let's Design Something Your Audience Can't Look Away From."
   },
   "motion-graphics": {
     slug: "motion-graphics",
-    heroBgColor: "#22c55e",
-    heroHeadline: "Professional Motion Graphics & Video Production for Brands That Move Fast.",
-    overviewHeadline: "A Motion Graphics Studio Built to Move Your Audience.",
+    heroBgColor: "#fdf8f2",
+    heroHeadline: "We Create Motion & Video Content That Stops the Scroll.",
+    overviewHeadline: "A Motion Studio That Turns Ideas Into Scroll Stopping Video.",
     overviewImage: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
-    overviewText: "We create high-impact motion graphics, social media videos, explainer videos, and advertising video content that captures attention, communicates your message, and drives conversions across every digital platform.",
+    overviewText: "We are a creative motion graphics and video production studio helping brands communicate faster, louder, and with more impact through the power of video. From social media Reels and YouTube ads to explainer videos and brand films, every video we produce is crafted to grab attention in the first second, hold it till the last frame, and drive your audience to take action.",
     cards: [
-      { id: "1", backgroundColor: "#65C495", title: "Social Media Video Pack", listItems: ["4 short-form videos/month (Reels)", "Caption overlays & text animations", "Platform-specific sizing & formatting", "Trending audio & sound design"] },
-      { id: "2", backgroundColor: "#F7C518", title: "Explainer Video Pack", listItems: ["1 animated explainer video (60–90 sec)", "Script writing & storyboarding", "Professional voiceover & sound design", "2 social media cutdowns included"] },
-      { id: "3", backgroundColor: "#FD6824", title: "Ad & PPC Video Pack", listItems: ["Video ads for Google, Meta & YouTube", "Multiple lengths (6s, 15s, 30s)", "A/B creative variations", "Performance-optimised formats"] },
-      { id: "4", backgroundColor: "#408BF7", title: "Brand Video Pack", listItems: ["Brand/corporate film (60–120 sec)", "Logo animation & brand intro", "Voiceover, music & colour grading", "Multi-format delivery (web, social, event)"] },
-      { id: "5", backgroundColor: "#408BF7", title: "Full Motion Suite", listItems: ["Social media videos + explainer video", "PPC ad creatives + brand film", "Logo animation & motion identity", "Full post-production & editing", "Monthly content delivery"] },
+      { id: "1", backgroundColor: "#65C495", title: "Social Media Video Pack", listItems: ["4 short form videos per month (Reels, Shorts, TikTok)", "Caption overlays and text animations", "Platform specific sizing and formatting", "Trending audio and sound design"] },
+      { id: "2", backgroundColor: "#F7C518", title: "Explainer Video Pack", listItems: ["1 animated explainer video (60 to 90 sec)", "Script writing and storyboarding", "Professional voiceover and sound design", "2 social media cutdowns included"] },
+      { id: "3", backgroundColor: "#FD6824", title: "Ad & PPC Video Pack", listItems: ["Video ads for Google, Meta, and YouTube", "Multiple lengths (6s, 15s, 30s)", "A/B creative variations", "Performance optimised formats"] },
+      { id: "4", backgroundColor: "#408BF7", title: "Brand Video Pack", listItems: ["Brand and corporate film (60 to 120 sec)", "Logo animation and brand intro", "Voiceover, music, and colour grading", "Multi format delivery for web, social, and events"] },
+      { id: "5", backgroundColor: "#FD6824", title: "Full Motion Suite", listItems: ["Social media videos and explainer video", "PPC ad creatives and brand film", "Logo animation and motion identity", "Full post production and editing", "Monthly content delivery"] },
     ],
     servicesIncluded: [
       {
-        id: "animation-1",
+        id: "social-media-video",
         title: "Social Media Video Production",
         items: [
-          "We create platform-optimised short-form videos for Instagram Reels, YouTube Shorts, TikTok, Facebook, and LinkedIn with trending formats, fast-paced edits, and thumb-stopping visuals produced in platform-specific aspect ratios (9:16, 1:1, 16:9) with safe zone compliance and caption overlays.",
-          "We handle the full production pipeline including concept ideation, scriptwriting, storyboarding, motion design, sound design, and final rendering so your brand has a consistent stream of high-quality video content every month.",
-          "Our social media videos are designed for both organic reach and paid promotion with hook-driven openings, clear brand messaging, and strong call-to-action endings that drive clicks, follows, and conversions."
+          "Platform optimised short form videos for Instagram Reels, YouTube Shorts, TikTok, Facebook, and LinkedIn with trending formats and thumb stopping visuals.",
+          "Full production pipeline including concept ideation, scriptwriting, storyboarding, motion design, sound design, and final rendering for monthly content flow.",
+          "Hook driven openings, clear brand messaging, and strong CTAs designed to drive clicks, follows, and conversions across organic and paid promotion."
         ],
         image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation-2",
+        id: "explainer-video",
         title: "Explainer Video Production",
         items: [
-          "We produce animated explainer videos that break down complex products, services, and processes into clear, engaging visual stories scripted with a strategic narrative structure of problem, solution, benefit, and CTA that drives your audience toward action.",
-          "We offer multiple animation styles including 2D character animation, motion graphics, whiteboard animation, kinetic typography, and isometric illustration tailored to your brand identity, with videos optimised for website embedding, SEO-friendly titles, and video schema markup.",
-          "We deliver explainer videos in multiple lengths from 30-second teasers and 60-second social cuts to full 90-120 second versions so you can use them across website, social media, email, and paid ad campaigns."
+          "Animated explainer videos that break down complex products and services into clear, engaging visual stories built to drive action.",
+          "Multiple animation styles including 2D character animation, motion graphics, kinetic typography, and isometric illustration tailored to your brand.",
+          "Delivered in multiple lengths from 30 second teasers to full 90 to 120 second versions, optimised for website, social, email, and paid campaigns."
         ],
-        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation-3",
+        id: "advertising-ppc-videos",
         title: "Advertising & PPC Video Ads",
         items: [
-          "We create high-converting video ads for Google Ads (YouTube pre-roll, in-feed, bumper), Meta Ads (Facebook & Instagram), LinkedIn video ads, and programmatic display campaigns with attention-grabbing hooks within the first 3 seconds and strong CTAs optimised for conversion.",
-          "We deliver multiple ad variations in different lengths (6s, 15s, 30s, 60s) and aspect ratios giving your media buying team the flexibility to A/B test creatives and optimise for the lowest cost per acquisition.",
-          "Our video ads follow platform-specific best practices including skip-proof openings for YouTube, sound-off optimisation with text overlays for Meta, and professional framing for LinkedIn ensuring peak performance on every channel."
+          "High converting video ads for Google YouTube, Meta, LinkedIn, and programmatic display campaigns with attention grabbing hooks within the first 3 seconds.",
+          "Multiple ad variations in different lengths (6s, 15s, 30s, 60s) and aspect ratios for flexible A/B testing and lower cost per acquisition.",
+          "Platform specific best practices including skip proof YouTube openings, sound off optimisation for Meta, and professional framing for LinkedIn."
         ],
-        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation-4",
+        id: "brand-corporate-video",
         title: "Brand & Corporate Video Production",
         items: [
-          "We produce premium brand videos and corporate films that communicate your company's story, mission, culture, and values crafted with cinematic motion graphics, professional voiceover, custom music, and brand-consistent visual styling.",
-          "We create corporate video content for company introductions, product showcases, leadership messages, event recaps, training modules, investor presentations, recruitment campaigns, and internal communication.",
-          "Our corporate videos are delivered in multiple formats including web-optimised MP4 and WebM, social media cuts, and high-resolution versions for large screen presentations and event displays."
+          "Premium brand films and corporate videos that communicate your story, mission, and culture through cinematic motion graphics and brand consistent visuals.",
+          "Custom video content for company introductions, leadership messages, event recaps, recruitment campaigns, and internal communication.",
+          "Delivered in multiple formats including web optimised MP4, social media cuts, and high resolution versions for events and presentations."
         ],
-        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation-5",
+        id: "product-demo-videos",
         title: "Product Demo & Showcase Videos",
         items: [
-          "We create visually compelling product demo videos using motion graphics, screen recordings, close-up product shots, and animated infographics structured to address your customer's pain points first, then demonstrate how your product solves them.",
-          "We produce product videos for website product pages, e-commerce listings (Amazon, Flipkart), social media, crowdfunding campaigns, and sales team pitch decks.",
-          "Our product showcase videos include on-screen text overlays, spec callouts, and animated feature highlights ensuring key selling points are communicated clearly even when watched without sound."
+          "Visually compelling product demo videos using motion graphics, screen recordings, close ups, and animated infographics that highlight key features.",
+          "Built for website product pages, e commerce listings on Amazon and Flipkart, social media, crowdfunding campaigns, and sales pitch decks.",
+          "On screen text overlays, spec callouts, and animated highlights ensure your selling points land clearly even when watched without sound."
         ],
-        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation-6",
+        id: "logo-animation",
         title: "Logo Animation & Brand Motion Identity",
         items: [
-          "We create custom logo animations and animated brand intros designed to reflect your brand's personality from clean minimal reveals to bold energetic motion sequences using smooth transitions, particle effects, and kinetic typography.",
-          "We deliver logo animations in multiple formats including transparent PNG sequence, MP4, GIF, and Lottie (JSON) for web so you can use them across video content, email signatures, website loaders, and app splash screens.",
-          "Our brand motion identity packages include animated logo, animated brand colours, transition elements, and lower-third templates creating a cohesive motion language your brand can use across all video content."
+          "Custom logo animations and brand intros designed to reflect your brand personality, from clean minimal reveals to bold energetic motion sequences.",
+          "Delivered in multiple formats including transparent PNG sequence, MP4, GIF, and Lottie JSON for video, web, app loaders, and email signatures.",
+          "Brand motion identity packages with animated logo, transition elements, and lower third templates for cohesive video storytelling."
         ],
-        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation-7",
+        id: "presentation-event-graphics",
         title: "Motion Graphics for Presentations & Events",
         items: [
-          "We design animated presentation slides, event opener videos, speaker intro animations, countdown timers, and stage backdrop visuals produced with your brand identity and event theme for seamless visual consistency across all screens.",
-          "We create motion graphics for both live events and virtual/hybrid formats optimised for LED walls, projector screens, live stream overlays, and virtual event platforms like Zoom, Teams, and Hopin.",
-          "Our presentation motion graphics include animated data visualisations, infographic transitions, and dynamic slide builds making complex information engaging and easier for your audience to follow and remember."
+          "Animated presentation slides, event opener videos, speaker intro animations, and stage backdrop visuals built to match your brand and event theme.",
+          "Designed for both live events and virtual or hybrid formats, optimised for LED walls, projectors, and platforms like Zoom and Teams.",
+          "Animated data visualisations and dynamic slide builds that make complex information engaging and easier for your audience to follow."
         ],
-        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "animation-8",
-        title: "Video Editing & Post-Production",
+        id: "video-editing-post-production",
+        title: "Video Editing & Post Production",
         items: [
-          "We provide professional video editing and post-production cutting raw footage from any source including smartphone, DSLR, screen captures, drone footage, and stock video into polished, brand-ready videos with colour grading, sound mixing, and seamless transitions.",
-          "We handle advanced post-production including green screen compositing, multi-camera editing, audio cleanup, subtitle and caption embedding, and animated text overlays to give your videos a professional finish.",
-          "Every edited video is exported in platform-optimised formats and resolutions from 4K master files to compressed social media versions ensuring your content looks sharp on every screen without buffering or quality loss."
+          "Professional video editing transforming raw footage from smartphone, DSLR, screen captures, drone, or stock into polished, brand ready videos.",
+          "Advanced post production including green screen compositing, multi camera editing, audio cleanup, subtitles, and animated text overlays.",
+          "Every video exported in platform optimised formats and resolutions, from 4K master files to compressed social cuts ready for instant publishing."
         ],
-        image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80"
+        image: "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=800&q=80"
       }
     ],
     process: {
       label: "Process",
-      heading: "How We Produce Motion Graphics & Video Content That Performs.",
-      subheading: "A creative video production process — from concept to final render.",
+      heading: "How We Create Motion Content That Performs.",
+      subheading: "A structured motion graphics and video production process from creative brief to final delivery.",
       steps: [
         {
-          id: "audit",
-          number: "1.",
-          title: "Creative Brief & Discovery",
-          description: "Every motion graphics project starts with a detailed creative brief — we understand your brand, target audience, video objective, distribution platforms, and key messaging to build a clear creative direction before production begins."
+          id: "brief",
+          number: "01.",
+          title: "Creative Brief",
+          description: "We start with a detailed brief covering your brand, target audience, video objectives, platforms, and key messaging direction."
         },
         {
-          id: "strategy",
-          number: "2.",
+          id: "scripting",
+          number: "02.",
           title: "Scripting & Storyboarding",
-          description: "We write a strategic video script with a hook-driven narrative structure and translate it into a detailed storyboard — mapping out every scene, transition, text overlay, and visual element so you can see the full video concept before any animation starts."
+          description: "We craft a strategic video script with a hook driven narrative, paired with detailed storyboards mapping every scene and transition."
         },
         {
-          id: "setup",
-          number: "3.",
-          title: "Voiceover & Audio Direction",
-          description: "We source professional voiceover artists matched to your brand tone and audience — handling script recording, audio direction, and music selection (licensed royalty-free tracks or custom compositions) to set the right mood and pace for your video."
+          id: "voiceover",
+          number: "03.",
+          title: "Voiceover & Audio",
+          description: "We finalise professional voiceover, audio direction, and licensed music selection that matches your brand tone and message."
         },
         {
-          id: "execution",
-          number: "4.",
+          id: "animation",
+          number: "04.",
           title: "Design & Animation",
-          description: "Our motion designers bring the storyboard to life — creating custom illustrations, animated graphics, kinetic typography, character animations, and dynamic transitions with frame-by-frame precision in tools like After Effects, Premiere Pro, and Cinema 4D."
+          description: "Our team produces custom illustrations, animated graphics, kinetic typography, and dynamic transitions with frame by frame precision."
         },
         {
-          id: "monitoring",
-          number: "5.",
+          id: "review",
+          number: "05.",
           title: "Review & Refinement",
-          description: "We share the first draft for your review and gather detailed feedback — refining animations, timing, colour, text, audio levels, and pacing until every frame meets your expectations and aligns with your brand standards."
+          description: "We share the first draft for feedback and refine animations, timing, colour, text, and pacing until every frame feels right."
         },
         {
-          id: "reporting",
-          number: "6.",
-          title: "Final Render & Multi-Format Delivery",
-          description: "The approved video is rendered in multiple formats and resolutions — 4K master file, web-optimised MP4, social media cuts (9:16, 1:1, 16:9), GIF versions, and transparent exports — organised and delivered ready for immediate use across all platforms."
+          id: "delivery",
+          number: "06.",
+          title: "Final Render & Delivery",
+          description: "Final videos are rendered in 4K master, web optimised MP4, social media cuts (9:16, 1:1, 16:9), GIF, and transparent exports."
         }
       ]
     },
     techStack: [
-      { id: "google-analytics", name: "Google Analytics 4", image: "https://upload.wikimedia.org/wikipedia/commons/8/89/Google_Analytics_icon_%282023%29.svg" },
-      { id: "google-ads", name: "Google Ads", image: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg" },
-      { id: "meta-ads", name: "Meta Ads Manager", image: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg" },
-      { id: "semrush", name: "SEMrush", image: "https://upload.wikimedia.org/wikipedia/commons/1/13/SEMrush_logo.svg" },
-      { id: "ahrefs", name: "Ahrefs", image: "https://upload.wikimedia.org/wikipedia/commons/1/10/Ahrefs_logo.svg" },
-      { id: "mailchimp", name: "Mailchimp", image: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Mailchimp_Freddie_Icon.svg" },
-      { id: "hubspot", name: "HubSpot", image: "https://upload.wikimedia.org/wikipedia/commons/f/f7/HubSpot_Logo.svg" },
-      { id: "looker-studio", name: "Looker Studio", image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Google_Looker_Logo.svg" },
+      { id: "aftereffects", name: "Adobe After Effects", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aftereffects/aftereffects-plain.svg" },
+      { id: "premiere", name: "Adobe Premiere Pro", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/premierepro/premierepro-plain.svg" },
+      { id: "audition", name: "Adobe Audition", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/audition/audition-plain.svg" },
+      { id: "illustrator", name: "Adobe Illustrator", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg" },
+      { id: "photoshop", name: "Adobe Photoshop", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" },
+      { id: "cinema4d", name: "Cinema 4D", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cinema4d/cinema4d-original.svg" },
+      { id: "figma", name: "Figma", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+      { id: "davinci", name: "DaVinci Resolve", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/davinciresolve/davinciresolve-original.svg" },
     ],
     deliverables: {
-      label: "Deliverables",
-      heading: "What You Get.",
-      subheading: "Every video asset your brand needs — scripted, animated, and delivered in production-ready formats across all platforms.",
+      label: "FAQ",
+      heading: "Frequently Asked Questions.",
+      subheading: "Everything you need to know about working with us on your motion graphics and video production project.",
       items: [
         {
-          id: "marketing-strategy",
-          title: "Custom Motion Graphics Videos",
-          description: "You receive fully custom animated videos — no templates, no stock loops — every motion element, transition, and visual is designed from scratch to match your brand identity, message, and campaign objective."
+          id: "project-timeline",
+          title: "How long does it take to produce a motion or video project?",
+          description: "Most projects take 2 to 6 weeks depending on scope. Short social videos take 1 to 2 weeks, explainer videos 3 to 4 weeks, and brand films or corporate videos 4 to 6 weeks."
         },
         {
-          id: "campaign-management",
-          title: "Script & Storyboard Documents",
-          description: "Every video project comes with a professionally written script and a detailed visual storyboard — giving you full visibility into the creative direction, scene flow, and messaging before production begins."
+          id: "video-types",
+          title: "What types of motion and video content do you create?",
+          description: "We produce social media Reels and Shorts, explainer videos, advertising ads, product demos, brand films, logo animations, event videos, and motion graphics for presentations."
         },
         {
-          id: "seo-audits",
-          title: " Professional Voiceover & Sound Design",
-          description: "Your videos are delivered with professional voiceover recordings, licensed background music, and custom sound effects — mixed and mastered to broadcast-quality audio standards for a polished, premium finish."
+          id: "script-storyboard",
+          title: "Do you provide scriptwriting and storyboarding services?",
+          description: "Yes, every project includes strategic scriptwriting and detailed storyboarding so you have full creative visibility before any animation or production begins."
         },
         {
-          id: "ad-creatives-copy",
-          title: "Multi-Platform Video Exports",
-          description: "Every video is rendered and delivered in multiple formats and aspect ratios — 16:9 (YouTube, website), 9:16 (Reels, Shorts, TikTok), 1:1 (feed posts), and 4:5 (Meta ads) — ready to publish on any platform without resizing."
+          id: "voiceover-music",
+          title: "Will my video include voiceover and background music?",
+          description: "Yes, we provide professional voiceover artists, licensed background music, and custom sound design mixed to broadcast quality audio standards."
         },
         {
-          id: "analytics-dashboards",
-          title: "Social Media Cutdowns & Teasers",
-          description: "Along with the full video, you receive shorter cutdown versions — 6-second bumpers, 15-second teasers, and 30-second social edits — optimised for paid advertising, Stories, and platform-specific attention spans."
+          id: "video-formats",
+          title: "What video formats and aspect ratios will I receive?",
+          description: "Every video is delivered in multiple formats including 16:9, 9:16, 1:1, and 4:5, ready to publish on Instagram, YouTube, TikTok, LinkedIn, and your website without resizing."
         },
         {
-          id: "monthly-reporting",
-          title: "Logo Animation & Brand Motion Assets",
-          description: "You receive an animated logo reveal, animated brand intro/outro, and reusable motion elements (transitions, lower-thirds, text templates) — building a consistent motion identity across all your video content."
+          id: "platform-optimisation",
+          title: "Are your videos optimised for social media platforms?",
+          description: "Absolutely. Every video is built with platform specific best practices including hook driven openings, sound off optimisation, captions, and trending formats for maximum reach."
         },
         {
-          id: "monthly-reporting",
-          title: "Subtitle & Caption Files",
-          description: "Every video is delivered with embedded captions and separate subtitle files (SRT/VTT) — ensuring your content is accessible, sound-off friendly, and compliant with platform accessibility standards."
+          id: "social-cutdowns",
+          title: "Do you provide social media cutdowns and teaser versions?",
+          description: "Yes, we deliver shorter cuts including 6 second bumpers, 15 second teasers, and 30 second social edits perfect for ads, Reels, Stories, and YouTube Shorts."
         },
         {
-          id: "monthly-reporting",
-          title: "Source Files & Project Archive",
-          description: "You receive organised project files — After Effects projects, Premiere Pro timelines, audio stems, and layered design assets — so your team can make future edits or hand off to another editor if needed."
+          id: "ongoing-content",
+          title: "Can you handle our monthly video content needs?",
+          description: "Yes, we offer monthly motion and video retainers covering Reels, Shorts, ads, product videos, and explainer content for consistent, on brand video output."
         },
+        {
+          id: "ownership-rights",
+          title: "Will I receive source files and full ownership of the videos?",
+          description: "Yes, you receive full ownership of every video along with source files, audio stems, and project archives so you can revisit or edit them in the future."
+        }
       ]
-      
     },
-    ctaText: "Let's Turn Your Audience into Your Biggest Revenue Channel."
+    ctaText: "Let's Create Video Content Your Audience Can't Stop Watching."
   },
 
   "digital-marketing": {
     slug: "digital-marketing",
-    heroBgColor: "#3b82f6",
-    heroHeadline: "Digital Marketing & Social Media Agency That Drives Real Growth.",
+    heroBgColor: "#fdf8f2",
+    heroHeadline: "We Drive Real Growth Through Smart Digital Marketing.",
     overviewHeadline: "A Digital Marketing Agency Built to Grow Your Brand Online.",
     overviewImage: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-    overviewText: "We are a full-service digital marketing and social media agency that helps businesses dominate the digital landscape. From search engine optimisation and paid advertising to social media strategy and content marketing — every campaign we run is backed by data, driven by creativity, and focused on delivering measurable ROI. Whether you're a startup building awareness or an established brand scaling revenue, we create marketing strategies that turn clicks into customers and followers into loyal communities.",
+    overviewText: "We are a full service digital marketing and social media agency helping brands dominate the digital landscape. From SEO and paid advertising to social media strategy, marketplace growth, and content marketing, every campaign we run is backed by data, driven by creativity, and focused on delivering measurable ROI. Whether you are a startup building awareness or an established brand scaling revenue, we turn clicks into customers and followers into loyal communities.",
     cards: [
-      { id: "1", backgroundColor: "#65C495", title: "SEO Pack", listItems: ["Keyword research & strategy", "On-page & technical SEO", "Local SEO & Google Business", "Content gap analysis"] },
-      { id: "2", backgroundColor: "#F7C518", title: "PPC Campaigns", listItems: ["Google Search & Display Ads", "Retargeting campaigns", "A/B testing & optimization", "Conversion tracking setup"] },
-      { id: "3", backgroundColor: "#FD6824", title: "Social Media Marketing", listItems: ["Meta (Facebook/Instagram) Ads", "LinkedIn B2B campaigns", "Audience segmentation", "Performance analytics"] },
-      { id: "4", backgroundColor: "#408BF7", title: "Email Marketing", listItems: ["Automated email sequences", "Newsletter management", "List building & segmentation", "A/B testing subject lines"] },
-      { id: "5", backgroundColor: "#8c6bf7", title: "Full-Funnel Growth", listItems: ["Omnichannel marketing strategy", "Conversion rate optimization", "Advanced analytics dashboards", "Monthly performance reporting"] },
+      { id: "1", backgroundColor: "#65C495", title: "SEO Pack", listItems: ["Keyword research and strategy", "On page and technical SEO", "Local SEO and Google Business", "Content gap analysis"] },
+      { id: "2", backgroundColor: "#F7C518", title: "PPC Campaigns", listItems: ["Google Search and Display Ads", "Retargeting campaigns", "A/B testing and optimisation", "Conversion tracking setup"] },
+      { id: "3", backgroundColor: "#FD6824", title: "Social Media Marketing", listItems: ["Meta (Facebook and Instagram) Ads", "LinkedIn B2B campaigns", "Audience segmentation", "Performance analytics"] },
+      { id: "4", backgroundColor: "#408BF7", title: "Marketplace Growth", listItems: ["Amazon, Flipkart, BigBasket setup", "Sponsored Ads and PLA campaigns", "A+ content and brand store", "BSR and review management"] },
+      { id: "5", backgroundColor: "#8c6bf7", title: "Full Funnel Growth", listItems: ["Omnichannel marketing strategy", "Conversion rate optimisation", "Advanced analytics dashboards", "Monthly performance reporting"] },
     ],
     servicesIncluded: [
       {
         id: "social-media-strategy",
-        title: "SSocial Media Strategy & Management",
+        title: "Social Media Strategy & Management",
         items: [
-          "We build comprehensive social media strategies tailored to your brand defining content pillars, posting schedules, platform priorities, and audience targeting, with daily posting, community engagement, comment moderation, and DM handling across Instagram, Facebook, LinkedIn, X (Twitter), and YouTube.",
-          "We track and analyse social media performance metrics including reach, impressions, engagement rate, follower growth, and click-through rate, optimising your strategy monthly based on platform-specific algorithms and best practices.",
-          "We stay ahead of trending formats including Reels, Shorts, Carousels, Stories, and live content ensuring your brand stays relevant, gets maximum organic visibility, and doesn't rely solely on paid promotion."
+          "Comprehensive social media strategies tailored to your brand with content pillars, posting schedules, audience targeting, and daily community management across Instagram, Facebook, LinkedIn, X, and YouTube.",
+          "Performance tracking on reach, impressions, engagement, follower growth, and click through rate, with monthly optimisation based on platform algorithms.",
+          "Trending format expertise across Reels, Shorts, Carousels, Stories, and live content to maximise organic visibility without relying solely on paid promotion."
         ],
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "pay-per-click-advertising",
+        id: "social-media-content",
         title: "Social Media Content Creation",
         items: [
-          "We create scroll-stopping social media content including branded graphics, short-form video scripts, Reels and Shorts concepts, carousel posts, memes, and interactive story content all designed with your brand guidelines, colour palette, typography, and tone of voice.",
-          "We develop monthly content calendars with a strategic mix of educational, promotional, entertaining, and community-building posts that keep your audience engaged and your brand top-of-mind.",
-          "Our content creation process includes caption writing with SEO-optimised hashtag research using high-performing and niche-specific hashtags that expand your organic reach and attract your ideal audience."
+          "Scroll stopping social media content including branded graphics, short form video scripts, Reels concepts, carousels, and interactive stories built around your brand identity.",
+          "Monthly content calendars with a strategic mix of educational, promotional, entertaining, and community building posts that keep your audience engaged.",
+          "Caption writing with SEO optimised hashtag research using high performing and niche specific tags that expand your organic reach."
         ],
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "social-media-advertising",
+        id: "influencer-marketing",
         title: "Influencer Marketing & Collaborations",
         items: [
-          "We identify, vet, and connect your brand with the right influencers and content creators from micro-influencers with high engagement to macro-influencers with massive reach based on your target audience and campaign objectives.",
-          "Our influencer marketing strategy covers campaign planning, content briefs, deliverable timelines, performance tracking, ROI measurement, and end-to-end partnership management from outreach and negotiation to content approval and post-campaign analytics.",
-          "We leverage influencer-generated content (IGC) across your social media, ads, and website repurposing authentic creator content that builds trust and drives higher conversion rates than traditional branded content."
+          "We connect your brand with the right influencers and content creators, from micro influencers with high engagement to macro influencers with massive reach.",
+          "End to end influencer campaign management including planning, content briefs, deliverable timelines, performance tracking, ROI measurement, and approvals.",
+          "Influencer generated content (IGC) repurposed across your social media, ads, and website to build authentic trust and drive higher conversion rates."
         ],
         image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "email-marketing-automation",
+        id: "social-media-ads",
         title: "Social Media Advertising (Paid Social)",
         items: [
-          "We create and manage high-performing paid social media campaigns on Instagram, Facebook, LinkedIn, YouTube, and TikTok using advanced audience targeting, retargeting, and lookalike audiences with multiple creative variations and A/B tested headlines to drive the lowest possible cost per acquisition.",
-          "We handle full campaign setup including ad account configuration, pixel installation, event tracking, custom audience creation, and campaign budget optimisation so your ads are technically sound from day one.",
-          "We scale campaigns that work by increasing budgets strategically on winning ad sets while pausing underperformers, with detailed weekly and monthly reports covering impressions, reach, CTR, CPC, ROAS, and conversion data."
+          "High performing paid social campaigns on Instagram, Facebook, LinkedIn, YouTube, and TikTok using advanced audience targeting, retargeting, and lookalike audiences.",
+          "Full campaign setup including ad account configuration, pixel installation, event tracking, custom audiences, and budget optimisation from day one.",
+          "Strategic scaling of winning ad sets with weekly and monthly reports covering impressions, reach, CTR, CPC, ROAS, and conversion data."
         ],
         image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "email-marketing-automation",
+        id: "search-engine-optimisation",
         title: "Search Engine Optimisation (SEO)",
         items: [
-          "We implement comprehensive on-page SEO including optimised meta titles, meta descriptions, heading structure, internal linking, image alt tags, and keyword-rich content placement with technical SEO audits covering site speed, mobile-friendliness, crawlability, XML sitemaps, schema markup, and Core Web Vitals.",
-          "We conduct in-depth keyword research using SEMrush, Ahrefs, and Google Keyword Planner targeting high-intent, low-competition keywords, combined with an off-page SEO strategy of ethical link building, guest posting, digital PR, and brand mention outreach.",
-          "We provide monthly SEO performance reports with keyword ranking updates, organic traffic trends, backlink growth, and actionable recommendations so you always know how your SEO investment is performing."
+          "Comprehensive on page SEO including optimised meta tags, heading structure, internal linking, image alt tags, and keyword rich content placement, with full technical SEO audits.",
+          "In depth keyword research using SEMrush, Ahrefs, and Google Keyword Planner targeting high intent, low competition keywords, plus ethical link building and digital PR.",
+          "Monthly SEO performance reports with keyword rankings, organic traffic trends, backlink growth, and clear action recommendations for sustained growth."
         ],
         image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "search-engine-optimization-seo",
-        title: "Google Ads & Pay-Per-Click (PPC) Advertising",
+        id: "google-ads-ppc",
+        title: "Google Ads & Pay Per Click (PPC) Advertising",
         items: [
-          "We set up and manage high-converting Google Ads campaigns including Search Ads, Display Ads, Shopping Ads, and YouTube Ads structured with tight ad groups, negative keyword lists, bid strategy optimisation, and quality score improvement.",
-          "We create compelling ad copy with strong headlines, clear value propositions, and action-driven CTAs combined with A/B testing to continuously improve click-through rates and conversion rates.",
-          "Our Google Ads management includes conversion tracking setup, remarketing audience creation, landing page alignment, and detailed performance reporting with full transparency on every rupee spent."
+          "High converting Google Ads campaigns including Search, Display, Shopping, and YouTube Ads with tight ad groups, negative keyword lists, and quality score optimisation.",
+          "Compelling ad copy with strong headlines, clear value propositions, and action driven CTAs, paired with continuous A/B testing for higher click through and conversion rates.",
+          "Complete conversion tracking, remarketing audience creation, landing page alignment, and transparent performance reporting on every rupee spent."
         ],
         image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
       },
       {
-        id: "search-engine-optimization-seo",
+        id: "marketplace-growth",
+        title: "Marketplace Growth on Amazon, Flipkart & BigBasket",
+        items: [
+          "End to end marketplace management on Amazon, Flipkart, BigBasket, and Meesho including store setup, product listings, catalogue optimisation, A+ content, and brand store development.",
+          "Marketplace advertising including Amazon Sponsored Products, Sponsored Brands, Flipkart PLA, and deal participation strategies to drive traffic, improve Best Seller Rank, and increase sales volume.",
+          "Ongoing marketplace operations including inventory coordination, pricing strategy, review management, competitor monitoring, and monthly performance reporting to scale revenue consistently."
+        ],
+        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
+      },
+      {
+        id: "content-marketing",
         title: "Content Marketing & Blogging",
         items: [
-          "We develop content marketing strategies that position your brand as an industry authority creating SEO-optimised blog posts, articles, case studies, whitepapers, and long-form content researched with targeted keyword strategy, competitor analysis, and search intent mapping.",
-          "We handle the full content pipeline from topic ideation and content calendar planning to writing, editing, on-page SEO optimisation, and publishing so your blog stays consistent without draining your team's time.",
-          "Our approach focuses on building topical authority creating content clusters around your core services and products that strengthen your website's overall SEO performance and domain relevance."
-        ],
-        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
-      },
-
-      {
-        id: "search-engine-optimization-seo",
-        title: "End-to-End Marketplace Growth Management For Amazon & Others",
-        items: [
-          "We manage your complete marketplace presence on Amazon, Flipkart, Meesho, and other leading e-commerce platforms including store setup, product listing creation, catalogue optimisation, A+ content design, and brand store development to maximise visibility and conversions.",
-          "We run and optimise marketplace advertising campaigns including Amazon Sponsored Products, Sponsored Brands, Flipkart Product Listing Ads, and deal participation strategies to drive traffic, improve Best Seller Rank (BSR), and increase your sales volume.",
-          "We handle ongoing marketplace operations including inventory coordination, pricing strategy, review management, competitor monitoring, keyword indexing, and monthly performance reporting with actionable insights to scale your marketplace revenue consistently."
+          "Content marketing strategies that position your brand as an industry authority through SEO optimised blogs, articles, case studies, and long form content.",
+          "Full content pipeline from topic ideation and calendar planning to writing, editing, on page SEO, and publishing for consistent output without team burnout.",
+          "Topical authority building through content clusters around your core services and products, strengthening your overall SEO and domain relevance."
         ],
         image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80"
       }
     ],
     process: {
       label: "Process",
-      heading: "How We Build Digital Marketing Campaigns That Deliver Results",
-      subheading: "A data-driven marketing process — from strategy to scaling.",
+      heading: "How We Build Marketing Campaigns That Deliver Results.",
+      subheading: "A structured digital marketing process from audit to scale.",
       steps: [
         {
           id: "audit",
-          number: "1.",
+          number: "01.",
           title: "Audit & Discovery",
-          description: "We begin every digital marketing engagement with a comprehensive audit — analysing your current online presence, website performance, social media accounts, competitor strategies, and audience behaviour to identify gaps and growth opportunities."
+          description: "We run a complete audit of your online presence, website, social media, competitors, and audience behaviour to identify gaps and opportunities."
         },
         {
           id: "strategy",
-          number: "2.",
-          title: "Strategy & Goal Setting",
-          description: "We define a clear digital marketing roadmap — setting measurable KPIs, selecting the right channels (SEO, PPC, social media, email), building audience personas, and aligning every tactic with your business revenue goals."
+          number: "02.",
+          title: "Strategy & Goals",
+          description: "We build a clear digital marketing roadmap with measurable KPIs, channel selection, audience personas, and revenue aligned tactics."
         },
         {
-          id: "setup",
-          number: "3.",
-          title: "Content & Creative Development",
-          description: "Our team creates all campaign assets — social media content, ad creatives, blog posts, email sequences, and landing page copy — ensuring every piece is on-brand, SEO-optimised, and designed to engage your target audience."
+          id: "creative",
+          number: "03.",
+          title: "Content & Creative",
+          description: "We craft all campaign assets including social content, ad creatives, blog posts, email sequences, and landing page copy, all SEO optimised and on brand."
         },
         {
-          id: "execution",
-          number: "4.",
-          title: "Campaign Launch & Execution",
-          description: "We launch your campaigns across all selected channels with precise targeting, budget allocation, and tracking setup — from social media posting schedules and ad activation to SEO implementation and email automation workflows."
+          id: "launch",
+          number: "04.",
+          title: "Campaign Launch",
+          description: "We launch campaigns with precise targeting, budget allocation, and tracking setup across every selected channel for instant performance visibility."
         },
         {
-          id: "monitoring",
-          number: "5.",
+          id: "optimisation",
+          number: "05.",
           title: "Monitoring & Optimisation",
-          description: "We continuously monitor campaign performance in real time — adjusting bids, refining audience targeting, testing new creatives, and reallocating budgets to the highest-performing channels to maximise your return on investment."
+          description: "We monitor performance in real time, adjusting bids, refining targeting, testing creatives, and reallocating budgets to top performers."
         },
         {
           id: "reporting",
-          number: "6.",
+          number: "06.",
           title: "Reporting & Scaling",
-          description: "You receive detailed monthly performance reports with traffic, engagement, conversion, and revenue data across every channel — along with strategic recommendations to scale what's working and improve what's not."
+          description: "Detailed monthly reports covering traffic, engagement, conversions, and revenue, paired with strategic recommendations to scale what works."
         }
       ]
     },
@@ -832,57 +827,57 @@ export const servicesData: Record<string, ServiceData> = {
       { id: "looker-studio", name: "Looker Studio", image: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Google_Looker_Logo.svg" },
     ],
     deliverables: {
-      label: "Deliverables",
-      heading: "What You Get.",
-      subheading: "Every asset, report, and strategy document you need to grow your brand online — delivered with full transparency.",
+      label: "FAQ",
+      heading: "Frequently Asked Questions.",
+      subheading: "Everything you need to know about working with us on your digital marketing project.",
       items: [
         {
-          id: "marketing-strategy",
-          title: "Custom Digital Marketing Strategy",
-          description: "You receive a tailored digital marketing strategy document — covering channel selection, audience targeting, content direction, budget allocation, and a quarterly growth roadmap aligned with your business objectives and revenue goals."
+          id: "results-timeline",
+          title: "How long does it take to see results from digital marketing?",
+          description: "Paid ads can drive results within days, while SEO and content marketing typically show meaningful traction in 3 to 6 months. Social media and marketplace growth build steady momentum across the first 90 days."
         },
         {
-          id: "campaign-management",
-          title: "Social Media Content & Calendar",
-          description: "You get a complete monthly social media content package — branded post designs, Reels/Shorts concepts, carousel layouts, captions with hashtag strategy, and a scheduled content calendar across all your active platforms."
+          id: "marketplace-platforms",
+          title: "Can you grow our brand on Amazon, Flipkart, and BigBasket?",
+          description: "Yes, we manage end to end marketplace growth including store setup, product listings, A+ content, paid advertising, deal participation, and ongoing optimisation across Amazon, Flipkart, BigBasket, and Meesho."
         },
         {
-          id: "seo-audits",
-          title: "SEO Audit & Optimisation Report",
-          description: "Your website receives a full technical and on-page SEO audit — with keyword rankings, site health scores, indexation issues, backlink analysis, and a prioritised action plan to improve your organic search visibility on Google."
+          id: "channels-managed",
+          title: "Which marketing channels do you manage?",
+          description: "We handle SEO, Google Ads, Meta Ads, LinkedIn Ads, YouTube Ads, social media management, email marketing, content marketing, and marketplace growth on leading e commerce platforms."
         },
         {
-          id: "ad-creatives-copy",
-          title: "Ad Campaign Setup & Creatives",
-          description: "Every paid campaign is delivered with complete ad account setup, audience targeting configuration, pixel and conversion tracking, multiple ad creative variations, and A/B testing structure — ready to drive traffic from day one."
+          id: "ad-budget",
+          title: "What is the minimum ad budget required for paid campaigns?",
+          description: "Ad budgets depend on your goals and industry. We recommend a starting monthly budget that allows enough data for testing and optimisation, typically beginning from a strategic minimum we discuss based on your business stage."
         },
         {
-          id: "analytics-dashboards",
-          title: "Email Marketing Sequences",
-          description: "You receive fully designed, mobile-responsive email templates and automated sequences — welcome flows, nurture campaigns, promotional blasts, and abandoned cart recovery — set up and tested on your email marketing platform."
+          id: "performance-reports",
+          title: "Will I receive performance reports for my campaigns?",
+          description: "Yes, every client gets detailed monthly performance reports covering traffic, engagement, conversions, ad spend, ROAS, keyword rankings, and social growth, along with clear next step recommendations."
         },
         {
-          id: "monthly-reporting",
-          title: "Blog Content & SEO Articles",
-          description: "You get professionally written, SEO-optimised blog posts and articles — researched with targeted keywords, formatted with proper heading structure, internal links, and meta tags — ready to publish and rank on search engines."
+          id: "content-creation",
+          title: "Do you create the social media content as well?",
+          description: "Yes, we handle the full content pipeline including branded graphics, Reels and Shorts concepts, carousel designs, captions, and hashtag strategy, all built around your brand identity and audience."
         },
         {
-          id: "monthly-reporting",
-          title: "Monthly Performance Reports",
-          description: "Every month you receive a detailed performance report covering traffic, engagement, conversions, ad spend, ROAS, keyword rankings, and social media growth — with clear insights and strategic recommendations for the next month."
+          id: "google-ranking",
+          title: "Can you help my website rank higher on Google?",
+          description: "Absolutely. Our SEO services cover technical audits, on page optimisation, keyword research, content marketing, link building, and local SEO to boost organic visibility and rankings sustainably."
         },
         {
-          id: "monthly-reporting",
-          title: "Competitor & Market Analysis",
-          description: "You receive a competitor benchmarking report — analysing their SEO rankings, social media presence, ad strategies, and content approach — so you understand where you stand and where the biggest opportunities lie to outperform them."
+          id: "tools-platforms",
+          title: "What tools and platforms do you work with?",
+          description: "We work with Google Analytics 4, Google Ads, Meta Business Suite, SEMrush, Ahrefs, Mailchimp, HubSpot, Klaviyo, Hootsuite, Buffer, and Looker Studio for complete marketing visibility."
         },
         {
-          id: "monthly-reporting",
-          title: "Analytics & Tracking Dashboard",
-          description: "We set up a live marketing dashboard consolidating data from Google Analytics, Search Console, ad platforms, and social media — giving you real-time visibility into every metric that matters, accessible anytime."
+          id: "contract-flexibility",
+          title: "Do I need to sign a long term contract?",
+          description: "No, we offer flexible monthly plans with no long term lock ins. You stay because of the results we deliver, not because of a contract."
         }
       ]
     },
-    ctaText: "Let's Turn Your Audience into Your Biggest Revenue Channel."
+    ctaText: "Let's Turn Your Audience Into Your Biggest Revenue Channel."
   }
 };

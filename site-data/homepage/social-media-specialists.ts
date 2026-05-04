@@ -59,7 +59,7 @@ export const socialMediaImages: StackImage[] = [
 // ── Right Side Copy ───────────────────────────────────────────
 export const socialMediaCopy = {
   heading: {
-    text: "A Studio Built on Strategy, Creativity, and 10+ Years of Expertise.",
+    text: "A Creative Studio Built on Strategy, Design, and a Decade of Real Results.",
     fontFamily: fonts.heading,
     fontSize: "text-5xl md:text-6xl lg:text-[4.5rem]",
     fontWeight: "font-bold",
@@ -72,7 +72,7 @@ export const socialMediaCopy = {
   },
 
   body: [
-    "The Designers World was founded with a clear mission — to give businesses access to world-class graphic design, custom web development, data-driven digital marketing, and professional motion graphics, all from a single creative team. Based in New Delhi, India, our studio brings together specialists who've spent over a decade working with brands across industries — from ambitious startups to established enterprises. We don't just make things look good. We build brand systems, digital experiences, and marketing strategies that are engineered to grow your business.",
+    "The Designers World is a full service creative studio based in New Delhi, bringing graphic design, web development, digital marketing, and motion graphics together under one roof. With over 10 years of combined experience, our team partners with startups, small businesses, and premium brands to build identities that stand out, websites that convert, and campaigns that drive measurable growth. We don't just create work that looks good. We build brand systems and digital experiences engineered to perform in the real world.",
     "",
     ""
   ],

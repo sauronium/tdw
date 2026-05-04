@@ -6,7 +6,7 @@ import { fonts } from "../tokens";
 
 // ── Section Heading ───────────────────────────────────────────
 export const clientsHeading = {
-  text: "Our Clients",
+  text: "",
   fontFamily: fonts.heading,
   fontSize: "text-4xl md:text-5xl lg:text-7xl text-balance",
   fontWeight: "font-normal",

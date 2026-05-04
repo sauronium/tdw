@@ -7,7 +7,7 @@ import { fonts, fontSizes, layout } from "../tokens";
 export const heroData = {
   // ── Main Heading ──────────────────────────────────────────
   heading: {
-    text: "Creative Design, Marketing & Web Development Studio for Growing Brands.",
+    text: "Where Creative Meets Conversion.",
     fontSize: "text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl",
     fontWeight: "font-medium",
     color: "text-black",
@@ -17,7 +17,7 @@ export const heroData = {
 
   // ── Sub-headline ──────────────────────────────────────────
   subheadline: {
-    text: "One Studio. Four Powerful Services. Results That Speak for Themselves.",
+    text: "Because beautiful design should also deliver results. We craft brands, websites, and campaigns built to grow.",
     fontFamily: fonts.heading,
     fontSize: "text-lg sm:text-xl md:text-2xl lg:text-3xl",
     fontWeight: "font-light",

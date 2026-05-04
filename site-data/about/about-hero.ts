@@ -5,7 +5,7 @@
 
 // ── Heading ───────────────────────────────────────────────────
 export const aboutHeroHeading = {
-  text: "The Creative Studio Behind Brands That Stand Out.",
+  text: "The Creative Studio Behind Bold Brands & Bigger Ideas.",
   fontSize: "text-4xl md:text-6xl lg:text-[6rem]",
   fontWeight: "font-bold",
   color: "#171717",
@@ -18,7 +18,7 @@ export const aboutHeroHeading = {
 // ── Body Paragraphs ───────────────────────────────────────────
 // Update or reorder paragraphs here. Each string is a <p> block.
 export const aboutHeroParagraphs: string[] = [
-  "The Designers World is a full-service creative agency specialising in graphic design, web design and development, digital marketing, and motion graphics. Founded by a team of creative professionals with over 10 years of combined experience, we set out to build a studio where strategy, design, and technology work together to deliver real business results. Based in New Delhi, India, we work with startups, small businesses, and premium brands — helping them build powerful digital identities, high-performing websites, and marketing campaigns that drive growth.",
+  "Where strategy, design, and technology come together to build brands that grow, scale, and stand the test of time.",
   "",
 ];
 

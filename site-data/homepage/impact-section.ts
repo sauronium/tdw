@@ -7,7 +7,7 @@
 export const impactSectionData = {
   // ── Primary Tagline ───────────────────────────────────────
   tagline: {
-    text: "The Designers World | Creative Design, Marketing & Web Development Studio",
+    text: "The Designers World | Graphic Design • Web Development • Digital Marketing • Motion Graphics",
     /** Background pill color */
     backgroundColor: "#f26522",
     backgroundTailwind: "bg-[#f26522]",
@@ -36,7 +36,7 @@ export const impactSectionData = {
     maxWidth: "max-w-[1050px]",
     /** Unsplash background image shown inside the rotating circle */
     backgroundImage: {
-      src: "home/header_tdw.png",
+      src: "home/impact_1.png",
       alt: "Design Collage",
       opacity: "opacity-80",
     },

@@ -42,6 +42,10 @@ export const metadata: Metadata = {
   icons: {
     icon: '/tdw-favicon.svg',
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
@@ -51,6 +55,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${hagrid.variable} ${bricolage.variable}`}>
+      <head>
+        <meta name="robots" content="noindex, nofollow" />
+      </head>
       <body
         className={`antialiased bg-background text-foreground`}
         suppressHydrationWarning
